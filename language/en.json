@@ -1,0 +1,60 @@
+{
+  "Ad": {
+    "Mobile": {
+      "Preroll": {
+        "ReadyIn": "The game is ready in ",
+        "Loading": "Your game is loading...",
+        "Close": "Close"
+      },
+      "Header": {
+        "ReadyIn": "The game is ready in ",
+        "Loading": "Your game is loading...",
+        "Close": "Close"
+      },
+      "End": {
+        "ReadyIn": "Advertisement ends in ",
+        "Loading": "Please wait ...",
+        "Close": "Close"
+      }
+    }
+  },
+  "Splash": {
+    "Loading": "Loading ...",
+    "LogoLine1": "Some text here",
+    "LogoLine2": "powered by v-geese",
+    "LogoLine3": "none",
+    "TapToStart": "TAP TO START"
+  },
+  "Game": {
+    "Settings": "SETTINGS",
+    "Pause": "PAUSE",
+    "Over": "GAME OVER",
+    "GameComplete": "GAME COMPLETE",
+    "Complete": "HOLE # COMPLETE",
+    "Reward": "OUT OF BALLS",
+    "Confirmation": "CONFIRMATION",
+    "Tutorial": "TUTORIAL",
+    "Tutorial1Line1": "Drag the ball to adjust force and direction.",
+    "Tutorial1Line2": "Complete the course before running out of balls.",
+    "Tutorial2Line1": "Tap outside of the ball",
+    "Tutorial2Line2": "and drag to rotate the camera.",
+    "Cheers": ["GREAT", "FANTASTIC", "AWESOME", "WONDERFUL", "AMAZING"],
+    "HoleIn": "HOLE IN #",
+    "Par": "PAR",
+    "Birdie": "BIRDIE",
+    "Eagle": "EAGLE",
+    "DoubleEagle": "DOUBLE EAGLE",
+    "Bogey": "BOGEY",
+    "DoubleBogey": "DOUBLE BOGEY",
+    "TripleBogey": "TRIPLE BOGEY",
+    "TriedHard": "TRIED HARD",
+    "Best": "BEST",
+    "Score": "SCORE",
+    "NewBest": "HIGH SCORE!",
+    "Hole": "HOLE: ",
+    "RewardMessage": "ADD # MORE BALLS?",
+    "EndGame": "END THE GAME?",
+    "NewGame": "START A NEW GAME",
+    "NewGame2": "( FROM HOLE 1 ) ?"
+  }
+}
