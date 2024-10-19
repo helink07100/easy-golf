@@ -2861,12 +2861,6 @@
   ig.module("plugins.audio.sound-info").defines(function () {
     SoundInfo = ig.Class.extend({
       sfx: {
-        logosplash1: {
-          path: "opening/logosplash1",
-        },
-        logosplash2: {
-          path: "opening/logosplash2",
-        },
         button: {
           path: "sfx/button",
         },
@@ -14560,129 +14554,6 @@
       });
     });
   ig.baked = true;
-  ig.module("game.entities.buttons.button-branding-logo")
-    .requires("game.entities.buttons.button", "plugins.clickable-div-layer")
-    .defines(function () {
-      EntityButtonBrandingLogo = EntityButtonText.extend({
-        type: ig.Entity.TYPE.A,
-        gravityFactor: 0x0,
-        logo: new ig.AnimationSheet(
-          "branding/logo.png",
-          _SETTINGS.Branding.Logo.Width,
-          _SETTINGS.Branding.Logo.Height
-        ),
-        zIndex: 0x2711,
-        size: {
-          x: 0x40,
-          y: 0x42,
-        },
-        clickableLayer: null,
-        link: null,
-        newWindow: false,
-        div_layer_name: "branding-logo",
-        name: "brandinglogo",
-        init: function (_0xe7306c, _0x3f514d, _0x3fd893) {
-          this.parent(_0xe7306c, _0x3f514d, _0x3fd893);
-          if (!ig.global.wm) {
-            if ("undefined" == typeof wm) {
-              if (_SETTINGS.Branding.Logo.Enabled) {
-                this.size.x = _SETTINGS.Branding.Logo.Width;
-                this.size.y = _SETTINGS.Branding.Logo.Height;
-                this.anims.idle = new ig.Animation(this.logo, 0x0, [0x0], true);
-                this.currentAnim = this.anims.idle;
-                if (_0x3fd893 && _0x3fd893.centralize) {
-                  this.pos.x = ig.system.width / 0x2 - this.size.x / 0x2;
-                  console.log("centralize true ... centering branded logo ...");
-                }
-                if (_SETTINGS.Branding.Logo.LinkEnabled) {
-                  this.link = _SETTINGS.Branding.Logo.Link;
-                  this.newWindow = _SETTINGS.Branding.Logo.NewWindow;
-                  this.clickableLayer = new ClickableDivLayer(this);
-                }
-              } else {
-                this.kill();
-                return;
-              }
-            }
-            this.div_layer_name = _0x3fd893.div_layer_name
-              ? _0x3fd893.div_layer_name
-              : "branding-logo";
-          }
-        },
-        show: function () {
-          var _0x4797eb = ig.domHandler.getElementById(
-            "#" + this.div_layer_name
-          );
-          ig.domHandler.show(_0x4797eb);
-        },
-        hide: function () {
-          var _0x4915db = ig.domHandler.getElementById(
-            "#" + this.div_layer_name
-          );
-          ig.domHandler.hide(_0x4915db);
-        },
-        clicked: function () {},
-        clicking: function () {},
-        released: function () {},
-      });
-    });
-  ig.baked = true;
-  ig.module("game.entities.branding-logo-placeholder")
-    .requires("impact.entity", "game.entities.buttons.button-branding-logo")
-    .defines(function () {
-      EntityBrandingLogoPlaceholder = ig.Entity.extend({
-        gravityFactor: 0x0,
-        size: {
-          x: 0x20,
-          y: 0x20,
-        },
-        _wmDrawBox: true,
-        _wmBoxColor: "rgba(0, 0, 255, 0.7)",
-        init: function (_0x3fd732, _0x3022f1, _0x109492) {
-          this.parent(_0x3fd732, _0x3022f1, _0x109492);
-          if (_0x109492) {
-            console.log("settings found ... using that div layer name");
-            _0x3fd732 = _0x109492.div_layer_name;
-            console.log("settings.centralize:", _0x109492.centralize);
-            switch (_0x109492.centralize) {
-              case "true":
-                console.log("centralize true");
-                centralize = true;
-                break;
-              case "false":
-                console.log("centralize false");
-                centralize = false;
-                break;
-              default:
-                console.log("default ... centralize false");
-                centralize = false;
-            }
-          } else {
-            _0x3fd732 = "branding-logo";
-            centralize = false;
-          }
-          if ("undefined" == typeof wm) {
-            if (_SETTINGS.Branding.Logo.Enabled) {
-              try {
-                ig.game.spawnEntity(
-                  EntityButtonBrandingLogo,
-                  this.pos.x,
-                  this.pos.y,
-                  {
-                    div_layer_name: _0x3fd732,
-                    centralize: centralize,
-                  }
-                );
-              } catch (_0x3b84f8) {
-                console.log(_0x3b84f8);
-              }
-            }
-            this.kill();
-          }
-        },
-      });
-    });
-  ig.baked = true;
   ig.module("game.entities.buttons.button-more-games")
     .requires("game.entities.buttons.button", "plugins.clickable-div-layer")
     .defines(function () {
@@ -14768,8 +14639,7 @@
       "plugins.director",
       "plugins.impact-storage",
       "game.plugin",
-      "plugins.astar",
-      "game.entities.branding-logo-placeholder"
+      "plugins.astar"
     )
     .defines(function () {
       VgeeseGame = ig.Game.extend({
