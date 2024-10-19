@@ -12157,7 +12157,7 @@
     .defines(function () {
       ig.SplashLoader = ig.Loader.extend({
         tapToStartDivId: "tap-to-start",
-        title: new ig.Image("logo/logo-load.jpeg"),
+        title: new ig.Image("logo/logo-load.png"),
         bar0: new ig.Image("media/graphics/sprites/ui/bar0.png"),
         bar1: new ig.Image("media/graphics/sprites/ui/bar1.png"),
         checkWGL: false,
@@ -13491,305 +13491,6 @@
       });
     });
   ig.baked = true;
-  ig.module("plugins.fullscreen")
-    .requires(
-      "impact.entity",
-      "plugins.handlers.size-handler",
-      "plugins.director"
-    )
-    .defines(function () {
-      ig.Fullscreen = {
-        enableFullscreenButton: true,
-        _isEnabled: "notChecked",
-        isEnabled: function () {
-          if ("notChecked" == this._isEnabled) {
-            this._isEnabled = !!(
-              document.fullscreenEnabled ||
-              document.mozFullScreenEnabled ||
-              document.webkitFullscreenEnabled ||
-              document.msFullscreenEnabled
-            );
-          }
-          return this._isEnabled;
-        },
-        isFullscreen: function () {
-          return !!(
-            ig.Fullscreen.isEnabled() &&
-            (document.fullscreenElement ||
-              document.mozFullScreenElement ||
-              document.webkitFullscreenElement ||
-              document.msFullscreenElement)
-          );
-        },
-        toggleFullscreen: function () {
-          if (ig.Fullscreen.isFullscreen()) {
-            ig.Fullscreen.exitFullscreen();
-          } else {
-            ig.Fullscreen.requestFullscreen();
-          }
-          ig.sizeHandler.orientationHandler();
-        },
-        requestFullscreen: function () {
-          var _0x310bb3 = document.documentElement;
-          if (_0x310bb3.requestFullscreen) {
-            _0x310bb3.requestFullscreen();
-          } else if (_0x310bb3.webkitRequestFullscreen) {
-            _0x310bb3.webkitRequestFullscreen();
-          } else if (_0x310bb3.mozRequestFullScreen) {
-            _0x310bb3.mozRequestFullScreen();
-          } else if (_0x310bb3.msRequestFullscreen) {
-            _0x310bb3.msRequestFullscreen();
-          }
-        },
-        exitFullscreen: function () {
-          if (document.exitFullscreen) {
-            document.exitFullscreen();
-          } else if (document.webkitExitFullscreen) {
-            document.webkitExitFullscreen();
-          } else if (document.mozCancelFullScreen) {
-            document.mozCancelFullScreen();
-          } else if (document.msExitFullscreen) {
-            document.msExitFullscreen();
-          }
-        },
-        divs: {},
-      };
-      ig.Director.inject({
-        loadLevel: function (_0x5c388a) {
-          var _0x1b65ae = ig.Fullscreen.divs;
-          var _0x404330;
-          for (_0x404330 in _0x1b65ae) {
-            _0x1b65ae = ig.domHandler.getElementById("#" + _0x404330);
-            ig.domHandler.hide(_0x1b65ae);
-          }
-          return this.parent(_0x5c388a);
-        },
-      });
-      ig.FullscreenButton = ig.Entity.extend({
-        enterImage: null,
-        exitImage: null,
-        isReady: false,
-        isShown: true,
-        zIndex: 0xf423f,
-        identifier: null,
-        prevPos: {
-          x: 0x0,
-          y: 0x0,
-        },
-        invisImagePath: "media/graphics/misc/invisible.png",
-        init: function (_0xb0e06e, _0x5d7deb, _0x4dff8b) {
-          this.parent(_0xb0e06e, _0x5d7deb, _0x4dff8b);
-          if (
-            ig.Fullscreen.isEnabled() &&
-            ig.Fullscreen.enableFullscreenButton
-          ) {
-            if (this.enterImage.loaded) {
-              this.initSize();
-            } else {
-              this.enterImage.loadCallback = function () {
-                this.initSize();
-              }.bind(this);
-            }
-            ig.btFullscreen = this;
-          } else {
-            this.kill();
-            ig.btFullscreen = null;
-          }
-        },
-        kill: function () {
-          this.parent();
-          var _0x247520 = ig.domHandler.getElementById("#" + this.identifier);
-          if (_0x247520) {
-            ig.domHandler.hide(_0x247520);
-          }
-        },
-        show: function () {
-          this.isShown = true;
-          var _0x556e10 = ig.domHandler.getElementById("#" + this.identifier);
-          if (_0x556e10) {
-            ig.domHandler.show(_0x556e10);
-          }
-        },
-        hide: function () {
-          this.isShown = false;
-          var _0xb29361 = ig.domHandler.getElementById("#" + this.identifier);
-          if (_0xb29361) {
-            ig.domHandler.hide(_0xb29361);
-          }
-        },
-        initSize: function () {
-          this.size.x = this.enterImage.width;
-          this.size.y = this.enterImage.height;
-          this.createClickableLayer();
-          this.isReady = true;
-          this.repos();
-          ig.sizeHandler.resizeLayers();
-        },
-        createClickableLayer: function () {
-          this.identifier = "fullscreen-button-layer";
-          var _0x284362 = ig.domHandler.getElementById("#" + this.identifier);
-          if (_0x284362) {
-            ig.domHandler.show(_0x284362);
-            ig.domHandler.attr(
-              _0x284362,
-              "onclick",
-              "ig.Fullscreen.toggleFullscreen()"
-            );
-          } else {
-            this.createClickableOutboundLayer();
-          }
-          ig.sizeHandler.dynamicClickableEntityDivs[this.identifier] = {};
-          ig.sizeHandler.dynamicClickableEntityDivs[this.identifier].width =
-            this.size.x;
-          ig.sizeHandler.dynamicClickableEntityDivs[this.identifier].height =
-            this.size.y;
-          ig.sizeHandler.dynamicClickableEntityDivs[
-            this.identifier
-          ].entity_pos_x = this.pos.x;
-          ig.sizeHandler.dynamicClickableEntityDivs[
-            this.identifier
-          ].entity_pos_y = this.pos.y;
-        },
-        repos: function () {
-          var _0x39618d = this.pos.x;
-          var _0x4c4ccc = this.pos.y;
-          if (
-            this.isReady &&
-            !(this.prevPos.x === _0x39618d && this.prevPos.y === _0x4c4ccc)
-          ) {
-            ig.sizeHandler.dynamicClickableEntityDivs[this.identifier] = {};
-            ig.sizeHandler.dynamicClickableEntityDivs[this.identifier].width =
-              this.size.x;
-            ig.sizeHandler.dynamicClickableEntityDivs[this.identifier].height =
-              this.size.y;
-            ig.sizeHandler.dynamicClickableEntityDivs[
-              this.identifier
-            ].entity_pos_x = this.pos.x;
-            ig.sizeHandler.dynamicClickableEntityDivs[
-              this.identifier
-            ].entity_pos_y = this.pos.y;
-            this.prevPos.x = _0x39618d;
-            this.prevPos.y = _0x4c4ccc;
-          }
-        },
-        draw: function () {
-          var _0x143d37 = ig.system.context;
-          _0x143d37.save();
-          _0x143d37.setTransform(0x1, 0x0, 0x0, 0x1, 0x0, 0x0);
-          if (this.isReady && this.isShown) {
-            if (ig.Fullscreen.isFullscreen()) {
-              this.exitImage.draw(this.pos.x, this.pos.y);
-            } else {
-              this.enterImage.draw(this.pos.x, this.pos.y);
-            }
-          }
-          _0x143d37.restore();
-        },
-        createClickableOutboundLayer: function () {
-          var _0x3a28c4 = this.identifier;
-          var _0x179a23 = this.invisImagePath;
-          var _0x3cf839 = ig.domHandler.create("div");
-          ig.domHandler.attr(_0x3cf839, "id", _0x3a28c4);
-          ig.domHandler.attr(
-            _0x3cf839,
-            "onclick",
-            "ig.Fullscreen.toggleFullscreen()"
-          );
-          var _0x358993 = ig.domHandler.create("a");
-          var _0x4338b2 = ig.domHandler.create("img");
-          ig.domHandler.css(_0x4338b2, {
-            width: "100%",
-            height: "100%",
-          });
-          ig.domHandler.attr(_0x4338b2, "src", _0x179a23);
-          _0x179a23 = Math.min(
-            ig.sizeHandler.scaleRatioMultiplier.x,
-            ig.sizeHandler.scaleRatioMultiplier.y
-          );
-          if (ig.ua.mobile) {
-            var _0x31c2cc = ig.domHandler.getElementById("#canvas");
-            var _0x1ab4e6 = ig.domHandler.getOffsets(_0x31c2cc);
-            var _0x31c2cc = _0x1ab4e6.left;
-            var _0x1ab4e6 = _0x1ab4e6.top;
-            if (ig.sizeHandler.disableStretchToFitOnMobileFlag) {
-              var _0x31c2cc =
-                Math.floor(
-                  _0x31c2cc + this.pos.x * ig.sizeHandler.scaleRatioMultiplier.x
-                ) + "px";
-              var _0x1ab4e6 =
-                Math.floor(
-                  _0x1ab4e6 + this.pos.y * ig.sizeHandler.scaleRatioMultiplier.y
-                ) + "px";
-              var _0x144af3 =
-                Math.floor(
-                  this.size.x * ig.sizeHandler.scaleRatioMultiplier.x
-                ) + "px";
-              var _0x179a23 =
-                Math.floor(
-                  this.size.y * ig.sizeHandler.scaleRatioMultiplier.y
-                ) + "px";
-            } else {
-              _0x31c2cc =
-                Math.floor(this.pos.x * ig.sizeHandler.sizeRatio.x) + "px";
-              _0x1ab4e6 =
-                Math.floor(this.pos.y * ig.sizeHandler.sizeRatio.y) + "px";
-              _0x144af3 =
-                Math.floor(this.size.x * ig.sizeHandler.sizeRatio.x) + "px";
-              _0x179a23 =
-                Math.floor(this.size.y * ig.sizeHandler.sizeRatio.y) + "px";
-            }
-          } else {
-            _0x31c2cc = ig.domHandler.getElementById("#canvas");
-            _0x1ab4e6 = ig.domHandler.getOffsets(_0x31c2cc);
-            _0x31c2cc = _0x1ab4e6.left;
-            _0x1ab4e6 = _0x1ab4e6.top;
-            if (ig.sizeHandler.enableStretchToFitOnDesktopFlag) {
-              _0x31c2cc =
-                Math.floor(
-                  _0x31c2cc + this.pos.x * ig.sizeHandler.sizeRatio.x
-                ) + "px";
-              _0x1ab4e6 =
-                Math.floor(
-                  _0x1ab4e6 + this.pos.y * ig.sizeHandler.sizeRatio.y
-                ) + "px";
-              _0x144af3 =
-                Math.floor(this.size.x * ig.sizeHandler.sizeRatio.x) + "px";
-              _0x179a23 =
-                Math.floor(this.size.y * ig.sizeHandler.sizeRatio.y) + "px";
-            } else {
-              _0x31c2cc = Math.floor(_0x31c2cc + this.pos.x * _0x179a23) + "px";
-              _0x1ab4e6 = Math.floor(_0x1ab4e6 + this.pos.y * _0x179a23) + "px";
-              _0x144af3 = Math.floor(this.size.x * _0x179a23) + "px";
-              _0x179a23 = Math.floor(this.size.y * _0x179a23) + "px";
-            }
-          }
-          ig.domHandler.css(_0x3cf839, {
-            float: "left",
-            position: "absolute",
-            left: _0x31c2cc,
-            top: _0x1ab4e6,
-            width: _0x144af3,
-            height: _0x179a23,
-            "z-index": 0x3,
-          });
-          ig.domHandler.addEvent(
-            _0x3cf839,
-            "mousemove",
-            ig.input.mousemove.bind(ig.input),
-            false
-          );
-          ig.domHandler.appendChild(_0x358993, _0x4338b2);
-          ig.domHandler.appendChild(_0x3cf839, _0x358993);
-          ig.domHandler.appendToBody(_0x3cf839);
-          ig.Fullscreen.divs[_0x3a28c4] = {};
-          ig.Fullscreen.divs[_0x3a28c4].width = this.size.x;
-          ig.Fullscreen.divs[_0x3a28c4].height = this.size.y;
-          ig.Fullscreen.divs[_0x3a28c4].entity_pos_x = this.pos.x;
-          ig.Fullscreen.divs[_0x3a28c4].entity_pos_y = this.pos.y;
-        },
-      });
-    });
-  ig.baked = true;
   ig.module("game.plugin")
     .requires(
       "plugins.handlers.size-handler",
@@ -14648,9 +14349,9 @@
         },
         draw: function () {
           if (this.visible) {
-            var _0x34786a = ig.system.context;
-            _0x34786a.save();
-            _0x34786a.translate(
+            var textContext = ig.system.context;
+            textContext.save();
+            textContext.translate(
               ig.system.getDrawPos(
                 this.pos.x.round() - ig.game.screen.x + this.halfSize.x
               ),
@@ -14659,11 +14360,11 @@
               )
             );
             this.image.draw(-this.halfSize.x, -this.halfSize.y);
-            _0x34786a.font = this.font;
-            _0x34786a.fillStyle = this.fillStyle;
-            _0x34786a.textAlign = "center";
-            _0x34786a.fillText(this.text, 0x0, this.textY);
-            _0x34786a.restore();
+            textContext.font = this.font;
+            textContext.fillStyle = this.fillStyle;
+            textContext.textAlign = "center";
+            textContext.fillText(this.text, 0x0, this.textY);
+            textContext.restore();
           }
         },
         setup: function () {},
@@ -14679,16 +14380,16 @@
         draw: function () {},
         drawImage: function () {
           if (this.visible) {
-            var _0x2ac76a = ig.system.context;
-            _0x2ac76a.save();
-            _0x2ac76a.translate(
+            var textContext = ig.system.context;
+            textContext.save();
+            textContext.translate(
               ig.system.getDrawPos(this.dx + this.halfSize.x),
               ig.system.getDrawPos(this.dy + this.halfSize.y)
             );
-            _0x2ac76a.scale(this.scale, this.scale);
+            textContext.scale(this.scale, this.scale);
             this.image.draw(-this.halfSize.x, -this.halfSize.y);
-            this.drawText(_0x2ac76a);
-            _0x2ac76a.restore();
+            this.drawText(textContext);
+            textContext.restore();
           }
         },
         drawText: function () {},
@@ -15066,11 +14767,9 @@
       "plugins.url-parameters",
       "plugins.director",
       "plugins.impact-storage",
-      "plugins.fullscreen",
       "game.plugin",
       "plugins.astar",
-      "game.entities.branding-logo-placeholder",
-      "game.entities.buttons.button-more-games"
+      "game.entities.branding-logo-placeholder"
     )
     .defines(function () {
       VgeeseGame = ig.Game.extend({
@@ -15433,47 +15132,39 @@
           }
         },
         draw: function () {
-          var _0x488ccf = ig.system.context;
-          _0x488ccf.save();
-          _0x488ccf.setTransform(0x1, 0x0, 0x0, 0x1, 0x0, 0x0);
-          _0x488ccf.fillStyle = "rgba(0,0,0," + this.overlayAlpha + ")";
-          _0x488ccf.fillRect(0x0, 0x0, ig.system.width, ig.system.height);
-          _0x488ccf.translate(
+          var textContext = ig.system.context;
+          textContext.save();
+          textContext.setTransform(1, 0, 0, 1, 0, 0);
+          textContext.fillStyle = "rgba(0,0,0," + this.overlayAlpha + ")";
+          textContext.fillRect(0, 0, ig.system.width, ig.system.height);
+          textContext.translate(
             ig.system.getDrawPos(this.pos.x + this.halfSize.x),
             ig.system.getDrawPos(this.pos.y + this.halfSize.y)
           );
-          _0x488ccf.scale(this.scale, this.scale);
+          textContext.scale(this.scale, this.scale);
           this.image.draw(-this.halfSize.x, -this.halfSize.y);
-          this.drawText(_0x488ccf);
-          this.extraDraw(_0x488ccf);
-          this.drawEntities(_0x488ccf);
-          _0x488ccf.restore();
+          this.drawText(textContext);
+          this.extraDraw(textContext);
+          this.drawEntities(textContext);
+          textContext.restore();
         },
         callback: function () {},
         callbackIn: function () {},
         extraDraw: function () {},
-        drawText: function (_0x4454e5) {
-          _0x4454e5.font = this.titleFont;
-          _0x4454e5.textAlign = "center";
-          _0x4454e5.fillStyle = "#FFF";
-          _0x4454e5.fillText(this.title, 0x0, this.titleY);
+        drawText: function (textContext) {
+          textContext.font = this.titleFont;
+          textContext.textAlign = "center";
+          textContext.fillStyle = "#FFF";
+          textContext.fillText(this.title, 0, this.titleY);
         },
-        drawEntities: function (_0x2cb4f) {
-          for (
-            var _0xfea89b = 0x0;
-            _0xfea89b < this.entities.length;
-            _0xfea89b++
-          ) {
-            this.entities[_0xfea89b].drawImage(_0x2cb4f);
+        drawEntities: function (textContext) {
+          for (var index = 0x0; index < this.entities.length; index++) {
+            this.entities[index].drawImage(textContext);
           }
         },
         kill: function () {
-          for (
-            var _0x9556c0 = 0x0;
-            _0x9556c0 < this.entities.length;
-            _0x9556c0++
-          ) {
-            this.entities[_0x9556c0].kill();
+          for (var index = 0x0; index < this.entities.length; index++) {
+            this.entities[index].kill();
           }
           if (this.btMoreGames) {
             this.btMoreGames.kill();
@@ -15554,10 +15245,10 @@
           this.titleY -= 0xc;
           this.tutorialImage = this.tutorials[0];
         },
-        extraDraw: function (_0x33f0d7) {
+        extraDraw: function (text) {
           ig.drawUtil.fontStyle("bold 32px Arial", "#0154c2", "center");
-          _0x33f0d7.fillText(this.text1, 0x0, this.textY0);
-          _0x33f0d7.fillText(this.text2, 0x0, this.textY1);
+          text.fillText(this.text1, 0x0, this.textY0);
+          text.fillText(this.text2, 0x0, this.textY1);
           this.tutorialImage.draw(this.imageX, this.imageY);
         },
         next: function () {
@@ -15804,7 +15495,7 @@
           _0x5a7d29.lineWidth = 0xa;
           _0x5a7d29.lineJoin = "round";
           _0x5a7d29.textAlign = "center";
-          ig.control.drawText(this.text, 0x0, -0x1c);
+          ig.control.drawText(this.text, 0, -28);
         },
         callback: function (_0x405e48) {
           switch (_0x405e48) {
@@ -15920,6 +15611,67 @@
       });
     });
   ig.baked = true;
+  // 语言设置
+  ig.module("game.entities.buttons.button-language")
+    .requires(
+      "plugins.impact-storage",
+      "game.entities.popups.popup",
+      "game.entities.buttons.button"
+    )
+    .defines(function () {
+      // ig.Language = {
+      //   isEnabled: function () {
+      //     return _SETTINGS.Language.show;
+      //   },
+      // };
+      EntityLanguagePopup = EntityPopup.extend({
+        pageId: 1000,
+        addEntities: function () {
+          this.text = _SETTINGS.Language.Option.forEach((i) => i.label);
+        },
+        extraDraw: function (textContext) {
+          textContext.font = "50px text";
+          textContext.textAlign = "center";
+          textContext.fillStyle = "#000000";
+
+          this.text = _SETTINGS.Language.Option.forEach((i, index) => {
+            const ty = index < 3 ? 0 : 30;
+            const tx = (index % 3) + 20;
+            textContext.fillText(i.label, tx, ty);
+          });
+        },
+        callback: function (_0x194962) {
+          if ("play" === _0x194962) {
+            ig.home.startGame();
+          } else if (ig.home.btMoreGames) {
+            ig.home.btMoreGames.show();
+          }
+        },
+        repos: function () {
+          this.parent();
+          var _0x41352b = 0x3ca > ig.system.width ? 0x64 : 0x0;
+          this.arrowNext.dx = this.halfSize.x - _0x41352b;
+          this.arrowPrevious.dx = -this.halfSize.x - (0x6e - _0x41352b);
+        },
+      });
+      EntityButtonLanguage = EntityButtonFix.extend({
+        image: new ig.Image("media/graphics/sprites/ui/btn-language.png"),
+        repos: function () {
+          this.pos.x = 0xf;
+          this.pos.y = 0xf;
+        },
+        callback: function () {
+          ig.game.spawnEntity(EntityLanguagePopup);
+        },
+      });
+      EntityButtonCloseLanguage = EntityButtonPopup.extend({
+        image: new ig.Image("media/graphics/sprites/ui/btn-home.png"),
+        callback: function () {
+          this.popup.hide("");
+        },
+      });
+    });
+  ig.baked = true;
   // 教程-弹窗按钮
   ig.module("game.entities.buttons.button-tutorial")
     .requires(
@@ -15943,6 +15695,7 @@
     .requires(
       "game.entities.buttons.button-play",
       "game.entities.buttons.button-settings",
+      "game.entities.buttons.button-language",
       "game.entities.buttons.button-tutorial"
     )
     .defines(function () {
@@ -15979,17 +15732,18 @@
             );
             this.buttons.push(this.btMoreGames);
           }
-          ig.game.spawnEntity(ig.FullscreenButton, 15, 15, {
-            enterImage: new ig.Image(
-              "media/graphics/sprites/ui/btn-expand.png"
-            ),
-            exitImage: new ig.Image("media/graphics/sprites/ui/btn-shrink.png"),
-          });
           this.buttons.push(
             ig.game.spawnEntity(EntityButtonTutorial, 0, 0, {
               scale: 0.01,
             })
           );
+          if (_SETTINGS.Language.show) {
+            this.buttons.push(
+              ig.game.spawnEntity(EntityButtonLanguage, 0, 0, {
+                scale: 0.01,
+              })
+            );
+          }
           this.titleOffset = {
             x: -this.imageTitle.width / 0x2,
             y: -this.imageTitle.height / 0x2,
@@ -16326,23 +16080,23 @@
             this.scoreTextY = -0x50;
           }
         },
-        extraDraw: function (_0x52ef4d) {
-          _0x52ef4d.strokeStyle = "#404040";
-          _0x52ef4d.font = "80px text";
-          _0x52ef4d.lineWidth = 0xa;
-          _0x52ef4d.lineJoin = "round";
-          _0x52ef4d.textAlign = "left";
+        extraDraw: function (textContext) {
+          textContext.strokeStyle = "#404040";
+          textContext.font = "80px text";
+          textContext.lineWidth = 0xa;
+          textContext.lineJoin = "round";
+          textContext.textAlign = "left";
           ig.control.drawText(_STRINGS.Game.Score, -0xfa, this.scoreTextY);
-          _0x52ef4d.textAlign = "right";
+          textContext.textAlign = "right";
           ig.control.drawText(this.scoreText, 0xfa, this.scoreTextY);
           if (!wgl.win || wgl.holeId === ig.params.ballNum.length) {
             if (this.bestScore) {
-              _0x52ef4d.textAlign = "center";
+              textContext.textAlign = "center";
               ig.control.drawText(_STRINGS.Game.NewBest, 0x0, 0x1e);
             } else {
-              _0x52ef4d.textAlign = "left";
+              textContext.textAlign = "left";
               ig.control.drawText(_STRINGS.Game.Best, -0xfa, 0x1e);
-              _0x52ef4d.textAlign = "right";
+              textContext.textAlign = "right";
               ig.control.drawText(this.bestText, 0xfa, 0x1e);
             }
           }
@@ -16662,10 +16416,10 @@
           ig.game.currentLayer = ig.game.layers.popup2;
           this.titleText = "REWARDED VIDEO AD";
           this.subText = "Rewarded in 3 second(s)...";
-          this.timer = new ig.Timer(0x3);
-          this.time = 0x3;
+          this.timer = new ig.Timer(3);
+          this.time = 3;
           this.repos();
-          this.fade(0x1);
+          this.fade(1);
         },
         fade: function (_0x53c694) {
           this.tween(
@@ -16752,7 +16506,7 @@
           this.ballLeft = this.ballTotal = ig.params.ballNum[wgl.holeId - 0x1];
           this.repos();
           this.text = ig.game.spawnEntity(EntityText);
-          this.btPause = ig.game.spawnEntity(EntityButtonPause, 0x0, 0x0, {
+          this.btPause = ig.game.spawnEntity(EntityButtonPause, 0, 0, {
             visible: false,
           });
           this.inputHandler = ig.game.spawnEntity(EntityInputHandler);
@@ -16766,7 +16520,7 @@
           );
           this.overTimer = new ig.Timeout(
             function () {
-              ig.game.spawnEntity(EntityPopupOver, 0x0, 0x0);
+              ig.game.spawnEntity(EntityPopupOver, 0, 0);
             },
             2.5,
             false,
@@ -16953,9 +16707,9 @@
             (100 * (this.ballTotal - 0x1) + this.ball1.width) / 0x2;
           this.ballY = ig.system.height - 0x64;
         },
-        drawText: function (_0x3d9f11, _0x36af7a, _0x18ec17) {
-          ig.system.context.strokeText(_0x3d9f11, _0x36af7a, _0x18ec17);
-          ig.system.context.fillText(_0x3d9f11, _0x36af7a, _0x18ec17);
+        drawText: function (text, _0x36af7a, _0x18ec17) {
+          ig.system.context.strokeText(text, _0x36af7a, _0x18ec17);
+          ig.system.context.fillText(text, _0x36af7a, _0x18ec17);
         },
         formatTime: function (_0x17ac22) {
           _0x17ac22 = Math.ceil(_0x17ac22);

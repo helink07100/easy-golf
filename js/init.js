@@ -79,64 +79,74 @@ var _SETTINGS = {
     Mobile: {
       Preroll: {
         Enabled: false,
-        Duration: 0x5,
-        Width: 0x12c,
-        Height: 0xfa,
+        Duration: 5,
+        Width: 300,
+        Height: 250,
         Rotation: {
           Enabled: false,
           Weight: {
-            MobileAdInGamePreroll: 0x28,
-            MobileAdInGamePreroll2: 0x28,
-            MobileAdInGamePreroll3: 0x14,
+            MobileAdInGamePreroll: 40,
+            MobileAdInGamePreroll2: 40,
+            MobileAdInGamePreroll3: 20,
           },
         },
       },
       Header: {
         Enabled: false,
-        Duration: 0x5,
-        Width: 0x140,
-        Height: 0x32,
+        Duration: 5,
+        Width: 320,
+        Height: 50,
         Rotation: {
           Enabled: false,
           Weight: {
-            MobileAdInGameHeader: 0x28,
-            MobileAdInGameHeader2: 0x28,
-            MobileAdInGameHeader3: 0x14,
+            MobileAdInGameHeader: 40,
+            MobileAdInGameHeader2: 40,
+            MobileAdInGameHeader3: 20,
           },
         },
       },
       Footer: {
         Enabled: false,
-        Duration: 0x5,
-        Width: 0x140,
-        Height: 0x32,
+        Duration: 5,
+        Width: 320,
+        Height: 50,
         Rotation: {
           Enabled: false,
           Weight: {
-            MobileAdInGameFooter: 0x28,
-            MobileAdInGameFooter2: 0x28,
-            MobileAdInGameFooter3: 0x14,
+            MobileAdInGameFooter: 40,
+            MobileAdInGameFooter2: 40,
+            MobileAdInGameFooter3: 20,
           },
         },
       },
       End: {
         Enabled: false,
-        Duration: 0x1,
-        Width: 0x12c,
-        Height: 0xfa,
+        Duration: 1,
+        Width: 300,
+        Height: 250,
         Rotation: {
           Enabled: false,
           Weight: {
-            MobileAdInGameEnd: 0x28,
-            MobileAdInGameEnd2: 0x28,
-            MobileAdInGameEnd3: 0x14,
+            MobileAdInGameEnd: 40,
+            MobileAdInGameEnd2: 40,
+            MobileAdInGameEnd3: 20,
           },
         },
       },
     },
   },
   Language: {
+    Title: "Language",
     Default: "en",
+    show: false,
+    Option: [
+      { value: "en", label: "English" }, // 英语
+      { value: "es", label: "Español" }, // 西班牙语
+      { value: "pt", label: "Português" }, // 葡萄牙语
+      { value: "fr", label: "Français" }, // 法语
+      { value: "ar", label: "‎العربية‎" }, // 阿拉伯语
+      { value: "id", label: "Bahasa Indonesia" }, // 印度尼西亚语
+    ],
   },
   DeveloperBranding: {
     Splash: {
@@ -147,7 +157,7 @@ var _SETTINGS = {
       Link: "http://www.v-geese.com",
       LinkEnabled: false,
       NewWindow: true,
-      Width: 0xa6,
+      Width: 166,
       Height: 0x3d,
     },
   },
@@ -160,12 +170,12 @@ var _SETTINGS = {
       Link: "http://google.com",
       LinkEnabled: true,
       NewWindow: true,
-      Width: 0x118,
-      Height: 0x22,
+      Width: 280,
+      Height: 34,
     },
   },
   MoreGames: {
-    Enabled: true,
+    Enabled: false,
     Link: "https://www.v-geese.com",
     NewWindow: true,
   },
