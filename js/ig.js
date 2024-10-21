@@ -2241,32 +2241,6 @@
         domHandler: null,
         dynamicClickableEntityDivs: {},
         coreDivsToResize: ["#canvas", "#play"],
-        adsToResize: {
-          MobileAdInGamePreroll: {
-            "box-width": _SETTINGS.Ad.Mobile.Preroll.Width + 0x2,
-            "box-height": _SETTINGS.Ad.Mobile.Preroll.Height + 0x14,
-          },
-          MobileAdInGameEnd: {
-            "box-width": _SETTINGS.Ad.Mobile.End.Width + 0x2,
-            "box-height": _SETTINGS.Ad.Mobile.End.Height + 0x14,
-          },
-          MobileAdInGamePreroll2: {
-            "box-width": _SETTINGS.Ad.Mobile.Preroll.Width + 0x2,
-            "box-height": _SETTINGS.Ad.Mobile.Preroll.Height + 0x14,
-          },
-          MobileAdInGameEnd2: {
-            "box-width": _SETTINGS.Ad.Mobile.End.Width + 0x2,
-            "box-height": _SETTINGS.Ad.Mobile.End.Height + 0x14,
-          },
-          MobileAdInGamePreroll3: {
-            "box-width": _SETTINGS.Ad.Mobile.Preroll.Width + 0x2,
-            "box-height": _SETTINGS.Ad.Mobile.Preroll.Height + 0x14,
-          },
-          MobileAdInGameEnd3: {
-            "box-width": _SETTINGS.Ad.Mobile.End.Width + 0x2,
-            "box-height": _SETTINGS.Ad.Mobile.End.Height + 0x14,
-          },
-        },
         init: function (_0x5d11f0) {
           this.domHandler = _0x5d11f0;
           if ("undefined" === typeof _0x5d11f0) {
@@ -2460,30 +2434,6 @@
               );
             }
           }
-          for (var _0x4d9e6e in this.adsToResize) {
-            _0x1cc8fc = ig.domHandler.getElementById("#" + _0x4d9e6e);
-            _0x244acd = ig.domHandler.getElementById("#" + _0x4d9e6e + "-Box");
-            _0x570cc3 =
-              (window.innerWidth - this.adsToResize[_0x4d9e6e]["box-width"]) /
-                0x2 +
-              "px";
-            _0x51e280 =
-              (window.innerHeight - this.adsToResize[_0x4d9e6e]["box-height"]) /
-                0x2 +
-              "px";
-            if (_0x1cc8fc) {
-              ig.domHandler.css(_0x1cc8fc, {
-                width: window.innerWidth,
-                height: window.innerHeight,
-              });
-            }
-            if (_0x244acd) {
-              ig.domHandler.css(_0x244acd, {
-                left: _0x570cc3,
-                top: _0x51e280,
-              });
-            }
-          }
           _0x1cc8fc = ig.domHandler.getElementById("#canvas");
           _0x244acd = ig.domHandler.getOffsets(_0x1cc8fc);
           _0x1cc8fc = _0x244acd.left;
@@ -2540,37 +2490,6 @@
         reorient: function () {
           console.log("changing orientation ...");
           this.resize();
-          if (ig.ua.mobile) {
-            this.resizeAds();
-          }
-        },
-        resizeAds: function () {
-          for (var _0xd41bd4 in this.adsToResize) {
-            var _0x40a9ec = ig.domHandler.getElementById("#" + _0xd41bd4);
-            var _0x14f233 = ig.domHandler.getElementById(
-              "#" + _0xd41bd4 + "-Box"
-            );
-            var _0x4a6f17 =
-              (window.innerWidth - this.adsToResize[_0xd41bd4]["box-width"]) /
-                0x2 +
-              "px";
-            var _0x16d817 =
-              (window.innerHeight - this.adsToResize[_0xd41bd4]["box-height"]) /
-                0x2 +
-              "px";
-            if (_0x40a9ec) {
-              ig.domHandler.css(_0x40a9ec, {
-                width: window.innerWidth,
-                height: window.innerHeight,
-              });
-            }
-            if (_0x14f233) {
-              ig.domHandler.css(_0x14f233, {
-                left: _0x4a6f17,
-                top: _0x16d817,
-              });
-            }
-          }
         },
         samsungFix: function () {
           if (
@@ -2727,55 +2646,6 @@
         },
       });
     });
-  ig.baked = true;
-  ig.module("plugins.handlers.api-handler").defines(function () {
-    ig.ApiHandler = ig.Class.extend({
-      apiAvailable: {
-        MJSPreroll: function () {
-          if (
-            ig.ua.mobile &&
-            ig.domHandler.JQUERYAVAILABLE &&
-            _SETTINGS &&
-            _SETTINGS.Ad.Mobile.Preroll.Enabled
-          ) {
-            MobileAdInGamePreroll.Initialize();
-          }
-        },
-        MJSHeader: function () {
-          if (
-            ig.ua.mobile &&
-            ig.domHandler.JQUERYAVAILABLE &&
-            _SETTINGS.Ad.Mobile.Header.Enabled
-          ) {
-            MobileAdInGameHeader.Initialize();
-          }
-        },
-        MJSFooter: function () {
-          if (
-            ig.ua.mobile &&
-            ig.domHandler.JQUERYAVAILABLE &&
-            _SETTINGS.Ad.Mobile.Footer.Enabled
-          ) {
-            MobileAdInGameFooter.Initialize();
-          }
-        },
-        MJSEnd: function () {
-          if (
-            ig.ua.mobile &&
-            ig.domHandler.JQUERYAVAILABLE &&
-            _SETTINGS.Ad.Mobile.End.Enabled
-          ) {
-            MobileAdInGameEnd.Initialize();
-          }
-        },
-      },
-      run: function (_0x20b240, _0x4639fb) {
-        if (this.apiAvailable[_0x20b240]) {
-          this.apiAvailable[_0x20b240](_0x4639fb);
-        }
-      },
-    });
-  });
   ig.baked = true;
   ig.module("plugins.audio.howler-player").defines(function () {
     HowlerPlayer = ig.Class.extend({
@@ -10094,7 +9964,7 @@
       ig.secure = new SecureLS({
         encodingType: "aes",
       });
-      ig.Game.prototype.name = "MJS-Game";
+      ig.Game.prototype.name = "V-Geese-Game";
       ig.Game.prototype.version = "1.0.0";
       ig.Game.prototype.sessionData = {};
       ig.Game.prototype.hash = function (_0x1e2a67) {
@@ -12161,7 +12031,6 @@
           try {
             $("#ajaxbar").css("background", "none");
           } catch (_0x3c1a83) {}
-          ig.apiHandler.run("MJSPreroll");
           wgl.init();
         },
         end: function () {
@@ -14615,7 +14484,7 @@
       });
     });
   ig.baked = true;
-  ig.module("game.mjs-game")
+  ig.module("game.v-geese-game")
     .requires(
       "plugins.patches.fps-limit-patch",
       "plugins.patches.timer-patch",
@@ -14628,7 +14497,6 @@
       "plugins.font.font-loader",
       "plugins.handlers.dom-handler",
       "plugins.handlers.size-handler",
-      "plugins.handlers.api-handler",
       "plugins.handlers.visibility-handler",
       "plugins.audio.sound-handler",
       "plugins.io.io-manager",
@@ -14642,8 +14510,8 @@
       "plugins.astar"
     )
     .defines(function () {
-      VgeeseGame = ig.Game.extend({
-        name: "MJS-Game",
+      VGeeseGame = ig.Game.extend({
+        name: "V-Geese-Game",
         version: "0.0.0",
         frameworkVersion: "1.1.2",
         sessionData: {},
@@ -14660,7 +14528,7 @@
         gravity: 0x12c,
         init: function () {
           this.tweens = new ig.TweensHandler();
-          this.setupVgeeseGameCenter();
+          this.setupVGeeseGameCenter();
           this.io = new IoManager();
           this.setupUrlParams = new ig.UrlParameters();
           this.removeLoadingWheel();
@@ -14672,28 +14540,28 @@
             bgm: 0x1,
           });
         },
-        setupVgeeseGameCenter: function () {
+        setupVGeeseGameCenter: function () {
           if (_SETTINGS) {
-            if (_SETTINGS.vGeeseGameCenter) {
+            if (_SETTINGS.VGeeseGameCenter) {
               var _0x11d4e2 = ig.domHandler.getElementByClass(
                 "gamecenter-activator"
               );
               if (
-                _SETTINGS.vGeeseGameCenter.Activator.Enabled &&
-                _SETTINGS.vGeeseGameCenter.Activator.Position
+                _SETTINGS.VGeeseGameCenter.Activator.Enabled &&
+                _SETTINGS.VGeeseGameCenter.Activator.Position
               ) {
-                console.log("vGeeseGameCenter activator settings present ....");
+                console.log("VGeeseGameCenter activator settings present ....");
                 ig.domHandler.css(_0x11d4e2, {
                   position: "absolute",
-                  left: _SETTINGS.vGeeseGameCenter.Activator.Position.Left,
-                  top: _SETTINGS.vGeeseGameCenter.Activator.Position.Top,
+                  left: _SETTINGS.VGeeseGameCenter.Activator.Position.Left,
+                  top: _SETTINGS.VGeeseGameCenter.Activator.Position.Top,
                   "z-index": 0x3,
                 });
               }
               ig.domHandler.show(_0x11d4e2);
             } else {
               console.log(
-                "vGeeseGameCenter settings not defined in game settings"
+                "VGeeseGameCenter settings not defined in game settings"
               );
             }
           }
@@ -14754,7 +14622,6 @@
         endGame: function () {
           console.log("End game");
           ig.soundHandler.bgmPlayer.stop();
-          ig.apiHandler.run("MJSEnd");
         },
         resetPlayerStats: function () {
           ig.log("resetting player stats ...");
@@ -16615,13 +16482,13 @@
   ig.baked = true;
   ig.module("game.main")
     .requires(
-      "game.mjs-game",
+      "game.v-geese-game",
       "game.levels.opening",
       "game.levels.home",
       "game.levels.game"
     )
     .defines(function () {
-      MyGame = VgeeseGame.extend({
+      MyGame = VGeeseGame.extend({
         name: "Easy-Golf-Saga",
         version: "1.0.1",
         frameworkVersion: "1.1.2",
@@ -16692,7 +16559,6 @@
       ig.domHandler = new ig.DomHandler();
       ig.domHandler.forcedDeviceDetection();
       ig.domHandler.forcedDeviceRotation();
-      ig.apiHandler = new ig.ApiHandler();
       ig.sizeHandler = new ig.SizeHandler(ig.domHandler);
       if (ig.ua.mobile) {
         ig.Sound.enabled = false;
