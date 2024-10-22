@@ -13,25 +13,53 @@
   </head>
   <body>
     <script type="text/javascript" src="./js/jquery.js"></script>
+    <script src="media/havok/havok.js"></script>
+    <script type="text/javascript" src="./js/babylon.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+    <script type="text/javascript" src="./js/jquery-extend.js"></script>
+    <script type="text/javascript" src="./js/ig.js"></script>
     <script
       id="facebook-jssdk"
       src="https://connect.facebook.net/en_US/fbinstant.6.2.js"
     ></script>
     <script type="text/javascript">
+      // 加载fb
       window.onload = function () {
         FBInstant.initializeAsync()
           .then(FBInstant.startGameAsync)
           .then(onStart);
       };
 
+      // 检查是否支持广告
       function onStart() {
         let supportedAPIs = FBInstant.getSupportedAPIs();
         let canShowAds =
           supportedAPIs.includes("getInterstitialAdAsync") &&
           supportedAPIs.includes("getRewardedVideoAsync");
         if (!canShowAds) {
-          display.error("Ads not supported in this session");
+          console.error("Ads not supported in this session");
+        } else {
+          // 如果可以则加载，插页式广告
+          preloadInterstitial();
         }
+      }
+
+      // 预加载插页式广告
+      function preloadInterstitial() {
+        console.log("Preloading Interstitial");
+        FBInstant.getInterstitialAdAsync("id")
+          .then(function (interstitial) {
+            // Load the Ad asynchronously
+            _SETTINGS.Ad.preloadedInterstitial = interstitial;
+            return _SETTINGS.Ad.preloadedInterstitial.loadAsync();
+          })
+          .then(function () {
+            console.log("Interstitial ready");
+            showInterstitial();
+          })
+          .catch(function (error) {
+            console.error("Interstitial failed to preload: " + error.message);
+          });
       }
     </script>
     <div id="ajaxbar">
@@ -39,10 +67,5 @@
       <div id="webgl"><canvas id="webglcanvas"></canvas></div>
       <div id="play" class="play" onclick></div>
     </div>
-    <script src="media/havok/havok.js"></script>
-    <script type="text/javascript" src="./js/babylon.js"></script>
-    <script type="text/javascript" src="./js/init.js"></script>
-    <script type="text/javascript" src="./js/jquery-extend.js"></script>
-    <script type="text/javascript" src="./js/ig.js"></script>
   </body>
 </html>

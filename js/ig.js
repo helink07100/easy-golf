@@ -10941,7 +10941,7 @@
         starBonus: 0xc8,
       },
       ballNum: [0x3, 0x4, 0x4, 0x5, 0x5, 0x6, 0x6, 0x7],
-      rewardBallNum: 0x3,
+      rewardBallNum: 3,
     };
   });
   ig.baked = true;
@@ -15226,12 +15226,12 @@
           this.parent();
           this.text = _STRINGS.Game.EndGame;
         },
-        extraDraw: function (_0x5a7d29) {
-          _0x5a7d29.strokeStyle = "#404040";
-          _0x5a7d29.font = "75px text";
-          _0x5a7d29.lineWidth = 0xa;
-          _0x5a7d29.lineJoin = "round";
-          _0x5a7d29.textAlign = "center";
+        extraDraw: function (textContext) {
+          textContext.strokeStyle = "#404040";
+          textContext.font = "75px text";
+          textContext.lineWidth = 0xa;
+          textContext.lineJoin = "round";
+          textContext.textAlign = "center";
           ig.control.drawText(this.text, 0, -28);
         },
         callback: function (_0x405e48) {
@@ -15540,6 +15540,17 @@
                 if (wgl.ready) {
                   wgl.start();
                   ig.game.director.jumpTo(LevelGame);
+
+                  // 插页式广告
+                  _SETTINGS.Ad.preloadedInterstitial
+                    .showAsync()
+                    .then(function () {
+                      // 看完之后回调
+                      console.log("Interstitial watched!");
+                    })
+                    .catch(function (error) {
+                      console.error(error.message);
+                    });
                 }
               }.bind(this),
             }
@@ -15625,6 +15636,7 @@
     });
   });
   ig.baked = true;
+  // 重新开始玩
   ig.module("game.entities.buttons.button-replay")
     .requires("game.entities.popups.popup-confirmation")
     .defines(function () {
@@ -15652,6 +15664,7 @@
       });
     });
   ig.baked = true;
+  // 游戏暂停
   ig.module("game.entities.popups.popup-pause")
     .requires(
       "game.entities.popups.popup",
@@ -16092,6 +16105,7 @@
       });
     });
   ig.baked = true;
+  // 奖励视频
   ig.module("game.entities.popups.popup-reward")
     .requires("game.entities.popups.popup-confirmation")
     .defines(function () {
@@ -16107,14 +16121,15 @@
             ig.params.rewardBallNum
           );
         },
-        extraDraw: function (_0x3dbbd5) {
-          _0x3dbbd5.strokeStyle = "#404040";
-          _0x3dbbd5.font = "75px text";
-          _0x3dbbd5.lineWidth = 0xa;
-          _0x3dbbd5.lineJoin = "round";
-          _0x3dbbd5.textAlign = "center";
+        extraDraw: function (textContext) {
+          textContext.strokeStyle = "#404040";
+          textContext.font = "75px text";
+          textContext.lineWidth = 0xa;
+          textContext.lineJoin = "round";
+          textContext.textAlign = "center";
           ig.control.drawText(this.text, 0x0, -0x1c);
         },
+        // 点击按钮以后回调，如果点yes,则观看奖励视频，否则回到首页
         callback: function (_0x361d3d) {
           switch (_0x361d3d) {
             case "RVAd":
@@ -16124,93 +16139,43 @@
               ig.control.over();
           }
         },
+        // 观看奖励视频
         showRewardedVideo: function () {
-          ig.game.spawnEntity(EntityPopupAd, 0x0, 0x0, {
-            callback: this.rewardedVideoResult.bind(this),
-          });
+          // 加载奖励视频: 广告位ID,
+          FBInstant.getRewardedVideoAsync("id")
+            .then(function (rewarded) {
+              // Load the Ad asynchronously
+              _SETTINGS.Ad.preloadedRewardedVideo = rewarded;
+              return _SETTINGS.Ad.preloadedRewardedVideo.loadAsync();
+            })
+            .then(function () {
+              this.rewardedVideoWatch();
+            })
+            .catch(function (error) {
+              console.error(
+                "Rewarded Video failed to preload: " + error.message
+              );
+            });
         },
-        rewardedVideoResult: function (_0x63df92) {
-          if (_0x63df92) {
-            ig.control.reward();
-          } else {
-            ig.control.over();
-          }
+
+        // 是否已经观看
+        rewardedVideoWatch: function () {
+          _SETTINGS.Ad.preloadedRewardedVideo
+            .showAsync()
+            .then(function () {
+              // 看完之后回调
+              ig.control.reward();
+            })
+            .catch(function (error) {
+              console.error(error.message);
+              ig.control.over();
+            });
         },
       });
       EntityButtonYesRV = EntityButtonPopup.extend({
         image: new ig.Image("media/graphics/sprites/ui/btn-yes-rv.png"),
         callback: function () {
           this.popup.hide("RVAd");
-        },
-      });
-      EntityPopupAd = ig.Entity.extend({
-        callback: null,
-        zIndex: 0x19,
-        alpha: 0x0,
-        init: function (_0xd6ff74, _0x53a83d, _0xa7a25b) {
-          this.parent(_0xd6ff74, _0x53a83d, _0xa7a25b);
-          this.saveLayer = ig.game.currentLayer;
-          ig.game.currentLayer = ig.game.layers.popup2;
-          this.titleText = "REWARDED VIDEO AD";
-          this.subText = "Rewarded in 3 second(s)...";
-          this.timer = new ig.Timer(3);
-          this.time = 3;
-          this.repos();
-          this.fade(1);
-        },
-        fade: function (_0x53c694) {
-          this.tween(
-            {
-              alpha: _0x53c694,
-            },
-            0.25,
-            {
-              onComplete: function () {
-                if (0x0 === _0x53c694) {
-                  ig.game.currentLayer = this.saveLayer;
-                  if (this.callback) {
-                    this.callback(true);
-                  }
-                  this.kill();
-                }
-              }.bind(this),
-            }
-          ).start();
-        },
-        update: function () {
-          this.parent();
-          if (0x0 < this.time) {
-            if (0x0 < this.timer.delta()) {
-              this.time = 0x0;
-              this.fade(0x0);
-            } else {
-              this.time = Math.ceil(-this.timer.delta());
-            }
-          }
-        },
-        draw: function () {
-          var context = ig.system.context;
-          context.save();
-          context.setTransform(0x1, 0x0, 0x0, 0x1, 0x0, 0x0);
-          context.globalAlpha = this.alpha;
-          context.fillStyle = "rgba(0,0,0,0.8)";
-          context.fillRect(0x0, 0x0, ig.system.width, ig.system.height);
-          context.textAlign = "center";
-          context.font = "64px text";
-          context.fillStyle = "#FF0";
-          context.fillText(this.titleText, ig.game.midX, this.titleY);
-          context.font = "40px text";
-          context.fillStyle = "#FFF";
-          context.fillText(
-            "Rewarded in... " + this.time + " second(s)",
-            ig.game.midX,
-            this.subTextY
-          );
-          context.restore();
-        },
-        repos: function () {
-          this.titleY = ig.game.midY - 0x23;
-          this.subTextY = this.titleY + 0x50;
         },
       });
     });
@@ -16298,7 +16263,7 @@
           this.updateHoleText();
           this.ballLeft = this.ballTotal = ig.params.ballNum[0x0];
           this.repos();
-          wgl.cameraEffect = this.showRV = true;
+          wgl.cameraEffect = true;
           wgl.ball.isFocused =
             this.btPause.visible =
             this.usedExtraBall =
@@ -16308,6 +16273,7 @@
           wgl.start();
           wgl.startShow();
         },
+        // 奖励
         reward: function () {
           this.ballLeft = ig.params.rewardBallNum;
           this.usedExtraBall = true;
@@ -16385,19 +16351,21 @@
             this.resumeTimers();
           }
         },
+        // 每次失败都会检查球的个数
         fail: function () {
           if (this.checkBall()) {
+            // 这段代码
             this.resetTimer.start();
           }
         },
+        // 检查是否需要观看奖励视频
         checkBall: function () {
-          return 0x0 >= this.ballLeft
-            ? (this.showRV
-                ? (ig.game.spawnEntity(EntityPopupReward),
-                  (this.showRV = false))
-                : this.over(),
-              false)
-            : true;
+          if (this.ballLeft <= 0) {
+            ig.game.spawnEntity(EntityPopupReward);
+            return false;
+          } else {
+            return true;
+          }
         },
         addScore: function (_0x4e2c97) {
           this.score += _0x4e2c97;
@@ -16489,7 +16457,7 @@
     )
     .defines(function () {
       MyGame = VGeeseGame.extend({
-        name: "Easy-Golf-Saga",
+        name: "Easy-Golf",
         version: "1.0.1",
         frameworkVersion: "1.1.2",
         layers: {

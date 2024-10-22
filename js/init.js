@@ -40,6 +40,10 @@ var _STRINGS = {
   },
 };
 var _SETTINGS = {
+  Ad: {
+    preloadedRewardedVideo: null,
+    preloadedInterstitial: null,
+  },
   API: {
     Enabled: true,
     Log: {
