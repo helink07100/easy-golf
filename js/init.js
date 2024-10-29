@@ -1,4 +1,4 @@
-var _STRINGS = {
+var STRINGS = {
   Splash: {
     Loading: "Loading ...",
     LogoLine1: "Some text here",
@@ -39,7 +39,7 @@ var _STRINGS = {
     NewGame2: "( FROM HOLE 1 ) ?",
   },
 };
-var _SETTINGS = {
+var SETTINGS = {
   Ad: {
     preloadedRewardedVideo: null,
     preloadedInterstitial: null,
@@ -124,14 +124,14 @@ var _SETTINGS = {
   },
 };
 if (
-  "undefined" !== typeof _SETTINGS.Versioning &&
-  null !== _SETTINGS.Versioning &&
-  true === _SETTINGS.Versioning.DisplayLog
+  "undefined" !== typeof SETTINGS.Versioning &&
+  null !== SETTINGS.Versioning &&
+  true === SETTINGS.Versioning.DisplayLog
 ) {
   console.log(
     "Release: v" +
-      _SETTINGS.Versioning.Version +
+      SETTINGS.Versioning.Version +
       "+build." +
-      _SETTINGS.Versioning.Build
+      SETTINGS.Versioning.Build
   );
 }

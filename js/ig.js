@@ -2164,18 +2164,18 @@
         if (_0x300e43) {
           switch (_0x300e43) {
             case "mobile":
-              console.log("serving mobile version ...");
+              //console.log("serving mobile version ...");
               ig.ua.mobile = true;
               break;
             case "desktop":
-              console.log("serving desktop version ...");
+              //console.log("serving desktop version ...");
               ig.ua.mobile = false;
               break;
             default:
-              console.log("serving universal version ...");
+            //console.log("serving universal version ...");
           }
         } else {
-          console.log("serving universal version ...");
+          //console.log("serving universal version ...");
         }
       },
       forcedDeviceRotation: function () {
@@ -2183,11 +2183,11 @@
         if (_0x4f7f0b) {
           switch (_0x4f7f0b) {
             case "portrait":
-              console.log("force rotate to portrait");
+              //console.log("force rotate to portrait");
               window.orientation = 0x0;
               break;
             case "landscape":
-              console.log("force rotate to horizontal");
+              //console.log("force rotate to horizontal");
               window.orientation = 0x5a;
               break;
             default:
@@ -2488,7 +2488,7 @@
           this.resizeLayers();
         },
         reorient: function () {
-          console.log("changing orientation ...");
+          //console.log("changing orientation ...");
           this.resize();
         },
         samsungFix: function () {
@@ -3165,7 +3165,7 @@
         try {
           window.localStorage.setItem(_0x1c3868, JSON.stringify(_0x5d9be2));
         } catch (_0x4cf04b) {
-          console.log(_0x4cf04b);
+          //console.log(_0x4cf04b);
         }
       },
       setHighest: function (_0x3fd33b, _0x34ff45) {
@@ -5485,7 +5485,7 @@
             window.localStorage.removeItem("test");
             this.storage = new ig.Storage();
           } catch (_0x3b0fdf) {
-            console.log("using fake storage");
+            //console.log("using fake storage");
             this.storage = new ig.FakeStorage();
           }
         },
@@ -11597,7 +11597,7 @@
                   }.bind(this)
                 );
               } catch (_0x373dab) {
-                console.log(_0x373dab);
+                //console.log(_0x373dab);
               }
             }.bind(this)
           );
@@ -12050,7 +12050,7 @@
             );
             this.desktopCoverDIV.innerHTML =
               "<div style='color:white;background-color: rgba(255, 255, 255, 0.3); border: 2px solid #fff; font-size:20px; border-radius: 5px; position: relative; float: left; top: 50%; left: 50%; transform: translate(-50%, -50%);'><div style='padding:20px 50px; font-family: montserrat;'>" +
-              _STRINGS.Splash.TapToStart +
+              STRINGS.Splash.TapToStart +
               "</div></div>";
             (
               document.getElementById("play").parentNode ||
@@ -12073,7 +12073,7 @@
                 }
               }
             } catch (_0x13700e) {
-              console.log(_0x13700e);
+              //console.log(_0x13700e);
             }
             this.desktopCoverDIV.addEventListener("click", function () {
               ig.soundHandler.unlockWebAudio();
@@ -12089,7 +12089,7 @@
           if (this.checkWGL && wgl.ready) {
             this.checkWGL = false;
             clearInterval(this._intervalId);
-            if (_SETTINGS.TapToStartAudioUnlock.Enabled) {
+            if (SETTINGS.TapToStartAudioUnlock.Enabled) {
               this.tapToStartDiv(function () {
                 ig.system.setGame(MyGame);
               });
@@ -13189,21 +13189,21 @@
         switch (getQueryVariable("iphone")) {
           case "true":
             ig.ua.iPhone = true;
-            console.log("iPhone mode");
+          //console.log("iPhone mode");
         }
         var _0x5727a3 = getQueryVariable("webview");
         if (_0x5727a3) {
           switch (_0x5727a3) {
             case "true":
               ig.ua.is_uiwebview = true;
-              console.log("webview mode");
+            //console.log("webview mode");
           }
         }
         if ((_0x5727a3 = getQueryVariable("debug"))) {
           switch (_0x5727a3) {
             case "true":
               ig.game.showDebugMenu();
-              console.log("debug mode");
+            //console.log("debug mode");
           }
         }
         switch (getQueryVariable("view")) {
@@ -13331,7 +13331,7 @@
           try {
             window.localStorage.setItem(_0x51d4ac, JSON.stringify(_0x215b48));
           } catch (_0xa7a73d) {
-            console.log(_0xa7a73d);
+            //console.log(_0xa7a73d);
           }
         },
         setHighest: function (_0x533208, _0x214805) {
@@ -14436,19 +14436,19 @@
         fontSize: 0x24,
         init: function (_0x55a492, _0x3c9dce, _0x23537f) {
           if (!ig.global.wm) {
-            this.text = _STRINGS.Game.MoreGames;
+            this.text = STRINGS.Game.MoreGames;
           }
           this.parent(_0x55a492, _0x3c9dce, _0x23537f);
           if (!ig.global.wm) {
             this.div_layer_name = _0x23537f.div_layer_name
               ? _0x23537f.div_layer_name
               : "more-games";
-            if (_SETTINGS.MoreGames.Enabled) {
-              if (_SETTINGS.MoreGames.Link) {
-                this.link = _SETTINGS.MoreGames.Link;
+            if (SETTINGS.MoreGames.Enabled) {
+              if (SETTINGS.MoreGames.Link) {
+                this.link = SETTINGS.MoreGames.Link;
               }
-              if (_SETTINGS.MoreGames.NewWindow) {
-                this.newWindow = _SETTINGS.MoreGames.NewWindow;
+              if (SETTINGS.MoreGames.NewWindow) {
+                this.newWindow = SETTINGS.MoreGames.NewWindow;
               }
               this.clickableLayer = new ClickableDivLayer(this);
               this.repos();
@@ -14541,28 +14541,28 @@
           });
         },
         setupVGeeseGameCenter: function () {
-          if (_SETTINGS) {
-            if (_SETTINGS.VGeeseGameCenter) {
+          if (SETTINGS) {
+            if (SETTINGS.VGeeseGameCenter) {
               var _0x11d4e2 = ig.domHandler.getElementByClass(
                 "gamecenter-activator"
               );
               if (
-                _SETTINGS.VGeeseGameCenter.Activator.Enabled &&
-                _SETTINGS.VGeeseGameCenter.Activator.Position
+                SETTINGS.VGeeseGameCenter.Activator.Enabled &&
+                SETTINGS.VGeeseGameCenter.Activator.Position
               ) {
-                console.log("VGeeseGameCenter activator settings present ....");
+                //console.log("VGeeseGameCenter activator settings present ....");
                 ig.domHandler.css(_0x11d4e2, {
                   position: "absolute",
-                  left: _SETTINGS.VGeeseGameCenter.Activator.Position.Left,
-                  top: _SETTINGS.VGeeseGameCenter.Activator.Position.Top,
+                  left: SETTINGS.VGeeseGameCenter.Activator.Position.Left,
+                  top: SETTINGS.VGeeseGameCenter.Activator.Position.Top,
                   "z-index": 0x3,
                 });
               }
               ig.domHandler.show(_0x11d4e2);
             } else {
-              console.log(
-                "VGeeseGameCenter settings not defined in game settings"
-              );
+              //console.log(
+              // ("VGeeseGameCenter settings not defined in game settings");
+              // );
             }
           }
         },
@@ -14574,31 +14574,31 @@
           try {
             $("#ajaxbar").css("background", "none");
           } catch (_0x4030e3) {
-            console.log(_0x4030e3);
+            //console.log(_0x4030e3);
           }
         },
         showDebugMenu: function () {
-          console.log("showing debug menu ...");
+          //console.log("showing debug menu ...");
           ig.Entity._debugShowBoxes = true;
           $(".ig_debug").show();
         },
         start: function () {
           this.resetPlayerStats();
           this.director = new ig.Director(this, [LevelLevel1]);
-          if (_SETTINGS.Branding.Splash.Enabled) {
+          if (SETTINGS.Branding.Splash.Enabled) {
             try {
               this.branding = new ig.BrandingSplash();
             } catch (_0x3f3755) {
-              console.log(_0x3f3755);
-              console.log("Loading original levels ...");
+              //console.log(_0x3f3755);
+              //console.log("Loading original levels ...");
               this.director.loadLevel(this.director.currentLevel);
             }
           } else {
             this.director.loadLevel(this.director.currentLevel);
           }
           if (
-            _SETTINGS.Branding.Splash.Enabled ||
-            _SETTINGS.DeveloperBranding.Splash.Enabled
+            SETTINGS.Branding.Splash.Enabled ||
+            SETTINGS.DeveloperBranding.Splash.Enabled
           ) {
             this.spawnEntity(EntityPointerSelector, 0x32, 0x32);
           }
@@ -14620,7 +14620,7 @@
           }
         },
         endGame: function () {
-          console.log("End game");
+          //console.log("End game");
           ig.soundHandler.bgmPlayer.stop();
         },
         resetPlayerStats: function () {
@@ -14636,7 +14636,7 @@
           if (ig.control) {
             ig.control.pauseGame();
           }
-          console.log("Game Paused");
+          //console.log("Game Paused");
         },
         resumeGame: function () {
           ig.system.startRunLoop.call(ig.system);
@@ -14645,7 +14645,7 @@
           if (ig.control) {
             ig.control.resumeGame();
           }
-          console.log("Game Resumed");
+          //console.log("Game Resumed");
         },
         showOverlay: function (_0x340fd8) {
           for (i = 0x0; i < _0x340fd8.length; i++) {
@@ -14714,7 +14714,7 @@
             this.debugLine = 0x1;
             this.debug.push(_0x4970c5);
           }
-          console.log(_0x4970c5);
+          //console.log(_0x4970c5);
         },
         debugEnable: function () {
           if (ig.input.pressed("click")) {
@@ -14734,14 +14734,14 @@
         },
         drawVersion: function () {
           if (
-            "undefined" !== typeof _SETTINGS.Versioning &&
-            null !== _SETTINGS.Versioning &&
-            _SETTINGS.Versioning.DrawVersion
+            "undefined" !== typeof SETTINGS.Versioning &&
+            null !== SETTINGS.Versioning &&
+            SETTINGS.Versioning.DrawVersion
           ) {
             var _0xa8d17b = ig.system.context;
-            fontSize = _SETTINGS.Versioning.FontSize;
-            fontFamily = _SETTINGS.Versioning.FontFamily;
-            fillStyle = _SETTINGS.Versioning.FillStyle;
+            fontSize = SETTINGS.Versioning.FontSize;
+            fontFamily = SETTINGS.Versioning.FontFamily;
+            fillStyle = SETTINGS.Versioning.FillStyle;
             _0xa8d17b.save();
             _0xa8d17b.textBaseline = "bottom";
             _0xa8d17b.textAlign = "left";
@@ -14749,9 +14749,9 @@
             _0xa8d17b.fillStyle = fillStyle || "#ffffff";
             _0xa8d17b.fillText(
               "v" +
-                _SETTINGS.Versioning.Version +
+                SETTINGS.Versioning.Version +
                 "+build." +
-                _SETTINGS.Versioning.Build,
+                SETTINGS.Versioning.Build,
               0xa,
               ig.system.height - 0xa
             );
@@ -14805,7 +14805,7 @@
           this.pos.y = -this.size.y - 0x32;
           this.savedLayer = ig.game.currentLayer;
           ig.game.currentLayer = this.layer;
-          this.title = _STRINGS.Game.Settings;
+          this.title = STRINGS.Game.Settings;
           this.titleY -= this.halfSize.y;
           this.addEntities();
           ig.game.sortEntitiesDeferred();
@@ -14926,7 +14926,7 @@
         ],
         pageId: 0,
         addEntities: function () {
-          this.title = _STRINGS.Game.Tutorial;
+          this.title = STRINGS.Game.Tutorial;
           var _0x4be0fd = this.zIndex + 1;
           var _0x5e02ff = this.halfSize.y + 0xa;
           if (ig.home.btMoreGames) {
@@ -14977,8 +14977,8 @@
           this.imageY = -_0x4be0fd.height / 0x2 - 0x32;
           this.textY0 = _0x4be0fd.height / 0x2;
           this.textY1 = this.textY0 + 0x3c;
-          this.text1 = _STRINGS.Game.Tutorial1Line1;
-          this.text2 = _STRINGS.Game.Tutorial1Line2;
+          this.text1 = STRINGS.Game.Tutorial1Line1;
+          this.text2 = STRINGS.Game.Tutorial1Line2;
           this.titleY -= 0xc;
           this.tutorialImage = this.tutorials[0];
         },
@@ -14998,9 +14998,9 @@
             }
             this.arrowPrevious.visible = true;
             this.text1 =
-              _STRINGS.Game["Tutorial" + (this.pageId + 0x1) + "Line1"];
+              STRINGS.Game["Tutorial" + (this.pageId + 0x1) + "Line1"];
             this.text2 =
-              _STRINGS.Game["Tutorial" + (this.pageId + 0x1) + "Line2"];
+              STRINGS.Game["Tutorial" + (this.pageId + 0x1) + "Line2"];
           }
         },
         previous: function () {
@@ -15012,9 +15012,9 @@
             }
             this.arrowNext.visible = true;
             this.text1 =
-              _STRINGS.Game["Tutorial" + (this.pageId + 0x1) + "Line1"];
+              STRINGS.Game["Tutorial" + (this.pageId + 0x1) + "Line1"];
             this.text2 =
-              _STRINGS.Game["Tutorial" + (this.pageId + 0x1) + "Line2"];
+              STRINGS.Game["Tutorial" + (this.pageId + 0x1) + "Line2"];
           }
         },
         callback: function (_0x194962) {
@@ -15158,8 +15158,8 @@
         isRV: false,
         addEntities: function () {
           this.title = this.isRV
-            ? _STRINGS.Game.Reward
-            : _STRINGS.Game.Confirmation;
+            ? STRINGS.Game.Reward
+            : STRINGS.Game.Confirmation;
           var _0x532181 = this.zIndex + 1;
           var _0xbab8c5 = this.halfSize.y - 220;
           this.entities.push(
@@ -15190,8 +15190,8 @@
           _0x506c30.lineWidth = 0xa;
           _0x506c30.lineJoin = "round";
           _0x506c30.textAlign = "center";
-          ig.control.drawText(_STRINGS.Game.NewGame, 0, -85);
-          ig.control.drawText(_STRINGS.Game.NewGame2, 0, 28);
+          ig.control.drawText(STRINGS.Game.NewGame, 0, -85);
+          ig.control.drawText(STRINGS.Game.NewGame2, 0, 28);
         },
         callback: function (_0x119306) {
           switch (_0x119306) {
@@ -15224,7 +15224,7 @@
       EntityPopupConfirmationHome = EntityPopupConfirmation.extend({
         addEntities: function () {
           this.parent();
-          this.text = _STRINGS.Game.EndGame;
+          this.text = STRINGS.Game.EndGame;
         },
         extraDraw: function (textContext) {
           textContext.strokeStyle = "#404040";
@@ -15278,7 +15278,7 @@
     .defines(function () {
       EntityPopupSettings = EntityPopup.extend({
         addEntities: function () {
-          this.title = _STRINGS.Game.Settings;
+          this.title = STRINGS.Game.Settings;
           var zIndex = this.zIndex + 1;
           var _0x5e4577 = -72.5;
           var _0x5164ad = this.halfSize.y - 160 - 0x53;
@@ -15334,7 +15334,7 @@
       EntityButtonSettings = EntityButtonFix.extend({
         image: new ig.Image("media/graphics/sprites/ui/btn-settings.png"),
         repos: function () {
-          if (_SETTINGS.MoreGames.Enabled) {
+          if (SETTINGS.MoreGames.Enabled) {
             this.pos.x = ig.game.midX - this.halfSize.x + 0xe6;
             this.pos.y = ig.game.midY + 0xe6;
           } else {
@@ -15358,20 +15358,20 @@
     .defines(function () {
       // ig.Language = {
       //   isEnabled: function () {
-      //     return _SETTINGS.Language.show;
+      //     return SETTINGS.Language.show;
       //   },
       // };
       EntityLanguagePopup = EntityPopup.extend({
         pageId: 1000,
         addEntities: function () {
-          this.text = _SETTINGS.Language.Option.forEach((i) => i.label);
+          this.text = SETTINGS.Language.Option.forEach((i) => i.label);
         },
         extraDraw: function (textContext) {
           textContext.font = "50px text";
           textContext.textAlign = "center";
           textContext.fillStyle = "#000000";
 
-          this.text = _SETTINGS.Language.Option.forEach((i, index) => {
+          this.text = SETTINGS.Language.Option.forEach((i, index) => {
             const ty = index < 3 ? 0 : 30;
             const tx = (index % 3) + 20;
             textContext.fillText(i.label, tx, ty);
@@ -15458,7 +15458,7 @@
               scale: 0.01,
             })
           );
-          if (_SETTINGS.MoreGames.Enabled) {
+          if (SETTINGS.MoreGames.Enabled) {
             this.btMoreGames = ig.game.spawnEntity(
               EntityButtonMoreGames,
               0,
@@ -15474,7 +15474,7 @@
               scale: 0.01,
             })
           );
-          if (_SETTINGS.Language.show) {
+          if (SETTINGS.Language.show) {
             this.buttons.push(
               ig.game.spawnEntity(EntityButtonLanguage, 0, 0, {
                 scale: 0.01,
@@ -15542,11 +15542,11 @@
                   ig.game.director.jumpTo(LevelGame);
 
                   // 插页式广告
-                  _SETTINGS.Ad.preloadedInterstitial
+                  SETTINGS.Ad.preloadedInterstitial
                     .showAsync()
                     .then(function () {
                       // 看完之后回调
-                      console.log("Interstitial watched!");
+                      //console.log("Interstitial watched!");
                     })
                     .catch(function (error) {
                       console.error(error.message);
@@ -15679,7 +15679,7 @@
         addEntities: function () {
           wgl.forcedPause = true;
           ig.control.pauseGame();
-          this.title = _STRINGS.Game.Pause;
+          this.title = STRINGS.Game.Pause;
           var _0x3d2e33 = this.zIndex + 0x1;
           var _0x39e28c = this.halfSize.y - 160 - 0x5a;
           this.entities.push(
@@ -15728,7 +15728,7 @@
           wgl.forcedPause = false;
           switch (_0xc3007f) {
             case "home":
-              console.log(wgl.forcedPause);
+              //console.log(wgl.forcedPause);
               ig.game.director.jumpTo(LevelHome);
               break;
             case "replay":
@@ -15781,9 +15781,9 @@
         addEntities: function () {
           this.title = wgl.win
             ? wgl.holeId < ig.params.ballNum.length
-              ? _STRINGS.Game.Complete.replace("#", wgl.holeId)
-              : _STRINGS.Game.GameComplete
-            : _STRINGS.Game.Over;
+              ? STRINGS.Game.Complete.replace("#", wgl.holeId)
+              : STRINGS.Game.GameComplete
+            : STRINGS.Game.Over;
           var _0x50961a = this.zIndex + 0x1;
           var _0x3679f7 = this.halfSize.y - 160 - 60;
           this.entities.push(
@@ -15836,16 +15836,16 @@
           textContext.lineWidth = 0xa;
           textContext.lineJoin = "round";
           textContext.textAlign = "left";
-          ig.control.drawText(_STRINGS.Game.Score, -0xfa, this.scoreTextY);
+          ig.control.drawText(STRINGS.Game.Score, -0xfa, this.scoreTextY);
           textContext.textAlign = "right";
           ig.control.drawText(this.scoreText, 0xfa, this.scoreTextY);
           if (!wgl.win || wgl.holeId === ig.params.ballNum.length) {
             if (this.bestScore) {
               textContext.textAlign = "center";
-              ig.control.drawText(_STRINGS.Game.NewBest, 0x0, 0x1e);
+              ig.control.drawText(STRINGS.Game.NewBest, 0x0, 0x1e);
             } else {
               textContext.textAlign = "left";
-              ig.control.drawText(_STRINGS.Game.Best, -0xfa, 0x1e);
+              ig.control.drawText(STRINGS.Game.Best, -0xfa, 0x1e);
               textContext.textAlign = "right";
               ig.control.drawText(this.bestText, 0xfa, 0x1e);
             }
@@ -16003,41 +16003,41 @@
           ig.game.sortEntitiesDeferred();
         },
         show: function () {
-          this.text = ig.util.rGet(_STRINGS.Game.Cheers);
+          this.text = ig.util.rGet(STRINGS.Game.Cheers);
           if (ig.control.usedExtraBall) {
             switch (ig.params.rewardBallNum - ig.control.ballLeft) {
               case 0x1:
-                this.subText = _STRINGS.Game.Bogey;
+                this.subText = STRINGS.Game.Bogey;
                 break;
               case 0x2:
-                this.subText = _STRINGS.Game.DoubleBogey;
+                this.subText = STRINGS.Game.DoubleBogey;
                 break;
               case 0x3:
-                this.subText = _STRINGS.Game.TripleBogey;
+                this.subText = STRINGS.Game.TripleBogey;
                 break;
               default:
-                this.subText = _STRINGS.Game.TriedHard;
+                this.subText = STRINGS.Game.TriedHard;
             }
           } else {
             var _0xf60e97 = ig.control.ballTotal - ig.control.ballLeft;
             if (0x1 === _0xf60e97) {
-              this.subText = _STRINGS.Game.HoleIn.replace("#", "1");
+              this.subText = STRINGS.Game.HoleIn.replace("#", "1");
             } else {
               switch (ig.control.ballLeft) {
                 case 0x0:
-                  this.subText = _STRINGS.Game.Par;
+                  this.subText = STRINGS.Game.Par;
                   break;
                 case 0x1:
-                  this.subText = _STRINGS.Game.Birdie;
+                  this.subText = STRINGS.Game.Birdie;
                   break;
                 case 0x2:
-                  this.subText = _STRINGS.Game.Eagle;
+                  this.subText = STRINGS.Game.Eagle;
                   break;
                 case 0x3:
-                  this.subText = _STRINGS.Game.DoubleEagle;
+                  this.subText = STRINGS.Game.DoubleEagle;
                   break;
                 default:
-                  this.subText = _STRINGS.Game.HoleIn.replace("#", _0xf60e97);
+                  this.subText = STRINGS.Game.HoleIn.replace("#", _0xf60e97);
               }
             }
           }
@@ -16116,7 +16116,7 @@
         },
         addEntities: function () {
           this.parent();
-          this.text = _STRINGS.Game.RewardMessage.replace(
+          this.text = STRINGS.Game.RewardMessage.replace(
             "#",
             ig.params.rewardBallNum
           );
@@ -16145,8 +16145,8 @@
           FBInstant.getRewardedVideoAsync("id")
             .then(function (rewarded) {
               // Load the Ad asynchronously
-              _SETTINGS.Ad.preloadedRewardedVideo = rewarded;
-              return _SETTINGS.Ad.preloadedRewardedVideo.loadAsync();
+              SETTINGS.Ad.preloadedRewardedVideo = rewarded;
+              return SETTINGS.Ad.preloadedRewardedVideo.loadAsync();
             })
             .then(function () {
               this.rewardedVideoWatch();
@@ -16160,7 +16160,7 @@
 
         // 是否已经观看
         rewardedVideoWatch: function () {
-          _SETTINGS.Ad.preloadedRewardedVideo
+          SETTINGS.Ad.preloadedRewardedVideo
             .showAsync()
             .then(function () {
               // 看完之后回调
@@ -16314,7 +16314,7 @@
         },
         updateHoleText: function () {
           this.holeText =
-            _STRINGS.Game.Hole + wgl.holeId + " / " + ig.params.ballNum.length;
+            STRINGS.Game.Hole + wgl.holeId + " / " + ig.params.ballNum.length;
         },
         reset: function (_0x4eab85) {
           this.btPause.visible = true;
@@ -16491,7 +16491,7 @@
         },
         start: function () {
           this.director = new ig.Director(this, [LevelHome, LevelGame]);
-          if (_SETTINGS.Branding.Splash.Enabled) {
+          if (SETTINGS.Branding.Splash.Enabled) {
             try {
               this.branding = new ig.BrandingSplash();
             } catch (_0x3692ff) {
