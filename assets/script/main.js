@@ -3,13 +3,24 @@ window.onload = function () {
   // 确保 Facebook SDK 加载完成
   FBInstant.initializeAsync()
     .then(() => {
-      // // console.log("Facebook SDK initialized");
+      console.log("Facebook SDK initialized");
 
       // 添加加载进度
-      setLoadingProgress();
+      // setLoadingProgress();
+
+      FBInstant.startGameAsync()
+        .then(() => {
+          // // console.log("Game started!");
+          // progressBar.style.display = "none";
+          // 游戏主逻辑
+          startMainGame();
+        })
+        .catch((error) => {
+          console.error("Error starting game:", error);
+        });
     })
     .catch((error) => {
-      // console.error("Error initializing Facebook SDK:", error);
+      console.error("Error initializing Facebook SDK:", error);
     });
 };
 
@@ -46,7 +57,7 @@ const setLoadingProgress = () => {
           startMainGame();
         })
         .catch((error) => {
-          // console.error("Error starting game:", error);
+          console.error("Error starting game:", error);
         });
     }
   }, 200); // Adjust the interval or replace with actual loading logic
@@ -54,20 +65,19 @@ const setLoadingProgress = () => {
 
 // 检查是否支持广告
 function startMainGame() {
-  FBInstant.getSupportedAPIs().then((supportedAPIs) => {
-    // // console.log("Supported APIs:", supportedAPIs);
-
-    // 例如，检查是否支持用户数据存储
-    let canShowAds =
-      supportedAPIs.includes("getInterstitialAdAsync") &&
-      supportedAPIs.includes("getRewardedVideoAsync");
-    if (!canShowAds) {
-      // console.error("Ads not supported in this session");
-    } else {
-      // 如果可以则加载，插页式广告
-      preloadInterstitial();
-    }
-  });
+  // FBInstant.getSupportedAPIs().then((supportedAPIs) => {
+  //   // // console.log("Supported APIs:", supportedAPIs);
+  //   // 例如，检查是否支持用户数据存储
+  //   let canShowAds =
+  //     supportedAPIs.includes("getInterstitialAdAsync") &&
+  //     supportedAPIs.includes("getRewardedVideoAsync");
+  //   if (!canShowAds) {
+  //     // console.error("Ads not supported in this session");
+  //   } else {
+  //     // 如果可以则加载，插页式广告
+  //     preloadInterstitial();
+  //   }
+  // });
 }
 
 // 预加载插页式广告

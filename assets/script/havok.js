@@ -314,7 +314,7 @@ var HavokPhysics = (() => {
       return filename.startsWith(dataURIPrefix);
     }
     var wasmBinaryFile;
-    wasmBinaryFile = "havok.wasm";
+    wasmBinaryFile = "./havok.wasm";
     if (!isDataURI(wasmBinaryFile)) {
       wasmBinaryFile = locateFile(wasmBinaryFile);
     }

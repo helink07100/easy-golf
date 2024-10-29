@@ -1,0 +1,301 @@
+{
+  "bundle": {
+    "name": "Easy Golf",
+    "version": "1.0.0",
+    "description": "Play golf on a beautiful island beach.",
+    "entryPoint": "index.html",
+    "assets": [
+      {
+        "type": "script",
+        "url": "assets/script/ig.js"
+      },
+      {
+        "type": "script",
+        "url": "assets/script/init.js"
+      },
+      {
+        "type": "script",
+        "url": "assets/script/jquery.js"
+      },
+      {
+        "type": "script",
+        "url": "assets/script/jquery-extend.js"
+      },
+      {
+        "type": "script",
+        "url": "assets/script/main.js"
+      },
+      {
+        "type": "script",
+        "url": "assets/script/havok.js"
+      },
+      {
+        "type": "wasm",
+        "url": "assets/script/havok.wasm"
+      },
+      {
+        "type": "image",
+        "url": "assets/logo/logo-fav.jpeg"
+      },
+      {
+        "type": "image",
+        "url": "assets/logo/logo-full.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/logo/logo-in.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/logo/logo-load.png"
+      },
+      {
+        "type": "mp3",
+        "url": "assets/media/audio/opening/logosplash1.mp3"
+      },
+      {
+        "type": "mp3",
+        "url": "assets/media/audio/opening/logosplash2.mp3"
+      },
+      {
+        "type": "mp3",
+        "url": "assets/media/audio/sfx/button.mp3"
+      },
+      {
+        "type": "mp3",
+        "url": "assets/media/audio/sfx/coin.mp3"
+      },
+      {
+        "type": "mp3",
+        "url": "assets/media/audio/sfx/fail.mp3"
+      },
+      {
+        "type": "mp3",
+        "url": "assets/media/audio/sfx/hit.mp3"
+      },
+      {
+        "type": "mp3",
+        "url": "assets/media/audio/sfx/inhole.mp3"
+      },
+      {
+        "type": "mp3",
+        "url": "assets/media/audio/sfx/stick.mp3"
+      },
+      {
+        "type": "mp3",
+        "url": "assets/media/audio/sfx/win.mp3"
+      },
+      {
+        "type": "mp3",
+        "url": "assets/media/audio/bgm.mp3"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/skybox/skybox_nx.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/skybox/skybox_ny.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/skybox/skybox_nz.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/skybox/skybox_px.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/skybox/skybox_py.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/skybox/skybox_pz.jpg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/cion.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/flag.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/flare.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/golf2.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/grass.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/leaf.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/leaf1.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/metal.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/mountain2.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/palm-wood.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/sand2.png"
+      },
+      {
+        "type": "json",
+        "url": "assets/media/babylon/scene.babylon"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/stone.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/waterbright.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/babylon/wood.png"
+      },
+      {
+        "type": "font",
+        "url": "assets/media/fonts/digitalt.ttf"
+      },
+      {
+        "type": "font",
+        "url": "assets/media/fonts/digitalt.woff"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/loading/loader.svg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/misc/invisible.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/tutorial/tutorial1.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/tutorial/tutorial2.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/bar0.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/bar1.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-arrow.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-expand.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-home.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-language.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-moregames.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-no.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-pause.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-play.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-resume.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-settings.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-tut.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-yes-rv.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/btn-yes.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/heart.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/heart0.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/language.jpeg"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/music-toggle-off.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/music-toggle-on.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/panel.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/sound-toggle-on.png"
+      },
+      {
+        "type": "image",
+        "url": "assets/media/graphics/sprites/ui/sound-toggle-off.png"
+      }
+    ],
+    "permissions": [
+      "gaming_profile",
+      "email",
+      "gaming_user_locale",
+      "gaming_user_picture"
+    ],
+    "platforms": ["web"]
+  }
+}

@@ -1827,7 +1827,7 @@
         fonts: [
           {
             name: "text",
-            source: "media/fonts/digitalt",
+            source: "assets/media/fonts/digitalt",
           },
         ],
         init: function () {
@@ -2656,7 +2656,7 @@
         for (var _0x3fe581 in _0x58e295) {
           var _0x41d83a = _0x58e295[_0x3fe581];
           this.soundList[_0x3fe581] = new Howl({
-            src: ["media/audio/" + _0x41d83a.path + ".mp3"],
+            src: ["assets/media/audio/" + _0x41d83a.path + ".mp3"],
             loop: !!_0x41d83a.loop,
             onend: function () {
               this.seekId = 0x0;
@@ -10961,7 +10961,7 @@
             wgl.scene
           );
           _0x40c7d0.particleTexture = new BABYLON.Texture(
-            "media/babylon/flare.png",
+            "assets/media/babylon/flare.png",
             wgl.scene
           );
           _0x40c7d0.minEmitBox = new BABYLON.Vector3(-0.1, -0.1, -0.1);
@@ -10993,7 +10993,7 @@
             wgl.scene
           );
           _0x260dec.particleTexture = new BABYLON.Texture(
-            "media/babylon/flare.png",
+            "assets/media/babylon/flare.png",
             wgl.scene
           );
           _0x260dec.minEmitBox = new BABYLON.Vector3(-0.1, -0.1, -0.1);
@@ -11584,7 +11584,7 @@
         },
         loadScene: function () {
           BABYLON.SceneLoader.Load(
-            "media/babylon/",
+            "assets/media/babylon/",
             "scene.babylon",
             this.engine,
             function (_0x94b773) {
@@ -11659,7 +11659,7 @@
           _0x3fb326.backFaceCulling = false;
           _0x3fb326.disableLighting = true;
           _0x3fb326.reflectionTexture = new BABYLON.CubeTexture(
-            "media/babylon/skybox/skybox",
+            "assets/media/babylon/skybox/skybox",
             _0x270de0
           );
           _0x3fb326.reflectionTexture.coordinatesMode =
@@ -11670,7 +11670,7 @@
           _0x17b062.position.y = 0x32;
           _0x270de0.fogEnabled = false;
           _0x17b062 = new BABYLON.Texture(
-            "media/babylon/waterbright.png",
+            "assets/media/babylon/waterbright.png",
             _0x270de0
           );
           _0x17b062.uOffset = 0x0;
@@ -12021,9 +12021,9 @@
     .defines(function () {
       ig.SplashLoader = ig.Loader.extend({
         tapToStartDivId: "tap-to-start",
-        title: new ig.Image("logo/logo-load.png"),
-        bar0: new ig.Image("media/graphics/sprites/ui/bar0.png"),
-        bar1: new ig.Image("media/graphics/sprites/ui/bar1.png"),
+        title: new ig.Image("assets/logo/logo-load.png"),
+        bar0: new ig.Image("assets/media/graphics/sprites/ui/bar0.png"),
+        bar1: new ig.Image("assets/media/graphics/sprites/ui/bar1.png"),
         checkWGL: false,
         init: function (_0x3f3943, _0x4f44bc) {
           this.parent(_0x3f3943, _0x4f44bc);
@@ -14050,7 +14050,7 @@
     .defines(function () {
       EntityButton = ig.Entity.extend({
         collides: ig.Entity.COLLIDES.NEVER,
-        image: new ig.Image("media/graphics/misc/invisible.png"),
+        image: new ig.Image("assets/media/graphics/misc/invisible.png"),
         visible: true,
         isClickable: true,
         scale: 0x1,
@@ -14266,7 +14266,7 @@
         pos: new Vector2(0x0, 0x0),
         size: new Vector2(0x0, 0x0),
         identifier: null,
-        invisImagePath: "media/graphics/misc/invisible.png",
+        invisImagePath: "assets/media/graphics/misc/invisible.png",
         init: function (_0x46bd96) {
           this.pos = new Vector2(_0x46bd96.pos.x, _0x46bd96.pos.y);
           this.size = new Vector2(_0x46bd96.size.x, _0x46bd96.size.y);
@@ -14427,7 +14427,9 @@
     .requires("game.entities.buttons.button", "plugins.clickable-div-layer")
     .defines(function () {
       EntityButtonMoreGames = EntityButtonFix.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-moregames.png"),
+        image: new ig.Image(
+          "assets/media/graphics/sprites/ui/btn-moregames.png"
+        ),
         clickableLayer: null,
         link: null,
         newWindow: false,
@@ -14783,7 +14785,7 @@
     .defines(function () {
       EntityPopup = ig.Entity.extend({
         collides: ig.Entity.COLLIDES.NEVER,
-        image: new ig.Image("media/graphics/sprites/ui/panel.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/panel.png"),
         scale: 0.01,
         delayShown: 0x0,
         overlayAlpha: 0x0,
@@ -14921,8 +14923,8 @@
     .defines(function () {
       EntityPopupTutorial = EntityPopup.extend({
         tutorials: [
-          new ig.Image("media/graphics/sprites/tutorial/tutorial1.png"),
-          new ig.Image("media/graphics/sprites/tutorial/tutorial2.png"),
+          new ig.Image("assets/media/graphics/sprites/tutorial/tutorial1.png"),
+          new ig.Image("assets/media/graphics/sprites/tutorial/tutorial2.png"),
         ],
         pageId: 0,
         addEntities: function () {
@@ -15032,19 +15034,19 @@
         },
       });
       EntityButtonCloseTutorial = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-home.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-home.png"),
         callback: function () {
           this.popup.hide("");
         },
       });
       EntityButtonPlayTutorial = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-resume.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-resume.png"),
         callback: function () {
           this.popup.hide("play");
         },
       });
       EntityButtonArrowNext = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-arrow.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-arrow.png"),
         callback: function () {
           this.popup.next();
         },
@@ -15076,7 +15078,7 @@
     )
     .defines(function () {
       EntityButtonPlay = EntityButtonFix.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-play.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-play.png"),
         repos: function () {
           this.pos.x = ig.game.midX - this.halfSize.x;
           this.pos.y = ig.game.midY + 0x5a;
@@ -15101,8 +15103,12 @@
     .requires("game.entities.buttons.button")
     .defines(function () {
       EntityButtonAudio = EntityButtonPopup.extend({
-        image1: new ig.Image("media/graphics/sprites/ui/sound-toggle-on.png"),
-        image2: new ig.Image("media/graphics/sprites/ui/sound-toggle-off.png"),
+        image1: new ig.Image(
+          "assets/media/graphics/sprites/ui/sound-toggle-on.png"
+        ),
+        image2: new ig.Image(
+          "assets/media/graphics/sprites/ui/sound-toggle-off.png"
+        ),
         audioOn: 0x1,
         audioType: "sfx",
         text: "",
@@ -15144,8 +15150,12 @@
         },
       });
       EntityButtonBGM = EntityButtonAudio.extend({
-        image1: new ig.Image("media/graphics/sprites/ui/music-toggle-on.png"),
-        image2: new ig.Image("media/graphics/sprites/ui/music-toggle-off.png"),
+        image1: new ig.Image(
+          "assets/media/graphics/sprites/ui/music-toggle-on.png"
+        ),
+        image2: new ig.Image(
+          "assets/media/graphics/sprites/ui/music-toggle-off.png"
+        ),
         audioType: "bgm",
       });
     });
@@ -15205,13 +15215,13 @@
         },
       });
       EntityButtonYes = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-yes.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-yes.png"),
         callback: function () {
           this.popup.hide("Yes");
         },
       });
       EntityButtonNo = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-no.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-no.png"),
         callback: function () {
           this.popup.hide("No");
         },
@@ -15254,7 +15264,7 @@
     )
     .defines(function () {
       EntityButtonHome = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-home.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-home.png"),
         callback: function () {
           if (
             wgl.over &&
@@ -15318,7 +15328,7 @@
         },
       });
       EntityButtonBackSetting = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-home.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-home.png"),
         callback: function () {
           this.popup.hide("");
         },
@@ -15332,7 +15342,9 @@
     )
     .defines(function () {
       EntityButtonSettings = EntityButtonFix.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-settings.png"),
+        image: new ig.Image(
+          "assets/media/graphics/sprites/ui/btn-settings.png"
+        ),
         repos: function () {
           if (SETTINGS.MoreGames.Enabled) {
             this.pos.x = ig.game.midX - this.halfSize.x + 0xe6;
@@ -15392,7 +15404,9 @@
         },
       });
       EntityButtonLanguage = EntityButtonFix.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-language.png"),
+        image: new ig.Image(
+          "assets/media/graphics/sprites/ui/btn-language.png"
+        ),
         repos: function () {
           this.pos.x = 0xf;
           this.pos.y = 0xf;
@@ -15402,7 +15416,7 @@
         },
       });
       EntityButtonCloseLanguage = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-home.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-home.png"),
         callback: function () {
           this.popup.hide("");
         },
@@ -15417,7 +15431,7 @@
     )
     .defines(function () {
       EntityButtonTutorial = EntityButtonFix.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-tut.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-tut.png"),
         repos: function () {
           this.pos.x = ig.system.width - this.size.x - 0xf;
           this.pos.y = 0xf;
@@ -15437,7 +15451,7 @@
     )
     .defines(function () {
       EntityHome = ig.Entity.extend({
-        imageTitle: new ig.Image("logo/logo-in.png"),
+        imageTitle: new ig.Image("assets/logo/logo-in.png"),
         buttons: [],
         showTitle: true,
         init: function (_0x1ac3c6, _0x5cbccf, _0x50dd70) {
@@ -15641,7 +15655,7 @@
     .requires("game.entities.popups.popup-confirmation")
     .defines(function () {
       EntityButtonReplay = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-replay.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-replay.png"),
         callback: function () {
           if (wgl.over) {
             this.popup.hide("replay");
@@ -15657,7 +15671,7 @@
     .requires("game.entities.buttons.button")
     .defines(function () {
       EntityButtonNext = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-resume.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-resume.png"),
         callback: function () {
           this.popup.hide("next");
         },
@@ -15748,7 +15762,7 @@
     )
     .defines(function () {
       EntityButtonPause = EntityButtonFix.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-pause.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-pause.png"),
         zIndex: 0x11,
         repos: function () {
           this.pos.x = ig.system.width - this.size.x - 0xf;
@@ -16173,7 +16187,7 @@
         },
       });
       EntityButtonYesRV = EntityButtonPopup.extend({
-        image: new ig.Image("media/graphics/sprites/ui/btn-yes-rv.png"),
+        image: new ig.Image("assets/media/graphics/sprites/ui/btn-yes-rv.png"),
         callback: function () {
           this.popup.hide("RVAd");
         },
@@ -16191,8 +16205,8 @@
     )
     .defines(function () {
       EntityGame = ig.Entity.extend({
-        ball0: new ig.Image("media/graphics/sprites/ui/heart0.png"),
-        ball1: new ig.Image("media/graphics/sprites/ui/heart.png"),
+        ball0: new ig.Image("assets/media/graphics/sprites/ui/heart0.png"),
+        ball1: new ig.Image("assets/media/graphics/sprites/ui/heart.png"),
         score: 0x0,
         scoreText: "0",
         ballTotal: 0x3,
