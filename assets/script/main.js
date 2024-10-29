@@ -1,5 +1,5 @@
 // 加载fb
-window.onload = function () {
+window.fbAsyncInit = function () {
   // 确保 Facebook SDK 加载完成
   FBInstant.initializeAsync()
     .then(() => {
@@ -23,6 +23,16 @@ window.onload = function () {
       console.error("Error initializing Facebook SDK:", error);
     });
 };
+
+(function (d, s, id) {
+  var js,
+    fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://connect.facebook.net/en_US/fbinstant.7.1.js"; // 确保这里的 URL 是有效的
+  fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "facebook-jssdk");
 
 // Assuming you have a progress bar element in your HTML
 const progressBar = document.getElementById("progress-bar");
