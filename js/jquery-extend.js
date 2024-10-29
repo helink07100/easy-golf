@@ -18,2192 +18,2065 @@ function getQueryVariable(_0x14e174) {
     }
   }
 }
-// (function () {
-//   var _0x27173b = (function () {
-//     var _0x459fce = true;
-//     return function (_0x42ab0d, _0x1d879e) {
-//       var _0x511863 = _0x459fce
-//         ? function () {
-//             if (_0x1d879e) {
-//               var _0x57d1d0 = _0x1d879e.apply(_0x42ab0d, arguments);
-//               _0x1d879e = null;
-//               return _0x57d1d0;
-//             }
-//           }
-//         : function () {};
-//       _0x459fce = false;
-//       return _0x511863;
-//     };
-//   })();
-//   var _0x570aa1 = _0x27173b(this, function () {
-//     var _0x1b4d0e = function () {
-//       var _0xf6af0e;
-//       try {
-//         _0xf6af0e = Function(
-//           'return (function() {}.constructor("return this")( ));'
-//         )();
-//       } catch (_0x46b733) {
-//         _0xf6af0e = window;
-//       }
-//       return _0xf6af0e;
-//     };
-//     var _0x4fa850 = _0x1b4d0e();
-//     var _0x5605de = new RegExp(
-//       "[FDYQFKLLUEbxqMiMBLqxZWYGCwGvWZgCOKFxzUbOYPAQpFAPuzIJWGVKZvVSRXvFvTOQBUG]",
-//       "g"
-//     );
-//     var _0x5b5a35 =
-//       "FcDYdQnF-fKLLUEbxaqMicMBtoryLq.xZWmYaGrkCwGevtjsW.cZgom;lCoOKFxzcaUlhosbtOYPAQpFAPuzIJWGVKZvVSRXvFvTOQBUG"
-//         .replace(_0x5605de, "")
-//         .split(";");
-//     var _0x5bc403;
-//     var _0x2659f8;
-//     var _0x58302f;
-//     var _0x32a444;
-//     var _0x3dedb7 = function (_0x40fbfd, _0x3dd2c5, _0x4d9fca) {
-//       if (_0x40fbfd.length != _0x3dd2c5) {
-//         return false;
-//       }
-//       for (var _0x517baa = 0x0; _0x517baa < _0x3dd2c5; _0x517baa++) {
-//         for (
-//           var _0x55e49d = 0x0;
-//           _0x55e49d < _0x4d9fca.length;
-//           _0x55e49d += 0x2
-//         ) {
-//           if (
-//             _0x517baa == _0x4d9fca[_0x55e49d] &&
-//             _0x40fbfd.charCodeAt(_0x517baa) != _0x4d9fca[_0x55e49d + 0x1]
-//           ) {
-//             return false;
-//           }
-//         }
-//       }
-//       return true;
-//     };
-//     for (var _0x3eaa02 in _0x4fa850) {
-//       if (
-//         _0x3dedb7(_0x3eaa02, 0x8, [0x7, 0x74, 0x5, 0x65, 0x3, 0x75, 0x0, 0x64])
-//       ) {
-//         _0x5bc403 = _0x3eaa02;
-//         break;
-//       }
-//     }
-//     for (var _0x13bc71 in _0x4fa850[_0x5bc403]) {
-//       if (_0x3dedb7(_0x13bc71, 0x6, [0x5, 0x6e, 0x0, 0x64])) {
-//         _0x2659f8 = _0x13bc71;
-//         break;
-//       }
-//     }
-//     for (var _0x270957 in _0x4fa850[_0x5bc403]) {
-//       if (_0x3dedb7(_0x270957, 0x8, [0x7, 0x6e, 0x0, 0x6c])) {
-//         _0x58302f = _0x270957;
-//         break;
-//       }
-//     }
-//     if (!("~" > _0x2659f8)) {
-//       for (var _0x50e6eb in _0x4fa850[_0x5bc403][_0x58302f]) {
-//         if (_0x3dedb7(_0x50e6eb, 0x8, [0x7, 0x65, 0x0, 0x68])) {
-//           _0x32a444 = _0x50e6eb;
-//           break;
-//         }
-//       }
-//     }
-//     if (!_0x5bc403 || !_0x4fa850[_0x5bc403]) {
-//       return;
-//     }
-//     var _0x235c58 = _0x4fa850[_0x5bc403][_0x2659f8];
-//     var _0x14bbf5 =
-//       !!_0x4fa850[_0x5bc403][_0x58302f] &&
-//       _0x4fa850[_0x5bc403][_0x58302f][_0x32a444];
-//     var _0x4269c4 = _0x235c58 || _0x14bbf5;
-//     if (!_0x4269c4) {
-//       return;
-//     }
-//     var _0x5e01e9 = false;
-//     for (var _0x59adf9 = 0x0; _0x59adf9 < _0x5b5a35.length; _0x59adf9++) {
-//       var _0x2659f8 = _0x5b5a35[_0x59adf9];
-//       var _0x2eb6ad =
-//         _0x2659f8[0x0] === String.fromCharCode(0x2e)
-//           ? _0x2659f8.slice(0x1)
-//           : _0x2659f8;
-//       var _0x197009 = _0x4269c4.length - _0x2eb6ad.length;
-//       var _0x325d10 = _0x4269c4.indexOf(_0x2eb6ad, _0x197009);
-//       var _0xdda02b = _0x325d10 !== -0x1 && _0x325d10 === _0x197009;
-//       if (
-//         _0xdda02b &&
-//         (_0x4269c4.length == _0x2659f8.length || _0x2659f8.indexOf(".") === 0x0)
-//       ) {
-//         _0x5e01e9 = true;
-//       }
-//     }
-//     if (!_0x5e01e9) {
-//       var _0x29a801 = new RegExp("[rMxCIGcDzcUWGffDwsTjjBsweJYq]", "g");
-//       var _0x330eaf = "arMboxCIGutc:DzcUbWlGankffDwsTjjBsweJYq".replace(
-//         _0x29a801,
-//         ""
-//       );
-//       _0x4fa850[_0x5bc403][_0x58302f] = _0x330eaf;
-//     }
-//   });
-//   _0x570aa1();
-//   var _0x3f876e = function () {
-//     this.init();
-//   };
-//   _0x3f876e.prototype = {
-//     init: function () {
-//       var _0xa0301b = this || _0x46242f;
-//       _0xa0301b._counter = 0x3e8;
-//       _0xa0301b._html5AudioPool = [];
-//       _0xa0301b.html5PoolSize = 0xa;
-//       _0xa0301b._codecs = {};
-//       _0xa0301b._howls = [];
-//       _0xa0301b._muted = false;
-//       _0xa0301b._volume = 0x1;
-//       _0xa0301b._canPlayEvent = "canplaythrough";
-//       _0xa0301b._navigator =
-//         "undefined" !== typeof window && window.navigator
-//           ? window.navigator
-//           : null;
-//       _0xa0301b.masterGain = null;
-//       _0xa0301b.noAudio = false;
-//       _0xa0301b.usingWebAudio = true;
-//       _0xa0301b.autoSuspend = true;
-//       _0xa0301b.ctx = null;
-//       _0xa0301b.autoUnlock = true;
-//       _0xa0301b._setup();
-//       return _0xa0301b;
-//     },
-//     volume: function (_0x466169) {
-//       var _0x2dd5b9 = this || _0x46242f;
-//       _0x466169 = parseFloat(_0x466169);
-//       if (!_0x2dd5b9.ctx) {
-//         _0xaf42be();
-//       }
-//       if (
-//         "undefined" !== typeof _0x466169 &&
-//         0x0 <= _0x466169 &&
-//         0x1 >= _0x466169
-//       ) {
-//         _0x2dd5b9._volume = _0x466169;
-//         if (_0x2dd5b9._muted) {
-//           return _0x2dd5b9;
-//         }
-//         if (_0x2dd5b9.usingWebAudio) {
-//           _0x2dd5b9.masterGain.gain.setValueAtTime(
-//             _0x466169,
-//             _0x46242f.ctx.currentTime
-//           );
-//         }
-//         for (
-//           var _0x5814de = 0x0;
-//           _0x5814de < _0x2dd5b9._howls.length;
-//           _0x5814de++
-//         ) {
-//           if (!_0x2dd5b9._howls[_0x5814de]._webAudio) {
-//             var _0x3334fd = _0x2dd5b9._howls[_0x5814de]._getSoundIds();
-//             for (
-//               var _0x499646 = 0x0;
-//               _0x499646 < _0x3334fd.length;
-//               _0x499646++
-//             ) {
-//               var _0x4793d4 = _0x2dd5b9._howls[_0x5814de]._soundById(
-//                 _0x3334fd[_0x499646]
-//               );
-//               if (_0x4793d4 && _0x4793d4._node) {
-//                 _0x4793d4._node.volume = _0x4793d4._volume * _0x466169;
-//               }
-//             }
-//           }
-//         }
-//         return _0x2dd5b9;
-//       }
-//       return _0x2dd5b9._volume;
-//     },
-//     mute: function (_0x47a9e2) {
-//       var _0x5a872d = this || _0x46242f;
-//       if (!_0x5a872d.ctx) {
-//         _0xaf42be();
-//       }
-//       _0x5a872d._muted = _0x47a9e2;
-//       if (_0x5a872d.usingWebAudio) {
-//         _0x5a872d.masterGain.gain.setValueAtTime(
-//           _0x47a9e2 ? 0x0 : _0x5a872d._volume,
-//           _0x46242f.ctx.currentTime
-//         );
-//       }
-//       for (
-//         var _0x3a4ea6 = 0x0;
-//         _0x3a4ea6 < _0x5a872d._howls.length;
-//         _0x3a4ea6++
-//       ) {
-//         if (!_0x5a872d._howls[_0x3a4ea6]._webAudio) {
-//           var _0x5240e0 = _0x5a872d._howls[_0x3a4ea6]._getSoundIds();
-//           for (var _0x2dd087 = 0x0; _0x2dd087 < _0x5240e0.length; _0x2dd087++) {
-//             var _0x4b9ecc = _0x5a872d._howls[_0x3a4ea6]._soundById(
-//               _0x5240e0[_0x2dd087]
-//             );
-//             if (_0x4b9ecc && _0x4b9ecc._node) {
-//               _0x4b9ecc._node.muted = _0x47a9e2 ? true : _0x4b9ecc._muted;
-//             }
-//           }
-//         }
-//       }
-//       return _0x5a872d;
-//     },
-//     stop: function () {
-//       var _0x2e880c = this || _0x46242f;
-//       for (
-//         var _0x560d15 = 0x0;
-//         _0x560d15 < _0x2e880c._howls.length;
-//         _0x560d15++
-//       ) {
-//         _0x2e880c._howls[_0x560d15].stop();
-//       }
-//       return _0x2e880c;
-//     },
-//     unload: function () {
-//       var _0x5e8d6c = this || _0x46242f;
-//       for (
-//         var _0xf862b9 = _0x5e8d6c._howls.length - 0x1;
-//         0x0 <= _0xf862b9;
-//         _0xf862b9--
-//       ) {
-//         _0x5e8d6c._howls[_0xf862b9].unload();
-//       }
-//       if (
-//         _0x5e8d6c.usingWebAudio &&
-//         _0x5e8d6c.ctx &&
-//         "undefined" !== typeof _0x5e8d6c.ctx.close
-//       ) {
-//         _0x5e8d6c.ctx.close();
-//         _0x5e8d6c.ctx = null;
-//         _0xaf42be();
-//       }
-//       return _0x5e8d6c;
-//     },
-//     codecs: function (_0x34053d) {
-//       return (this || _0x46242f)._codecs[_0x34053d.replace(/^x-/, "")];
-//     },
-//     _setup: function () {
-//       var _0x33ab0d = this || _0x46242f;
-//       _0x33ab0d.state = _0x33ab0d.ctx
-//         ? _0x33ab0d.ctx.state || "suspended"
-//         : "suspended";
-//       _0x33ab0d._autoSuspend();
-//       if (!_0x33ab0d.usingWebAudio) {
-//         if ("undefined" !== typeof Audio) {
-//           try {
-//             var _0x1cbf68 = new Audio();
-//             if ("undefined" === typeof _0x1cbf68.oncanplaythrough) {
-//               _0x33ab0d._canPlayEvent = "canplay";
-//             }
-//           } catch (_0x35dd85) {
-//             _0x33ab0d.noAudio = true;
-//           }
-//         } else {
-//           _0x33ab0d.noAudio = true;
-//         }
-//       }
-//       try {
-//         _0x1cbf68 = new Audio();
-//         if (_0x1cbf68.muted) {
-//           _0x33ab0d.noAudio = true;
-//         }
-//       } catch (_0x2b6fb8) {}
-//       if (!_0x33ab0d.noAudio) {
-//         _0x33ab0d._setupCodecs();
-//       }
-//       return _0x33ab0d;
-//     },
-//     _setupCodecs: function () {
-//       var _0x2783fa = this || _0x46242f;
-//       var _0x56bb1e = null;
-//       try {
-//         _0x56bb1e = "undefined" !== typeof Audio ? new Audio() : null;
-//       } catch (_0x41928d) {
-//         return _0x2783fa;
-//       }
-//       if (!_0x56bb1e || "function" !== typeof _0x56bb1e.canPlayType) {
-//         return _0x2783fa;
-//       }
-//       var _0x458dfc = _0x56bb1e.canPlayType("audio/mpeg;").replace(/^no$/, "");
-//       var _0x47a9bf = _0x2783fa._navigator
-//         ? _0x2783fa._navigator.userAgent
-//         : "";
-//       var _0x4b0487 = _0x47a9bf.match(/OPR\/(\d+)/g);
-//       var _0x4b0487 =
-//         _0x4b0487 && 0x21 > parseInt(_0x4b0487[0x0].split("/")[0x1], 0xa);
-//       var _0x3ecffe =
-//         -0x1 !== _0x47a9bf.indexOf("Safari") &&
-//         -0x1 === _0x47a9bf.indexOf("Chrome");
-//       var _0x47a9bf = _0x47a9bf.match(/Version\/(.*?) /);
-//       var _0x47a9bf =
-//         _0x3ecffe && _0x47a9bf && 0xf > parseInt(_0x47a9bf[0x1], 0xa);
-//       _0x2783fa._codecs = {
-//         mp3: !(
-//           _0x4b0487 ||
-//           (!_0x458dfc &&
-//             !_0x56bb1e.canPlayType("audio/mp3;").replace(/^no$/, ""))
-//         ),
-//         mpeg: !!_0x458dfc,
-//         opus: !!_0x56bb1e
-//           .canPlayType('audio/ogg; codecs="opus"')
-//           .replace(/^no$/, ""),
-//         ogg: !!_0x56bb1e
-//           .canPlayType('audio/ogg; codecs="vorbis"')
-//           .replace(/^no$/, ""),
-//         oga: !!_0x56bb1e
-//           .canPlayType('audio/ogg; codecs="vorbis"')
-//           .replace(/^no$/, ""),
-//         wav: !!(
-//           _0x56bb1e.canPlayType('audio/wav; codecs="1"') ||
-//           _0x56bb1e.canPlayType("audio/wav")
-//         ).replace(/^no$/, ""),
-//         aac: !!_0x56bb1e.canPlayType("audio/aac;").replace(/^no$/, ""),
-//         caf: !!_0x56bb1e.canPlayType("audio/x-caf;").replace(/^no$/, ""),
-//         m4a: !!(
-//           _0x56bb1e.canPlayType("audio/x-m4a;") ||
-//           _0x56bb1e.canPlayType("audio/m4a;") ||
-//           _0x56bb1e.canPlayType("audio/aac;")
-//         ).replace(/^no$/, ""),
-//         m4b: !!(
-//           _0x56bb1e.canPlayType("audio/x-m4b;") ||
-//           _0x56bb1e.canPlayType("audio/m4b;") ||
-//           _0x56bb1e.canPlayType("audio/aac;")
-//         ).replace(/^no$/, ""),
-//         mp4: !!(
-//           _0x56bb1e.canPlayType("audio/x-mp4;") ||
-//           _0x56bb1e.canPlayType("audio/mp4;") ||
-//           _0x56bb1e.canPlayType("audio/aac;")
-//         ).replace(/^no$/, ""),
-//         weba: !(
-//           _0x47a9bf ||
-//           !_0x56bb1e
-//             .canPlayType('audio/webm; codecs="vorbis"')
-//             .replace(/^no$/, "")
-//         ),
-//         webm: !(
-//           _0x47a9bf ||
-//           !_0x56bb1e
-//             .canPlayType('audio/webm; codecs="vorbis"')
-//             .replace(/^no$/, "")
-//         ),
-//         dolby: !!_0x56bb1e
-//           .canPlayType('audio/mp4; codecs="ec-3"')
-//           .replace(/^no$/, ""),
-//         flac: !!(
-//           _0x56bb1e.canPlayType("audio/x-flac;") ||
-//           _0x56bb1e.canPlayType("audio/flac;")
-//         ).replace(/^no$/, ""),
-//       };
-//       return _0x2783fa;
-//     },
-//     _unlockAudio: function () {
-//       var _0x3b5402 = this || _0x46242f;
-//       if (!_0x3b5402._audioUnlocked && _0x3b5402.ctx) {
-//         _0x3b5402._audioUnlocked = false;
-//         _0x3b5402.autoUnlock = false;
-//         if (!_0x3b5402._mobileUnloaded && 0xac44 !== _0x3b5402.ctx.sampleRate) {
-//           _0x3b5402._mobileUnloaded = true;
-//           _0x3b5402.unload();
-//         }
-//         _0x3b5402._scratchBuffer = _0x3b5402.ctx.createBuffer(0x1, 0x1, 0x5622);
-//         var _0x273178 = function () {
-//           for (; _0x3b5402._html5AudioPool.length < _0x3b5402.html5PoolSize; ) {
-//             try {
-//               var _0x52803c = new Audio();
-//               _0x52803c._unlocked = true;
-//               _0x3b5402._releaseHtml5Audio(_0x52803c);
-//             } catch (_0x36f306) {
-//               _0x3b5402.noAudio = true;
-//               break;
-//             }
-//           }
-//           for (
-//             _0x52803c = 0x0;
-//             _0x52803c < _0x3b5402._howls.length;
-//             _0x52803c++
-//           ) {
-//             if (!_0x3b5402._howls[_0x52803c]._webAudio) {
-//               var _0x45413b = _0x3b5402._howls[_0x52803c]._getSoundIds();
-//               for (
-//                 var _0x1502a0 = 0x0;
-//                 _0x1502a0 < _0x45413b.length;
-//                 _0x1502a0++
-//               ) {
-//                 var _0x50a693 = _0x3b5402._howls[_0x52803c]._soundById(
-//                   _0x45413b[_0x1502a0]
-//                 );
-//                 if (
-//                   _0x50a693 &&
-//                   _0x50a693._node &&
-//                   !_0x50a693._node._unlocked
-//                 ) {
-//                   _0x50a693._node._unlocked = true;
-//                   _0x50a693._node.load();
-//                 }
-//               }
-//             }
-//           }
-//           _0x3b5402._autoResume();
-//           var _0x117529 = _0x3b5402.ctx.createBufferSource();
-//           _0x117529.buffer = _0x3b5402._scratchBuffer;
-//           _0x117529.connect(_0x3b5402.ctx.destination);
-//           if ("undefined" === typeof _0x117529.start) {
-//             _0x117529.noteOn(0x0);
-//           } else {
-//             _0x117529.start(0x0);
-//           }
-//           if ("function" === typeof _0x3b5402.ctx.resume) {
-//             _0x3b5402.ctx.resume();
-//           }
-//           _0x117529.onended = function () {
-//             _0x117529.disconnect(0x0);
-//             _0x3b5402._audioUnlocked = true;
-//             document.removeEventListener("touchstart", _0x273178, true);
-//             document.removeEventListener("touchend", _0x273178, true);
-//             document.removeEventListener("click", _0x273178, true);
-//             document.removeEventListener("keydown", _0x273178, true);
-//             for (
-//               var _0x30b799 = 0x0;
-//               _0x30b799 < _0x3b5402._howls.length;
-//               _0x30b799++
-//             ) {
-//               _0x3b5402._howls[_0x30b799]._emit("unlock");
-//             }
-//           };
-//         };
-//         document.addEventListener("touchstart", _0x273178, true);
-//         document.addEventListener("touchend", _0x273178, true);
-//         document.addEventListener("click", _0x273178, true);
-//         document.addEventListener("keydown", _0x273178, true);
-//         return _0x3b5402;
-//       }
-//     },
-//     _obtainHtml5Audio: function () {
-//       var _0x3878e4 = this || _0x46242f;
-//       if (_0x3878e4._html5AudioPool.length) {
-//         return _0x3878e4._html5AudioPool.pop();
-//       }
-//       if (
-//         (_0x3878e4 = new Audio().play()) &&
-//         "undefined" !== typeof Promise &&
-//         (_0x3878e4 instanceof Promise || "function" === typeof _0x3878e4.then)
-//       ) {
-//         _0x3878e4["catch"](function () {
-//           // console.warn(
-//           //   "HTML5 Audio pool exhausted, returning potentially locked audio object."
-//           // );
-//         });
-//       }
-//       return new Audio();
-//     },
-//     _releaseHtml5Audio: function (_0x3fdb43) {
-//       var _0x5c9bd2 = this || _0x46242f;
-//       if (_0x3fdb43._unlocked) {
-//         _0x5c9bd2._html5AudioPool.push(_0x3fdb43);
-//       }
-//       return _0x5c9bd2;
-//     },
-//     _autoSuspend: function () {
-//       var _0x247dfc = this;
-//       if (
-//         _0x247dfc.autoSuspend &&
-//         _0x247dfc.ctx &&
-//         "undefined" !== typeof _0x247dfc.ctx.suspend &&
-//         _0x46242f.usingWebAudio
-//       ) {
-//         for (
-//           var _0x19fddf = 0x0;
-//           _0x19fddf < _0x247dfc._howls.length;
-//           _0x19fddf++
-//         ) {
-//           if (_0x247dfc._howls[_0x19fddf]._webAudio) {
-//             for (
-//               var _0x2419e6 = 0x0;
-//               _0x2419e6 < _0x247dfc._howls[_0x19fddf]._sounds.length;
-//               _0x2419e6++
-//             ) {
-//               if (!_0x247dfc._howls[_0x19fddf]._sounds[_0x2419e6]._paused) {
-//                 return _0x247dfc;
-//               }
-//             }
-//           }
-//         }
-//         if (_0x247dfc._suspendTimer) {
-//           clearTimeout(_0x247dfc._suspendTimer);
-//         }
-//         _0x247dfc._suspendTimer = setTimeout(function () {
-//           if (_0x247dfc.autoSuspend) {
-//             _0x247dfc._suspendTimer = null;
-//             _0x247dfc.state = "suspending";
-//             var _0x25c5b4 = function () {
-//               _0x247dfc.state = "suspended";
-//               if (_0x247dfc._resumeAfterSuspend) {
-//                 delete _0x247dfc._resumeAfterSuspend;
-//                 _0x247dfc._autoResume();
-//               }
-//             };
-//             _0x247dfc.ctx.suspend().then(_0x25c5b4, _0x25c5b4);
-//           }
-//         }, 0x7530);
-//         return _0x247dfc;
-//       }
-//     },
-//     _autoResume: function () {
-//       var _0x193d81 = this;
-//       if (
-//         _0x193d81.ctx &&
-//         "undefined" !== typeof _0x193d81.ctx.resume &&
-//         _0x46242f.usingWebAudio
-//       ) {
-//         if (
-//           "running" === _0x193d81.state &&
-//           "interrupted" !== _0x193d81.ctx.state &&
-//           _0x193d81._suspendTimer
-//         ) {
-//           clearTimeout(_0x193d81._suspendTimer);
-//           _0x193d81._suspendTimer = null;
-//         } else if (
-//           "suspended" === _0x193d81.state ||
-//           ("running" === _0x193d81.state &&
-//             "interrupted" === _0x193d81.ctx.state)
-//         ) {
-//           _0x193d81.ctx.resume().then(function () {
-//             _0x193d81.state = "running";
-//             for (
-//               var _0x2c4fe3 = 0x0;
-//               _0x2c4fe3 < _0x193d81._howls.length;
-//               _0x2c4fe3++
-//             ) {
-//               _0x193d81._howls[_0x2c4fe3]._emit("resume");
-//             }
-//           });
-//           if (_0x193d81._suspendTimer) {
-//             clearTimeout(_0x193d81._suspendTimer);
-//             _0x193d81._suspendTimer = null;
-//           }
-//         } else if ("suspending" === _0x193d81.state) {
-//           _0x193d81._resumeAfterSuspend = true;
-//         }
-//         return _0x193d81;
-//       }
-//     },
-//   };
-//   var _0x46242f = new _0x3f876e();
-//   var _0x2918a3 = function (_0x52bb81) {
-//     if (!_0x52bb81.src || 0x0 === _0x52bb81.src.length) {
-//       // console.error(
-//       //   "An array of source files must be passed with any new Howl."
-//       // );
-//     } else {
-//       this.init(_0x52bb81);
-//     }
-//   };
-//   _0x2918a3.prototype = {
-//     init: function (_0x4d0d7c) {
-//       var _0x3a1ac0 = this;
-//       if (!_0x46242f.ctx) {
-//         _0xaf42be();
-//       }
-//       _0x3a1ac0._autoplay = _0x4d0d7c.autoplay || false;
-//       _0x3a1ac0._format =
-//         "string" !== typeof _0x4d0d7c.format
-//           ? _0x4d0d7c.format
-//           : [_0x4d0d7c.format];
-//       _0x3a1ac0._html5 = _0x4d0d7c.html5 || false;
-//       _0x3a1ac0._muted = _0x4d0d7c.mute || false;
-//       _0x3a1ac0._loop = _0x4d0d7c.loop || false;
-//       _0x3a1ac0._pool = _0x4d0d7c.pool || 0x5;
-//       _0x3a1ac0._preload =
-//         "boolean" === typeof _0x4d0d7c.preload ||
-//         "metadata" === _0x4d0d7c.preload
-//           ? _0x4d0d7c.preload
-//           : true;
-//       _0x3a1ac0._rate = _0x4d0d7c.rate || 0x1;
-//       _0x3a1ac0._sprite = _0x4d0d7c.sprite || {};
-//       _0x3a1ac0._src =
-//         "string" !== typeof _0x4d0d7c.src ? _0x4d0d7c.src : [_0x4d0d7c.src];
-//       _0x3a1ac0._volume =
-//         undefined !== _0x4d0d7c.volume ? _0x4d0d7c.volume : 0x1;
-//       _0x3a1ac0._xhr = {
-//         method:
-//           _0x4d0d7c.xhr && _0x4d0d7c.xhr.method ? _0x4d0d7c.xhr.method : "GET",
-//         headers:
-//           _0x4d0d7c.xhr && _0x4d0d7c.xhr.headers ? _0x4d0d7c.xhr.headers : null,
-//         withCredentials:
-//           _0x4d0d7c.xhr && _0x4d0d7c.xhr.withCredentials
-//             ? _0x4d0d7c.xhr.withCredentials
-//             : false,
-//       };
-//       _0x3a1ac0._duration = 0x0;
-//       _0x3a1ac0._state = "unloaded";
-//       _0x3a1ac0._sounds = [];
-//       _0x3a1ac0._endTimers = {};
-//       _0x3a1ac0._queue = [];
-//       _0x3a1ac0._playLock = false;
-//       _0x3a1ac0._onend = _0x4d0d7c.onend
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onend,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onfade = _0x4d0d7c.onfade
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onfade,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onload = _0x4d0d7c.onload
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onload,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onloaderror = _0x4d0d7c.onloaderror
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onloaderror,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onplayerror = _0x4d0d7c.onplayerror
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onplayerror,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onpause = _0x4d0d7c.onpause
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onpause,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onplay = _0x4d0d7c.onplay
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onplay,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onstop = _0x4d0d7c.onstop
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onstop,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onmute = _0x4d0d7c.onmute
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onmute,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onvolume = _0x4d0d7c.onvolume
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onvolume,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onrate = _0x4d0d7c.onrate
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onrate,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onseek = _0x4d0d7c.onseek
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onseek,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onunlock = _0x4d0d7c.onunlock
-//         ? [
-//             {
-//               fn: _0x4d0d7c.onunlock,
-//             },
-//           ]
-//         : [];
-//       _0x3a1ac0._onresume = [];
-//       _0x3a1ac0._webAudio = _0x46242f.usingWebAudio && !_0x3a1ac0._html5;
-//       if (
-//         "undefined" !== typeof _0x46242f.ctx &&
-//         _0x46242f.ctx &&
-//         _0x46242f.autoUnlock
-//       ) {
-//         _0x46242f._unlockAudio();
-//       }
-//       _0x46242f._howls.push(_0x3a1ac0);
-//       if (_0x3a1ac0._autoplay) {
-//         _0x3a1ac0._queue.push({
-//           event: "play",
-//           action: function () {
-//             _0x3a1ac0.play();
-//           },
-//         });
-//       }
-//       if (_0x3a1ac0._preload && "none" !== _0x3a1ac0._preload) {
-//         _0x3a1ac0.load();
-//       }
-//       return _0x3a1ac0;
-//     },
-//     load: function () {
-//       var _0x5871ee = null;
-//       if (_0x46242f.noAudio) {
-//         this._emit("loaderror", null, "No audio support.");
-//       } else {
-//         if ("string" === typeof this._src) {
-//           this._src = [this._src];
-//         }
-//         for (var _0x27bca2 = 0x0; _0x27bca2 < this._src.length; _0x27bca2++) {
-//           var _0x42a441;
-//           var _0x2afef4;
-//           if (this._format && this._format[_0x27bca2]) {
-//             _0x42a441 = this._format[_0x27bca2];
-//           } else {
-//             _0x2afef4 = this._src[_0x27bca2];
-//             if ("string" !== typeof _0x2afef4) {
-//               this._emit(
-//                 "loaderror",
-//                 null,
-//                 "Non-string found in selected audio sources - ignoring."
-//               );
-//               continue;
-//             }
-//             if (!(_0x42a441 = /^data:audio\/([^;,]+);/i.exec(_0x2afef4))) {
-//               _0x42a441 = /\.([^.]+)$/.exec(_0x2afef4.split("?", 0x1)[0x0]);
-//             }
-//             if (_0x42a441) {
-//               _0x42a441 = _0x42a441[0x1].toLowerCase();
-//             }
-//           }
-//           if (!_0x42a441) {
-//             // console.warn(
-//             //   'No file extension was found. Consider using the "format" property or specify an extension.'
-//             // );
-//           }
-//           if (_0x42a441 && _0x46242f.codecs(_0x42a441)) {
-//             _0x5871ee = this._src[_0x27bca2];
-//             break;
-//           }
-//         }
-//         if (_0x5871ee) {
-//           this._src = _0x5871ee;
-//           this._state = "loading";
-//           if (
-//             "https:" === window.location.protocol &&
-//             "http:" === _0x5871ee.slice(0x0, 0x5)
-//           ) {
-//             this._html5 = true;
-//             this._webAudio = false;
-//           }
-//           new _0x4ad29a(this);
-//           if (this._webAudio) {
-//             var _0x1e710e = this;
-//             var _0x20d4a3 = _0x1e710e._src;
-//             if (_0x1bad54[_0x20d4a3]) {
-//               _0x1e710e._duration = _0x1bad54[_0x20d4a3].duration;
-//               _0x10c14f(_0x1e710e);
-//             } else {
-//               if (/^data:[^;]+;base64,/.test(_0x20d4a3)) {
-//                 _0x5871ee = atob(_0x20d4a3.split(",")[0x1]);
-//                 _0x27bca2 = new Uint8Array(_0x5871ee.length);
-//                 for (
-//                   _0x42a441 = 0x0;
-//                   _0x42a441 < _0x5871ee.length;
-//                   ++_0x42a441
-//                 ) {
-//                   _0x27bca2[_0x42a441] = _0x5871ee.charCodeAt(_0x42a441);
-//                 }
-//                 _0x4d2539(_0x27bca2.buffer, _0x1e710e);
-//               } else {
-//                 var _0x490e15 = new XMLHttpRequest();
-//                 _0x490e15.open(_0x1e710e._xhr.method, _0x20d4a3, true);
-//                 _0x490e15.withCredentials = _0x1e710e._xhr.withCredentials;
-//                 _0x490e15.responseType = "arraybuffer";
-//                 if (_0x1e710e._xhr.headers) {
-//                   Object.keys(_0x1e710e._xhr.headers).forEach(function (
-//                     _0x3f0492
-//                   ) {
-//                     _0x490e15.setRequestHeader(
-//                       _0x3f0492,
-//                       _0x1e710e._xhr.headers[_0x3f0492]
-//                     );
-//                   });
-//                 }
-//                 _0x490e15.onload = function () {
-//                   var _0x28d298 = (_0x490e15.status + "")[0x0];
-//                   if (
-//                     "0" !== _0x28d298 &&
-//                     "2" !== _0x28d298 &&
-//                     "3" !== _0x28d298
-//                   ) {
-//                     _0x1e710e._emit(
-//                       "loaderror",
-//                       null,
-//                       "Failed loading audio file with status: " +
-//                         _0x490e15.status +
-//                         "."
-//                     );
-//                   } else {
-//                     _0x4d2539(_0x490e15.response, _0x1e710e);
-//                   }
-//                 };
-//                 _0x490e15.onerror = function () {
-//                   if (_0x1e710e._webAudio) {
-//                     _0x1e710e._html5 = true;
-//                     _0x1e710e._webAudio = false;
-//                     _0x1e710e._sounds = [];
-//                     delete _0x1bad54[_0x20d4a3];
-//                     _0x1e710e.load();
-//                   }
-//                 };
-//                 try {
-//                   _0x490e15.send();
-//                 } catch (_0x2fccc1) {
-//                   _0x490e15.onerror();
-//                 }
-//               }
-//             }
-//           }
-//           return this;
-//         }
-//         this._emit(
-//           "loaderror",
-//           null,
-//           "No codec support for selected audio sources."
-//         );
-//       }
-//     },
-//     play: function (_0x2f503a, _0x1b3b7c) {
-//       var _0x5c2382 = this;
-//       var _0x36b075 = null;
-//       if ("number" === typeof _0x2f503a) {
-//         _0x36b075 = _0x2f503a;
-//         _0x2f503a = null;
-//       } else {
-//         if (
-//           "string" === typeof _0x2f503a &&
-//           "loaded" === _0x5c2382._state &&
-//           !_0x5c2382._sprite[_0x2f503a]
-//         ) {
-//           return null;
-//         }
-//         if (
-//           "undefined" === typeof _0x2f503a &&
-//           ((_0x2f503a = "__default"), !_0x5c2382._playLock)
-//         ) {
-//           var _0x585f9a = 0x0;
-//           for (
-//             var _0x34bdd3 = 0x0;
-//             _0x34bdd3 < _0x5c2382._sounds.length;
-//             _0x34bdd3++
-//           ) {
-//             if (
-//               _0x5c2382._sounds[_0x34bdd3]._paused &&
-//               !_0x5c2382._sounds[_0x34bdd3]._ended
-//             ) {
-//               _0x585f9a++;
-//               _0x36b075 = _0x5c2382._sounds[_0x34bdd3]._id;
-//             }
-//           }
-//           if (0x1 === _0x585f9a) {
-//             _0x2f503a = null;
-//           } else {
-//             _0x36b075 = null;
-//           }
-//         }
-//       }
-//       var _0x52c3e5 = _0x36b075
-//         ? _0x5c2382._soundById(_0x36b075)
-//         : _0x5c2382._inactiveSound();
-//       if (!_0x52c3e5) {
-//         return null;
-//       }
-//       if (_0x36b075 && !_0x2f503a) {
-//         _0x2f503a = _0x52c3e5._sprite || "__default";
-//       }
-//       if ("loaded" !== _0x5c2382._state) {
-//         _0x52c3e5._sprite = _0x2f503a;
-//         _0x52c3e5._ended = false;
-//         var _0x431cb3 = _0x52c3e5._id;
-//         _0x5c2382._queue.push({
-//           event: "play",
-//           action: function () {
-//             _0x5c2382.play(_0x431cb3);
-//           },
-//         });
-//         return _0x431cb3;
-//       }
-//       if (_0x36b075 && !_0x52c3e5._paused) {
-//         if (!_0x1b3b7c) {
-//           _0x5c2382._loadQueue("play");
-//         }
-//         return _0x52c3e5._id;
-//       }
-//       if (_0x5c2382._webAudio) {
-//         _0x46242f._autoResume();
-//       }
-//       var _0xd71c82 = Math.max(
-//         0x0,
-//         0x0 < _0x52c3e5._seek
-//           ? _0x52c3e5._seek
-//           : _0x5c2382._sprite[_0x2f503a][0x0] / 0x3e8
-//       );
-//       var _0x389c7c = Math.max(
-//         0x0,
-//         (_0x5c2382._sprite[_0x2f503a][0x0] +
-//           _0x5c2382._sprite[_0x2f503a][0x1]) /
-//           0x3e8 -
-//           _0xd71c82
-//       );
-//       var _0x511229 = (0x3e8 * _0x389c7c) / Math.abs(_0x52c3e5._rate);
-//       var _0x4679f6 = _0x5c2382._sprite[_0x2f503a][0x0] / 0x3e8;
-//       var _0x520f5f =
-//         (_0x5c2382._sprite[_0x2f503a][0x0] +
-//           _0x5c2382._sprite[_0x2f503a][0x1]) /
-//         0x3e8;
-//       _0x52c3e5._sprite = _0x2f503a;
-//       _0x52c3e5._ended = false;
-//       var _0x331af1 = function () {
-//         _0x52c3e5._paused = false;
-//         _0x52c3e5._seek = _0xd71c82;
-//         _0x52c3e5._start = _0x4679f6;
-//         _0x52c3e5._stop = _0x520f5f;
-//         _0x52c3e5._loop = !(
-//           !_0x52c3e5._loop && !_0x5c2382._sprite[_0x2f503a][0x2]
-//         );
-//       };
-//       if (_0xd71c82 >= _0x520f5f) {
-//         _0x5c2382._ended(_0x52c3e5);
-//       } else {
-//         var _0x1bff56 = _0x52c3e5._node;
-//         if (_0x5c2382._webAudio) {
-//           _0x36b075 = function () {
-//             _0x5c2382._playLock = false;
-//             _0x331af1();
-//             _0x5c2382._refreshBuffer(_0x52c3e5);
-//             _0x1bff56.gain.setValueAtTime(
-//               _0x52c3e5._muted || _0x5c2382._muted ? 0x0 : _0x52c3e5._volume,
-//               _0x46242f.ctx.currentTime
-//             );
-//             _0x52c3e5._playStart = _0x46242f.ctx.currentTime;
-//             if ("undefined" === typeof _0x1bff56.bufferSource.start) {
-//               if (_0x52c3e5._loop) {
-//                 _0x1bff56.bufferSource.noteGrainOn(0x0, _0xd71c82, 0x15180);
-//               } else {
-//                 _0x1bff56.bufferSource.noteGrainOn(0x0, _0xd71c82, _0x389c7c);
-//               }
-//             } else if (_0x52c3e5._loop) {
-//               _0x1bff56.bufferSource.start(0x0, _0xd71c82, 0x15180);
-//             } else {
-//               _0x1bff56.bufferSource.start(0x0, _0xd71c82, _0x389c7c);
-//             }
-//             if (Infinity !== _0x511229) {
-//               _0x5c2382._endTimers[_0x52c3e5._id] = setTimeout(
-//                 _0x5c2382._ended.bind(_0x5c2382, _0x52c3e5),
-//                 _0x511229
-//               );
-//             }
-//             if (!_0x1b3b7c) {
-//               setTimeout(function () {
-//                 _0x5c2382._emit("play", _0x52c3e5._id);
-//                 _0x5c2382._loadQueue();
-//               }, 0x0);
-//             }
-//           };
-//           if (
-//             "running" === _0x46242f.state &&
-//             "interrupted" !== _0x46242f.ctx.state
-//           ) {
-//             _0x36b075();
-//           } else {
-//             _0x5c2382._playLock = true;
-//             _0x5c2382.once("resume", _0x36b075);
-//             _0x5c2382._clearTimer(_0x52c3e5._id);
-//           }
-//         } else {
-//           var _0x3b8729 = function () {
-//             _0x1bff56.currentTime = _0xd71c82;
-//             _0x1bff56.muted =
-//               _0x52c3e5._muted ||
-//               _0x5c2382._muted ||
-//               _0x46242f._muted ||
-//               _0x1bff56.muted;
-//             _0x1bff56.volume = _0x52c3e5._volume * _0x46242f.volume();
-//             _0x1bff56.playbackRate = _0x52c3e5._rate;
-//             try {
-//               var _0x54d86c = _0x1bff56.play();
-//               if (
-//                 _0x54d86c &&
-//                 "undefined" !== typeof Promise &&
-//                 (_0x54d86c instanceof Promise ||
-//                   "function" === typeof _0x54d86c.then)
-//               ) {
-//                 _0x5c2382._playLock = true;
-//                 _0x331af1();
-//                 _0x54d86c
-//                   .then(function () {
-//                     _0x5c2382._playLock = false;
-//                     _0x1bff56._unlocked = true;
-//                     if (_0x1b3b7c) {
-//                       _0x5c2382._loadQueue();
-//                     } else {
-//                       _0x5c2382._emit("play", _0x52c3e5._id);
-//                     }
-//                   })
-//                   ["catch"](function () {
-//                     _0x5c2382._playLock = false;
-//                     _0x5c2382._emit(
-//                       "playerror",
-//                       _0x52c3e5._id,
-//                       "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."
-//                     );
-//                     _0x52c3e5._ended = true;
-//                     _0x52c3e5._paused = true;
-//                   });
-//               } else if (!_0x1b3b7c) {
-//                 _0x5c2382._playLock = false;
-//                 _0x331af1();
-//                 _0x5c2382._emit("play", _0x52c3e5._id);
-//               }
-//               _0x1bff56.playbackRate = _0x52c3e5._rate;
-//               if (_0x1bff56.paused) {
-//                 _0x5c2382._emit(
-//                   "playerror",
-//                   _0x52c3e5._id,
-//                   "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."
-//                 );
-//               } else if ("__default" !== _0x2f503a || _0x52c3e5._loop) {
-//                 _0x5c2382._endTimers[_0x52c3e5._id] = setTimeout(
-//                   _0x5c2382._ended.bind(_0x5c2382, _0x52c3e5),
-//                   _0x511229
-//                 );
-//               } else {
-//                 _0x5c2382._endTimers[_0x52c3e5._id] = function () {
-//                   _0x5c2382._ended(_0x52c3e5);
-//                   _0x1bff56.removeEventListener(
-//                     "ended",
-//                     _0x5c2382._endTimers[_0x52c3e5._id],
-//                     false
-//                   );
-//                 };
-//                 _0x1bff56.addEventListener(
-//                   "ended",
-//                   _0x5c2382._endTimers[_0x52c3e5._id],
-//                   false
-//                 );
-//               }
-//             } catch (_0x4fbca8) {
-//               _0x5c2382._emit("playerror", _0x52c3e5._id, _0x4fbca8);
-//             }
-//           };
-//           if (
-//             "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA" ===
-//             _0x1bff56.src
-//           ) {
-//             _0x1bff56.src = _0x5c2382._src;
-//             _0x1bff56.load();
-//           }
-//           _0x36b075 =
-//             (window && window.ejecta) ||
-//             (!_0x1bff56.readyState && _0x46242f._navigator.isCocoonJS);
-//           if (0x3 <= _0x1bff56.readyState || _0x36b075) {
-//             _0x3b8729();
-//           } else {
-//             _0x5c2382._playLock = true;
-//             _0x5c2382._state = "loading";
-//             var _0x5e59ea = function () {
-//               _0x5c2382._state = "loaded";
-//               _0x3b8729();
-//               _0x1bff56.removeEventListener(
-//                 _0x46242f._canPlayEvent,
-//                 _0x5e59ea,
-//                 false
-//               );
-//             };
-//             _0x1bff56.addEventListener(
-//               _0x46242f._canPlayEvent,
-//               _0x5e59ea,
-//               false
-//             );
-//             _0x5c2382._clearTimer(_0x52c3e5._id);
-//           }
-//         }
-//         return _0x52c3e5._id;
-//       }
-//     },
-//     pause: function (_0x91c72c, _0x472393) {
-//       var _0x194882 = this;
-//       if ("loaded" !== _0x194882._state || _0x194882._playLock) {
-//         _0x194882._queue.push({
-//           event: "pause",
-//           action: function () {
-//             _0x194882.pause(_0x91c72c);
-//           },
-//         });
-//         return _0x194882;
-//       }
-//       var _0x14a013 = _0x194882._getSoundIds(_0x91c72c);
-//       for (var _0x3619af = 0x0; _0x3619af < _0x14a013.length; _0x3619af++) {
-//         _0x194882._clearTimer(_0x14a013[_0x3619af]);
-//         var _0x2af3ac = _0x194882._soundById(_0x14a013[_0x3619af]);
-//         if (
-//           _0x2af3ac &&
-//           !_0x2af3ac._paused &&
-//           ((_0x2af3ac._seek = _0x194882.seek(_0x14a013[_0x3619af])),
-//           (_0x2af3ac._rateSeek = 0x0),
-//           (_0x2af3ac._paused = true),
-//           _0x194882._stopFade(_0x14a013[_0x3619af]),
-//           _0x2af3ac._node)
-//         ) {
-//           if (_0x194882._webAudio) {
-//             if (!_0x2af3ac._node.bufferSource) {
-//               continue;
-//             }
-//             if ("undefined" === typeof _0x2af3ac._node.bufferSource.stop) {
-//               _0x2af3ac._node.bufferSource.noteOff(0x0);
-//             } else {
-//               _0x2af3ac._node.bufferSource.stop(0x0);
-//             }
-//             _0x194882._cleanBuffer(_0x2af3ac._node);
-//           } else if (
-//             !isNaN(_0x2af3ac._node.duration) ||
-//             Infinity === _0x2af3ac._node.duration
-//           ) {
-//             _0x2af3ac._node.pause();
-//           }
-//         }
-//         if (!_0x472393) {
-//           _0x194882._emit("pause", _0x2af3ac ? _0x2af3ac._id : null);
-//         }
-//       }
-//       return _0x194882;
-//     },
-//     stop: function (_0x271e03, _0x899325) {
-//       var _0x2ac0d1 = this;
-//       if ("loaded" !== _0x2ac0d1._state || _0x2ac0d1._playLock) {
-//         _0x2ac0d1._queue.push({
-//           event: "stop",
-//           action: function () {
-//             _0x2ac0d1.stop(_0x271e03);
-//           },
-//         });
-//         return _0x2ac0d1;
-//       }
-//       var _0x5165de = _0x2ac0d1._getSoundIds(_0x271e03);
-//       for (var _0x4ca200 = 0x0; _0x4ca200 < _0x5165de.length; _0x4ca200++) {
-//         _0x2ac0d1._clearTimer(_0x5165de[_0x4ca200]);
-//         var _0x20610d = _0x2ac0d1._soundById(_0x5165de[_0x4ca200]);
-//         if (_0x20610d) {
-//           _0x20610d._seek = _0x20610d._start || 0x0;
-//           _0x20610d._rateSeek = 0x0;
-//           _0x20610d._paused = true;
-//           _0x20610d._ended = true;
-//           _0x2ac0d1._stopFade(_0x5165de[_0x4ca200]);
-//           if (_0x20610d._node) {
-//             if (_0x2ac0d1._webAudio) {
-//               if (_0x20610d._node.bufferSource) {
-//                 if ("undefined" === typeof _0x20610d._node.bufferSource.stop) {
-//                   _0x20610d._node.bufferSource.noteOff(0x0);
-//                 } else {
-//                   _0x20610d._node.bufferSource.stop(0x0);
-//                 }
-//                 _0x2ac0d1._cleanBuffer(_0x20610d._node);
-//               }
-//             } else {
-//               if (
-//                 !isNaN(_0x20610d._node.duration) ||
-//                 Infinity === _0x20610d._node.duration
-//               ) {
-//                 _0x20610d._node.currentTime = _0x20610d._start || 0x0;
-//                 _0x20610d._node.pause();
-//                 if (Infinity === _0x20610d._node.duration) {
-//                   _0x2ac0d1._clearSound(_0x20610d._node);
-//                 }
-//               }
-//             }
-//           }
-//           if (!_0x899325) {
-//             _0x2ac0d1._emit("stop", _0x20610d._id);
-//           }
-//         }
-//       }
-//       return _0x2ac0d1;
-//     },
-//     mute: function (_0x4bc71b, _0x1f13d7) {
-//       var _0xac0179 = this;
-//       if ("loaded" !== _0xac0179._state || _0xac0179._playLock) {
-//         _0xac0179._queue.push({
-//           event: "mute",
-//           action: function () {
-//             _0xac0179.mute(_0x4bc71b, _0x1f13d7);
-//           },
-//         });
-//         return _0xac0179;
-//       }
-//       if ("undefined" === typeof _0x1f13d7) {
-//         if ("boolean" === typeof _0x4bc71b) {
-//           _0xac0179._muted = _0x4bc71b;
-//         } else {
-//           return _0xac0179._muted;
-//         }
-//       }
-//       var _0x530a48 = _0xac0179._getSoundIds(_0x1f13d7);
-//       for (var _0x20d4f9 = 0x0; _0x20d4f9 < _0x530a48.length; _0x20d4f9++) {
-//         var _0x390834 = _0xac0179._soundById(_0x530a48[_0x20d4f9]);
-//         if (_0x390834) {
-//           _0x390834._muted = _0x4bc71b;
-//           if (_0x390834._interval) {
-//             _0xac0179._stopFade(_0x390834._id);
-//           }
-//           if (_0xac0179._webAudio && _0x390834._node) {
-//             _0x390834._node.gain.setValueAtTime(
-//               _0x4bc71b ? 0x0 : _0x390834._volume,
-//               _0x46242f.ctx.currentTime
-//             );
-//           } else if (_0x390834._node) {
-//             _0x390834._node.muted = _0x46242f._muted ? true : _0x4bc71b;
-//           }
-//           _0xac0179._emit("mute", _0x390834._id);
-//         }
-//       }
-//       return _0xac0179;
-//     },
-//     volume: function () {
-//       var _0x3579f8 = this;
-//       var _0x56c56f;
-//       var _0x4bdbf3;
-//       if (0x0 === arguments.length) {
-//         return _0x3579f8._volume;
-//       }
-//       if (
-//         0x1 === arguments.length ||
-//         (0x2 === arguments.length && "undefined" === typeof arguments[0x1])
-//       ) {
-//         if (0x0 <= _0x3579f8._getSoundIds().indexOf(arguments[0x0])) {
-//           _0x4bdbf3 = parseInt(arguments[0x0], 0xa);
-//         } else {
-//           _0x56c56f = parseFloat(arguments[0x0]);
-//         }
-//       } else if (0x2 <= arguments.length) {
-//         _0x56c56f = parseFloat(arguments[0x0]);
-//         _0x4bdbf3 = parseInt(arguments[0x1], 0xa);
-//       }
-//       var _0x535f2c;
-//       if (
-//         "undefined" !== typeof _0x56c56f &&
-//         0x0 <= _0x56c56f &&
-//         0x1 >= _0x56c56f
-//       ) {
-//         if ("loaded" !== _0x3579f8._state || _0x3579f8._playLock) {
-//           _0x3579f8._queue.push({
-//             event: "volume",
-//             action: function () {
-//               _0x3579f8.volume.apply(_0x3579f8, arguments);
-//             },
-//           });
-//           return _0x3579f8;
-//         }
-//         if ("undefined" === typeof _0x4bdbf3) {
-//           _0x3579f8._volume = _0x56c56f;
-//         }
-//         _0x4bdbf3 = _0x3579f8._getSoundIds(_0x4bdbf3);
-//         for (var _0x11ba17 = 0x0; _0x11ba17 < _0x4bdbf3.length; _0x11ba17++) {
-//           if ((_0x535f2c = _0x3579f8._soundById(_0x4bdbf3[_0x11ba17]))) {
-//             _0x535f2c._volume = _0x56c56f;
-//             if (!arguments[0x2]) {
-//               _0x3579f8._stopFade(_0x4bdbf3[_0x11ba17]);
-//             }
-//             if (_0x3579f8._webAudio && _0x535f2c._node && !_0x535f2c._muted) {
-//               _0x535f2c._node.gain.setValueAtTime(
-//                 _0x56c56f,
-//                 _0x46242f.ctx.currentTime
-//               );
-//             } else if (_0x535f2c._node && !_0x535f2c._muted) {
-//               _0x535f2c._node.volume = _0x56c56f * _0x46242f.volume();
-//             }
-//             _0x3579f8._emit("volume", _0x535f2c._id);
-//           }
-//         }
-//       } else {
-//         return (_0x535f2c = _0x4bdbf3
-//           ? _0x3579f8._soundById(_0x4bdbf3)
-//           : _0x3579f8._sounds[0x0])
-//           ? _0x535f2c._volume
-//           : 0x0;
-//       }
-//       return _0x3579f8;
-//     },
-//     fade: function (_0x1a261c, _0x5737e7, _0x9ca99, _0x3a4c34) {
-//       var _0x26a692 = this;
-//       if ("loaded" !== _0x26a692._state || _0x26a692._playLock) {
-//         _0x26a692._queue.push({
-//           event: "fade",
-//           action: function () {
-//             _0x26a692.fade(_0x1a261c, _0x5737e7, _0x9ca99, _0x3a4c34);
-//           },
-//         });
-//         return _0x26a692;
-//       }
-//       _0x1a261c = Math.min(Math.max(0x0, parseFloat(_0x1a261c)), 0x1);
-//       _0x5737e7 = Math.min(Math.max(0x0, parseFloat(_0x5737e7)), 0x1);
-//       _0x9ca99 = parseFloat(_0x9ca99);
-//       _0x26a692.volume(_0x1a261c, _0x3a4c34);
-//       var _0x45e4c9 = _0x26a692._getSoundIds(_0x3a4c34);
-//       for (var _0x1fdc32 = 0x0; _0x1fdc32 < _0x45e4c9.length; _0x1fdc32++) {
-//         var _0x477a66 = _0x26a692._soundById(_0x45e4c9[_0x1fdc32]);
-//         if (_0x477a66) {
-//           if (!_0x3a4c34) {
-//             _0x26a692._stopFade(_0x45e4c9[_0x1fdc32]);
-//           }
-//           if (_0x26a692._webAudio && !_0x477a66._muted) {
-//             var _0x4bcfba = _0x46242f.ctx.currentTime;
-//             var _0xe045aa = _0x4bcfba + _0x9ca99 / 0x3e8;
-//             _0x477a66._volume = _0x1a261c;
-//             _0x477a66._node.gain.setValueAtTime(_0x1a261c, _0x4bcfba);
-//             _0x477a66._node.gain.linearRampToValueAtTime(_0x5737e7, _0xe045aa);
-//           }
-//           _0x26a692._startFadeInterval(
-//             _0x477a66,
-//             _0x1a261c,
-//             _0x5737e7,
-//             _0x9ca99,
-//             _0x45e4c9[_0x1fdc32],
-//             "undefined" === typeof _0x3a4c34
-//           );
-//         }
-//       }
-//       return _0x26a692;
-//     },
-//     _startFadeInterval: function (
-//       _0x9619b8,
-//       _0x3d353c,
-//       _0x4ed05b,
-//       _0x9a6b14,
-//       _0xadfadc,
-//       _0x4c8838
-//     ) {
-//       var _0x182c98 = this;
-//       var _0x53dca6 = _0x3d353c;
-//       var _0x4f7a17 = _0x4ed05b - _0x3d353c;
-//       _0xadfadc = Math.abs(_0x4f7a17 / 0.01);
-//       _0xadfadc = Math.max(
-//         0x4,
-//         0x0 < _0xadfadc ? _0x9a6b14 / _0xadfadc : _0x9a6b14
-//       );
-//       var _0x1dad2d = Date.now();
-//       _0x9619b8._fadeTo = _0x4ed05b;
-//       _0x9619b8._interval = setInterval(function () {
-//         var _0x53e6c3 = (Date.now() - _0x1dad2d) / _0x9a6b14;
-//         _0x1dad2d = Date.now();
-//         _0x53dca6 += _0x4f7a17 * _0x53e6c3;
-//         _0x53dca6 = Math.round(100 * _0x53dca6) / 100;
-//         _0x53dca6 =
-//           0x0 > _0x4f7a17
-//             ? Math.max(_0x4ed05b, _0x53dca6)
-//             : Math.min(_0x4ed05b, _0x53dca6);
-//         if (_0x182c98._webAudio) {
-//           _0x9619b8._volume = _0x53dca6;
-//         } else {
-//           _0x182c98.volume(_0x53dca6, _0x9619b8._id, true);
-//         }
-//         if (_0x4c8838) {
-//           _0x182c98._volume = _0x53dca6;
-//         }
-//         if (
-//           (_0x4ed05b < _0x3d353c && _0x53dca6 <= _0x4ed05b) ||
-//           (_0x4ed05b > _0x3d353c && _0x53dca6 >= _0x4ed05b)
-//         ) {
-//           clearInterval(_0x9619b8._interval);
-//           _0x9619b8._interval = null;
-//           _0x9619b8._fadeTo = null;
-//           _0x182c98.volume(_0x4ed05b, _0x9619b8._id);
-//           _0x182c98._emit("fade", _0x9619b8._id);
-//         }
-//       }, _0xadfadc);
-//     },
-//     _stopFade: function (_0x38dadb) {
-//       var _0x4fc53c = this._soundById(_0x38dadb);
-//       if (_0x4fc53c && _0x4fc53c._interval) {
-//         if (this._webAudio) {
-//           _0x4fc53c._node.gain.cancelScheduledValues(_0x46242f.ctx.currentTime);
-//         }
-//         clearInterval(_0x4fc53c._interval);
-//         _0x4fc53c._interval = null;
-//         this.volume(_0x4fc53c._fadeTo, _0x38dadb);
-//         _0x4fc53c._fadeTo = null;
-//         this._emit("fade", _0x38dadb);
-//       }
-//       return this;
-//     },
-//     loop: function () {
-//       var _0x309fec = arguments;
-//       var _0x2d64be;
-//       var _0x424812;
-//       if (0x0 === _0x309fec.length) {
-//         return this._loop;
-//       }
-//       if (0x1 === _0x309fec.length) {
-//         if ("boolean" === typeof _0x309fec[0x0]) {
-//           this._loop = _0x2d64be = _0x309fec[0x0];
-//         } else {
-//           return (_0x309fec = this._soundById(parseInt(_0x309fec[0x0], 0xa)))
-//             ? _0x309fec._loop
-//             : false;
-//         }
-//       } else if (0x2 === _0x309fec.length) {
-//         _0x2d64be = _0x309fec[0x0];
-//         _0x424812 = parseInt(_0x309fec[0x1], 0xa);
-//       }
-//       _0x424812 = this._getSoundIds(_0x424812);
-//       for (var _0x3a91b6 = 0x0; _0x3a91b6 < _0x424812.length; _0x3a91b6++) {
-//         if ((_0x309fec = this._soundById(_0x424812[_0x3a91b6]))) {
-//           _0x309fec._loop = _0x2d64be;
-//           if (
-//             this._webAudio &&
-//             _0x309fec._node &&
-//             _0x309fec._node.bufferSource &&
-//             (_0x309fec._node.bufferSource.loop = _0x2d64be)
-//           ) {
-//             _0x309fec._node.bufferSource.loopStart = _0x309fec._start || 0x0;
-//             _0x309fec._node.bufferSource.loopEnd = _0x309fec._stop;
-//             if (this.playing(_0x424812[_0x3a91b6])) {
-//               this.pause(_0x424812[_0x3a91b6], true);
-//               this.play(_0x424812[_0x3a91b6], true);
-//             }
-//           }
-//         }
-//       }
-//       return this;
-//     },
-//     rate: function () {
-//       var _0x45d2a4 = this;
-//       var _0x53ebd0;
-//       var _0x30ef6c;
-//       if (0x0 === arguments.length) {
-//         _0x30ef6c = _0x45d2a4._sounds[0x0]._id;
-//       } else if (0x1 === arguments.length) {
-//         if (0x0 <= _0x45d2a4._getSoundIds().indexOf(arguments[0x0])) {
-//           _0x30ef6c = parseInt(arguments[0x0], 0xa);
-//         } else {
-//           _0x53ebd0 = parseFloat(arguments[0x0]);
-//         }
-//       } else if (0x2 === arguments.length) {
-//         _0x53ebd0 = parseFloat(arguments[0x0]);
-//         _0x30ef6c = parseInt(arguments[0x1], 0xa);
-//       }
-//       var _0x3bffac;
-//       if ("number" === typeof _0x53ebd0) {
-//         if ("loaded" !== _0x45d2a4._state || _0x45d2a4._playLock) {
-//           _0x45d2a4._queue.push({
-//             event: "rate",
-//             action: function () {
-//               _0x45d2a4.rate.apply(_0x45d2a4, arguments);
-//             },
-//           });
-//           return _0x45d2a4;
-//         }
-//         if ("undefined" === typeof _0x30ef6c) {
-//           _0x45d2a4._rate = _0x53ebd0;
-//         }
-//         _0x30ef6c = _0x45d2a4._getSoundIds(_0x30ef6c);
-//         for (var _0x1e8ddc = 0x0; _0x1e8ddc < _0x30ef6c.length; _0x1e8ddc++) {
-//           if ((_0x3bffac = _0x45d2a4._soundById(_0x30ef6c[_0x1e8ddc]))) {
-//             if (_0x45d2a4.playing(_0x30ef6c[_0x1e8ddc])) {
-//               _0x3bffac._rateSeek = _0x45d2a4.seek(_0x30ef6c[_0x1e8ddc]);
-//               _0x3bffac._playStart = _0x45d2a4._webAudio
-//                 ? _0x46242f.ctx.currentTime
-//                 : _0x3bffac._playStart;
-//             }
-//             _0x3bffac._rate = _0x53ebd0;
-//             if (
-//               _0x45d2a4._webAudio &&
-//               _0x3bffac._node &&
-//               _0x3bffac._node.bufferSource
-//             ) {
-//               _0x3bffac._node.bufferSource.playbackRate.setValueAtTime(
-//                 _0x53ebd0,
-//                 _0x46242f.ctx.currentTime
-//               );
-//             } else if (_0x3bffac._node) {
-//               _0x3bffac._node.playbackRate = _0x53ebd0;
-//             }
-//             var _0x1f746f = _0x45d2a4.seek(_0x30ef6c[_0x1e8ddc]);
-//             var _0x1f746f =
-//               (0x3e8 *
-//                 ((_0x45d2a4._sprite[_0x3bffac._sprite][0x0] +
-//                   _0x45d2a4._sprite[_0x3bffac._sprite][0x1]) /
-//                   0x3e8 -
-//                   _0x1f746f)) /
-//               Math.abs(_0x3bffac._rate);
-//             if (
-//               _0x45d2a4._endTimers[_0x30ef6c[_0x1e8ddc]] ||
-//               !_0x3bffac._paused
-//             ) {
-//               _0x45d2a4._clearTimer(_0x30ef6c[_0x1e8ddc]);
-//               _0x45d2a4._endTimers[_0x30ef6c[_0x1e8ddc]] = setTimeout(
-//                 _0x45d2a4._ended.bind(_0x45d2a4, _0x3bffac),
-//                 _0x1f746f
-//               );
-//             }
-//             _0x45d2a4._emit("rate", _0x3bffac._id);
-//           }
-//         }
-//       } else {
-//         return (_0x3bffac = _0x45d2a4._soundById(_0x30ef6c))
-//           ? _0x3bffac._rate
-//           : _0x45d2a4._rate;
-//       }
-//       return _0x45d2a4;
-//     },
-//     seek: function () {
-//       var _0x3489be = this;
-//       var _0x3161ca;
-//       var _0x4a3177;
-//       if (0x0 === arguments.length) {
-//         if (_0x3489be._sounds.length) {
-//           _0x4a3177 = _0x3489be._sounds[0x0]._id;
-//         }
-//       } else if (0x1 === arguments.length) {
-//         if (0x0 <= _0x3489be._getSoundIds().indexOf(arguments[0x0])) {
-//           _0x4a3177 = parseInt(arguments[0x0], 0xa);
-//         } else if (_0x3489be._sounds.length) {
-//           _0x4a3177 = _0x3489be._sounds[0x0]._id;
-//           _0x3161ca = parseFloat(arguments[0x0]);
-//         }
-//       } else if (0x2 === arguments.length) {
-//         _0x3161ca = parseFloat(arguments[0x0]);
-//         _0x4a3177 = parseInt(arguments[0x1], 0xa);
-//       }
-//       if ("undefined" === typeof _0x4a3177) {
-//         return 0x0;
-//       }
-//       if (
-//         "number" === typeof _0x3161ca &&
-//         ("loaded" !== _0x3489be._state || _0x3489be._playLock)
-//       ) {
-//         _0x3489be._queue.push({
-//           event: "seek",
-//           action: function () {
-//             _0x3489be.seek.apply(_0x3489be, arguments);
-//           },
-//         });
-//         return _0x3489be;
-//       }
-//       var _0x175771 = _0x3489be._soundById(_0x4a3177);
-//       if (_0x175771) {
-//         if ("number" === typeof _0x3161ca && 0x0 <= _0x3161ca) {
-//           var _0x304962 = _0x3489be.playing(_0x4a3177);
-//           if (_0x304962) {
-//             _0x3489be.pause(_0x4a3177, true);
-//           }
-//           _0x175771._seek = _0x3161ca;
-//           _0x175771._ended = false;
-//           _0x3489be._clearTimer(_0x4a3177);
-//           if (
-//             !_0x3489be._webAudio &&
-//             _0x175771._node &&
-//             !isNaN(_0x175771._node.duration)
-//           ) {
-//             _0x175771._node.currentTime = _0x3161ca;
-//           }
-//           var _0xdb8bba = function () {
-//             if (_0x304962) {
-//               _0x3489be.play(_0x4a3177, true);
-//             }
-//             _0x3489be._emit("seek", _0x4a3177);
-//           };
-//           if (_0x304962 && !_0x3489be._webAudio) {
-//             var _0x330d0d = function () {
-//               if (_0x3489be._playLock) {
-//                 setTimeout(_0x330d0d, 0x0);
-//               } else {
-//                 _0xdb8bba();
-//               }
-//             };
-//             setTimeout(_0x330d0d, 0x0);
-//           } else {
-//             _0xdb8bba();
-//           }
-//         } else {
-//           return _0x3489be._webAudio
-//             ? ((_0x3161ca = _0x3489be.playing(_0x4a3177)
-//                 ? _0x46242f.ctx.currentTime - _0x175771._playStart
-//                 : 0x0),
-//               _0x175771._seek +
-//                 ((_0x175771._rateSeek
-//                   ? _0x175771._rateSeek - _0x175771._seek
-//                   : 0x0) +
-//                   _0x3161ca * Math.abs(_0x175771._rate)))
-//             : _0x175771._node.currentTime;
-//         }
-//       }
-//       return _0x3489be;
-//     },
-//     playing: function (_0x5200bf) {
-//       if ("number" === typeof _0x5200bf) {
-//         return (_0x5200bf = this._soundById(_0x5200bf))
-//           ? !_0x5200bf._paused
-//           : false;
-//       }
-//       for (_0x5200bf = 0x0; _0x5200bf < this._sounds.length; _0x5200bf++) {
-//         if (!this._sounds[_0x5200bf]._paused) {
-//           return true;
-//         }
-//       }
-//       return false;
-//     },
-//     duration: function (_0x24dcc0) {
-//       var _0x2f91db = this._duration;
-//       if ((_0x24dcc0 = this._soundById(_0x24dcc0))) {
-//         _0x2f91db = this._sprite[_0x24dcc0._sprite][0x1] / 0x3e8;
-//       }
-//       return _0x2f91db;
-//     },
-//     state: function () {
-//       return this._state;
-//     },
-//     unload: function () {
-//       var _0x3b9f81 = this._sounds;
-//       for (var _0x140e6c = 0x0; _0x140e6c < _0x3b9f81.length; _0x140e6c++) {
-//         if (!_0x3b9f81[_0x140e6c]._paused) {
-//           this.stop(_0x3b9f81[_0x140e6c]._id);
-//         }
-//         if (!this._webAudio) {
-//           this._clearSound(_0x3b9f81[_0x140e6c]._node);
-//           _0x3b9f81[_0x140e6c]._node.removeEventListener(
-//             "error",
-//             _0x3b9f81[_0x140e6c]._errorFn,
-//             false
-//           );
-//           _0x3b9f81[_0x140e6c]._node.removeEventListener(
-//             _0x46242f._canPlayEvent,
-//             _0x3b9f81[_0x140e6c]._loadFn,
-//             false
-//           );
-//           _0x3b9f81[_0x140e6c]._node.removeEventListener(
-//             "ended",
-//             _0x3b9f81[_0x140e6c]._endFn,
-//             false
-//           );
-//           _0x46242f._releaseHtml5Audio(_0x3b9f81[_0x140e6c]._node);
-//         }
-//         delete _0x3b9f81[_0x140e6c]._node;
-//         this._clearTimer(_0x3b9f81[_0x140e6c]._id);
-//       }
-//       _0x140e6c = _0x46242f._howls.indexOf(this);
-//       if (0x0 <= _0x140e6c) {
-//         _0x46242f._howls.splice(_0x140e6c, 0x1);
-//       }
-//       _0x3b9f81 = true;
-//       for (_0x140e6c = 0x0; _0x140e6c < _0x46242f._howls.length; _0x140e6c++) {
-//         if (
-//           _0x46242f._howls[_0x140e6c]._src === this._src ||
-//           0x0 <= this._src.indexOf(_0x46242f._howls[_0x140e6c]._src)
-//         ) {
-//           _0x3b9f81 = false;
-//           break;
-//         }
-//       }
-//       if (_0x1bad54 && _0x3b9f81) {
-//         delete _0x1bad54[this._src];
-//       }
-//       _0x46242f.noAudio = false;
-//       this._state = "unloaded";
-//       this._sounds = [];
-//       return null;
-//     },
-//     on: function (_0x40d854, _0x8f6c4b, _0x13c722, _0x3329e7) {
-//       _0x40d854 = this["_on" + _0x40d854];
-//       if ("function" === typeof _0x8f6c4b) {
-//         _0x40d854.push(
-//           _0x3329e7
-//             ? {
-//                 id: _0x13c722,
-//                 fn: _0x8f6c4b,
-//                 once: _0x3329e7,
-//               }
-//             : {
-//                 id: _0x13c722,
-//                 fn: _0x8f6c4b,
-//               }
-//         );
-//       }
-//       return this;
-//     },
-//     off: function (_0x276689, _0x225783, _0x3c77f6) {
-//       var _0x1e4268 = this["_on" + _0x276689];
-//       var _0x24ef2f = 0x0;
-//       if ("number" === typeof _0x225783) {
-//         _0x3c77f6 = _0x225783;
-//         _0x225783 = null;
-//       }
-//       if (_0x225783 || _0x3c77f6) {
-//         for (_0x24ef2f = 0x0; _0x24ef2f < _0x1e4268.length; _0x24ef2f++) {
-//           _0x276689 = _0x3c77f6 === _0x1e4268[_0x24ef2f].id;
-//           if (
-//             (_0x225783 === _0x1e4268[_0x24ef2f].fn && _0x276689) ||
-//             (!_0x225783 && _0x276689)
-//           ) {
-//             _0x1e4268.splice(_0x24ef2f, 0x1);
-//             break;
-//           }
-//         }
-//       } else {
-//         if (_0x276689) {
-//           this["_on" + _0x276689] = [];
-//         } else {
-//           _0x225783 = Object.keys(this);
-//           for (_0x24ef2f = 0x0; _0x24ef2f < _0x225783.length; _0x24ef2f++) {
-//             if (
-//               0x0 === _0x225783[_0x24ef2f].indexOf("_on") &&
-//               Array.isArray(this[_0x225783[_0x24ef2f]])
-//             ) {
-//               this[_0x225783[_0x24ef2f]] = [];
-//             }
-//           }
-//         }
-//       }
-//       return this;
-//     },
-//     once: function (_0x1e7064, _0x240a52, _0x3c1f9b) {
-//       this.on(_0x1e7064, _0x240a52, _0x3c1f9b, 0x1);
-//       return this;
-//     },
-//     _emit: function (_0x4620e5, _0x61ffff, _0x2df215) {
-//       var _0x3207b9 = this["_on" + _0x4620e5];
-//       for (
-//         var _0x1354fe = _0x3207b9.length - 0x1;
-//         0x0 <= _0x1354fe;
-//         _0x1354fe--
-//       ) {
-//         if (
-//           !_0x3207b9[_0x1354fe].id ||
-//           _0x3207b9[_0x1354fe].id === _0x61ffff ||
-//           "load" === _0x4620e5
-//         ) {
-//           setTimeout(
-//             function (_0x20e0ee) {
-//               _0x20e0ee.call(this, _0x61ffff, _0x2df215);
-//             }.bind(this, _0x3207b9[_0x1354fe].fn),
-//             0x0
-//           );
-//           if (_0x3207b9[_0x1354fe].once) {
-//             this.off(
-//               _0x4620e5,
-//               _0x3207b9[_0x1354fe].fn,
-//               _0x3207b9[_0x1354fe].id
-//             );
-//           }
-//         }
-//       }
-//       this._loadQueue(_0x4620e5);
-//       return this;
-//     },
-//     _loadQueue: function (_0x41a455) {
-//       if (0x0 < this._queue.length) {
-//         var _0x41c3ea = this._queue[0x0];
-//         if (_0x41c3ea.event === _0x41a455) {
-//           this._queue.shift();
-//           this._loadQueue();
-//         }
-//         if (!_0x41a455) {
-//           _0x41c3ea.action();
-//         }
-//       }
-//       return this;
-//     },
-//     _ended: function (_0x399590) {
-//       var _0x4ad1b6 = _0x399590._sprite;
-//       if (
-//         !this._webAudio &&
-//         _0x399590._node &&
-//         !_0x399590._node.paused &&
-//         !_0x399590._node.ended &&
-//         _0x399590._node.currentTime < _0x399590._stop
-//       ) {
-//         setTimeout(this._ended.bind(this, _0x399590), 0x64);
-//         return this;
-//       }
-//       _0x4ad1b6 = !(!_0x399590._loop && !this._sprite[_0x4ad1b6][0x2]);
-//       this._emit("end", _0x399590._id);
-//       if (!this._webAudio && _0x4ad1b6) {
-//         this.stop(_0x399590._id, true).play(_0x399590._id);
-//       }
-//       if (this._webAudio && _0x4ad1b6) {
-//         this._emit("play", _0x399590._id);
-//         _0x399590._seek = _0x399590._start || 0x0;
-//         _0x399590._rateSeek = 0x0;
-//         _0x399590._playStart = _0x46242f.ctx.currentTime;
-//         var _0x97b4e3 =
-//           (0x3e8 * (_0x399590._stop - _0x399590._start)) /
-//           Math.abs(_0x399590._rate);
-//         this._endTimers[_0x399590._id] = setTimeout(
-//           this._ended.bind(this, _0x399590),
-//           _0x97b4e3
-//         );
-//       }
-//       if (this._webAudio && !_0x4ad1b6) {
-//         _0x399590._paused = true;
-//         _0x399590._ended = true;
-//         _0x399590._seek = _0x399590._start || 0x0;
-//         _0x399590._rateSeek = 0x0;
-//         this._clearTimer(_0x399590._id);
-//         this._cleanBuffer(_0x399590._node);
-//         _0x46242f._autoSuspend();
-//       }
-//       if (!this._webAudio && !_0x4ad1b6) {
-//         this.stop(_0x399590._id, true);
-//       }
-//       return this;
-//     },
-//     _clearTimer: function (_0x236801) {
-//       if (this._endTimers[_0x236801]) {
-//         if ("function" !== typeof this._endTimers[_0x236801]) {
-//           clearTimeout(this._endTimers[_0x236801]);
-//         } else {
-//           var _0x20ff59 = this._soundById(_0x236801);
-//           if (_0x20ff59 && _0x20ff59._node) {
-//             _0x20ff59._node.removeEventListener(
-//               "ended",
-//               this._endTimers[_0x236801],
-//               false
-//             );
-//           }
-//         }
-//         delete this._endTimers[_0x236801];
-//       }
-//       return this;
-//     },
-//     _soundById: function (_0x124d23) {
-//       for (var _0x4edb40 = 0x0; _0x4edb40 < this._sounds.length; _0x4edb40++) {
-//         if (_0x124d23 === this._sounds[_0x4edb40]._id) {
-//           return this._sounds[_0x4edb40];
-//         }
-//       }
-//       return null;
-//     },
-//     _inactiveSound: function () {
-//       this._drain();
-//       for (var _0x28a5de = 0x0; _0x28a5de < this._sounds.length; _0x28a5de++) {
-//         if (this._sounds[_0x28a5de]._ended) {
-//           return this._sounds[_0x28a5de].reset();
-//         }
-//       }
-//       return new _0x4ad29a(this);
-//     },
-//     _drain: function () {
-//       var _0x84a1b0 = this._pool;
-//       var _0x1bf36c = 0x0;
-//       var _0x16c921 = 0x0;
-//       if (!(this._sounds.length < _0x84a1b0)) {
-//         for (_0x16c921 = 0x0; _0x16c921 < this._sounds.length; _0x16c921++) {
-//           if (this._sounds[_0x16c921]._ended) {
-//             _0x1bf36c++;
-//           }
-//         }
-//         for (
-//           _0x16c921 = this._sounds.length - 0x1;
-//           0x0 <= _0x16c921 && !(_0x1bf36c <= _0x84a1b0);
-//           _0x16c921--
-//         ) {
-//           if (this._sounds[_0x16c921]._ended) {
-//             if (this._webAudio && this._sounds[_0x16c921]._node) {
-//               this._sounds[_0x16c921]._node.disconnect(0x0);
-//             }
-//             this._sounds.splice(_0x16c921, 0x1);
-//             _0x1bf36c--;
-//           }
-//         }
-//       }
-//     },
-//     _getSoundIds: function (_0x1ce920) {
-//       if ("undefined" === typeof _0x1ce920) {
-//         _0x1ce920 = [];
-//         for (
-//           var _0x3a12a2 = 0x0;
-//           _0x3a12a2 < this._sounds.length;
-//           _0x3a12a2++
-//         ) {
-//           _0x1ce920.push(this._sounds[_0x3a12a2]._id);
-//         }
-//         return _0x1ce920;
-//       }
-//       return [_0x1ce920];
-//     },
-//     _refreshBuffer: function (_0x4f4cb5) {
-//       _0x4f4cb5._node.bufferSource = _0x46242f.ctx.createBufferSource();
-//       _0x4f4cb5._node.bufferSource.buffer = _0x1bad54[this._src];
-//       if (_0x4f4cb5._panner) {
-//         _0x4f4cb5._node.bufferSource.connect(_0x4f4cb5._panner);
-//       } else {
-//         _0x4f4cb5._node.bufferSource.connect(_0x4f4cb5._node);
-//       }
-//       if ((_0x4f4cb5._node.bufferSource.loop = _0x4f4cb5._loop)) {
-//         _0x4f4cb5._node.bufferSource.loopStart = _0x4f4cb5._start || 0x0;
-//         _0x4f4cb5._node.bufferSource.loopEnd = _0x4f4cb5._stop || 0x0;
-//       }
-//       _0x4f4cb5._node.bufferSource.playbackRate.setValueAtTime(
-//         _0x4f4cb5._rate,
-//         _0x46242f.ctx.currentTime
-//       );
-//       return this;
-//     },
-//     _cleanBuffer: function (_0x5e7bb0) {
-//       var _0x425040 =
-//         _0x46242f._navigator &&
-//         0x0 <= _0x46242f._navigator.vendor.indexOf("Apple");
-//       if (!_0x5e7bb0.bufferSource) {
-//         return this;
-//       }
-//       if (
-//         _0x46242f._scratchBuffer &&
-//         _0x5e7bb0.bufferSource &&
-//         ((_0x5e7bb0.bufferSource.onended = null),
-//         _0x5e7bb0.bufferSource.disconnect(0x0),
-//         _0x425040)
-//       ) {
-//         try {
-//           _0x5e7bb0.bufferSource.buffer = _0x46242f._scratchBuffer;
-//         } catch (_0x3c96d9) {}
-//       }
-//       _0x5e7bb0.bufferSource = null;
-//       return this;
-//     },
-//     _clearSound: function (_0x2b9599) {
-//       if (
-//         !/MSIE |Trident\//.test(
-//           _0x46242f._navigator && _0x46242f._navigator.userAgent
-//         )
-//       ) {
-//         _0x2b9599.src =
-//           "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
-//       }
-//     },
-//   };
-//   var _0x4ad29a = function (_0x2f0c3f) {
-//     this._parent = _0x2f0c3f;
-//     this.init();
-//   };
-//   _0x4ad29a.prototype = {
-//     init: function () {
-//       var _0x481da2 = this._parent;
-//       this._muted = _0x481da2._muted;
-//       this._loop = _0x481da2._loop;
-//       this._volume = _0x481da2._volume;
-//       this._rate = _0x481da2._rate;
-//       this._seek = 0x0;
-//       this._ended = this._paused = true;
-//       this._sprite = "__default";
-//       this._id = ++_0x46242f._counter;
-//       _0x481da2._sounds.push(this);
-//       this.create();
-//       return this;
-//     },
-//     create: function () {
-//       var _0x8bc912 = this._parent;
-//       var _0x3ba200 =
-//         _0x46242f._muted || this._muted || this._parent._muted
-//           ? 0x0
-//           : this._volume;
-//       if (_0x8bc912._webAudio) {
-//         this._node =
-//           "undefined" === typeof _0x46242f.ctx.createGain
-//             ? _0x46242f.ctx.createGainNode()
-//             : _0x46242f.ctx.createGain();
-//         this._node.gain.setValueAtTime(_0x3ba200, _0x46242f.ctx.currentTime);
-//         this._node.paused = true;
-//         this._node.connect(_0x46242f.masterGain);
-//       } else if (!_0x46242f.noAudio) {
-//         this._node = _0x46242f._obtainHtml5Audio();
-//         this._errorFn = this._errorListener.bind(this);
-//         this._node.addEventListener("error", this._errorFn, false);
-//         this._loadFn = this._loadListener.bind(this);
-//         this._node.addEventListener(
-//           _0x46242f._canPlayEvent,
-//           this._loadFn,
-//           false
-//         );
-//         this._endFn = this._endListener.bind(this);
-//         this._node.addEventListener("ended", this._endFn, false);
-//         this._node.src = _0x8bc912._src;
-//         this._node.preload =
-//           true === _0x8bc912._preload ? "auto" : _0x8bc912._preload;
-//         this._node.volume = _0x3ba200 * _0x46242f.volume();
-//         this._node.load();
-//       }
-//       return this;
-//     },
-//     reset: function () {
-//       var _0x30c70b = this._parent;
-//       this._muted = _0x30c70b._muted;
-//       this._loop = _0x30c70b._loop;
-//       this._volume = _0x30c70b._volume;
-//       this._rate = _0x30c70b._rate;
-//       this._rateSeek = this._seek = 0x0;
-//       this._ended = this._paused = true;
-//       this._sprite = "__default";
-//       this._id = ++_0x46242f._counter;
-//       return this;
-//     },
-//     _errorListener: function () {
-//       this._parent._emit(
-//         "loaderror",
-//         this._id,
-//         this._node.error ? this._node.error.code : 0x0
-//       );
-//       this._node.removeEventListener("error", this._errorFn, false);
-//     },
-//     _loadListener: function () {
-//       var _0x229236 = this._parent;
-//       _0x229236._duration = Math.ceil(0xa * this._node.duration) / 0xa;
-//       if (0x0 === Object.keys(_0x229236._sprite).length) {
-//         _0x229236._sprite = {
-//           __default: [0x0, 0x3e8 * _0x229236._duration],
-//         };
-//       }
-//       if ("loaded" !== _0x229236._state) {
-//         _0x229236._state = "loaded";
-//         _0x229236._emit("load");
-//         _0x229236._loadQueue();
-//       }
-//       this._node.removeEventListener(
-//         _0x46242f._canPlayEvent,
-//         this._loadFn,
-//         false
-//       );
-//     },
-//     _endListener: function () {
-//       var _0x2c160d = this._parent;
-//       if (Infinity === _0x2c160d._duration) {
-//         _0x2c160d._duration = Math.ceil(0xa * this._node.duration) / 0xa;
-//         if (Infinity === _0x2c160d._sprite.__default[0x1]) {
-//           _0x2c160d._sprite.__default[0x1] = 0x3e8 * _0x2c160d._duration;
-//         }
-//         _0x2c160d._ended(this);
-//       }
-//       this._node.removeEventListener("ended", this._endFn, false);
-//     },
-//   };
-//   var _0x1bad54 = {};
-//   var _0x4d2539 = function (_0xa0e228, _0x35abd7) {
-//     var _0x215515 = function () {
-//       _0x35abd7._emit("loaderror", null, "Decoding audio data failed.");
-//     };
-//     var _0x51115c = function (_0x5f144a) {
-//       if (_0x5f144a && 0x0 < _0x35abd7._sounds.length) {
-//         _0x1bad54[_0x35abd7._src] = _0x5f144a;
-//         _0x10c14f(_0x35abd7, _0x5f144a);
-//       } else {
-//         _0x215515();
-//       }
-//     };
-//     if (
-//       "undefined" !== typeof Promise &&
-//       0x1 === _0x46242f.ctx.decodeAudioData.length
-//     ) {
-//       _0x46242f.ctx
-//         .decodeAudioData(_0xa0e228)
-//         .then(_0x51115c)
-//         ["catch"](_0x215515);
-//     } else {
-//       _0x46242f.ctx.decodeAudioData(_0xa0e228, _0x51115c, _0x215515);
-//     }
-//   };
-//   var _0x10c14f = function (_0x5cddf2, _0x3ee60c) {
-//     if (_0x3ee60c && !_0x5cddf2._duration) {
-//       _0x5cddf2._duration = _0x3ee60c.duration;
-//     }
-//     if (0x0 === Object.keys(_0x5cddf2._sprite).length) {
-//       _0x5cddf2._sprite = {
-//         __default: [0x0, 0x3e8 * _0x5cddf2._duration],
-//       };
-//     }
-//     if ("loaded" !== _0x5cddf2._state) {
-//       _0x5cddf2._state = "loaded";
-//       _0x5cddf2._emit("load");
-//       _0x5cddf2._loadQueue();
-//     }
-//   };
-//   var _0xaf42be = function () {
-//     if (_0x46242f.usingWebAudio) {
-//       try {
-//         if ("undefined" !== typeof AudioContext) {
-//           _0x46242f.ctx = new AudioContext();
-//         } else if ("undefined" !== typeof webkitAudioContext) {
-//           _0x46242f.ctx = new webkitAudioContext();
-//         } else {
-//           _0x46242f.usingWebAudio = false;
-//         }
-//       } catch (_0x2c245e) {
-//         _0x46242f.usingWebAudio = false;
-//       }
-//       if (!_0x46242f.ctx) {
-//         _0x46242f.usingWebAudio = false;
-//       }
-//       var _0x49ffc9 = /iP(hone|od|ad)/.test(
-//         _0x46242f._navigator && _0x46242f._navigator.platform
-//       );
-//       var _0x56104d =
-//         _0x46242f._navigator &&
-//         _0x46242f._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/);
-//       var _0x56104d = _0x56104d ? parseInt(_0x56104d[0x1], 0xa) : null;
-//       if (_0x49ffc9 && _0x56104d && 0x9 > _0x56104d) {
-//         _0x49ffc9 = /safari/.test(
-//           _0x46242f._navigator && _0x46242f._navigator.userAgent.toLowerCase()
-//         );
-//         if (_0x46242f._navigator && !_0x49ffc9) {
-//           _0x46242f.usingWebAudio = false;
-//         }
-//       }
-//       if (_0x46242f.usingWebAudio) {
-//         _0x46242f.masterGain =
-//           "undefined" === typeof _0x46242f.ctx.createGain
-//             ? _0x46242f.ctx.createGainNode()
-//             : _0x46242f.ctx.createGain();
-//         _0x46242f.masterGain.gain.setValueAtTime(
-//           _0x46242f._muted ? 0x0 : _0x46242f._volume,
-//           _0x46242f.ctx.currentTime
-//         );
-//         _0x46242f.masterGain.connect(_0x46242f.ctx.destination);
-//       }
-//       _0x46242f._setup();
-//     }
-//   };
-//   if ("function" === typeof define && define.amd) {
-//     define([], function () {
-//       return {
-//         Howler: _0x46242f,
-//         Howl: _0x2918a3,
-//       };
-//     });
-//   }
-//   if ("undefined" !== typeof exports) {
-//     exports.Howler = _0x46242f;
-//     exports.Howl = _0x2918a3;
-//   }
-//   if ("undefined" !== typeof global) {
-//     global.HowlerGlobal = _0x3f876e;
-//     global.Howler = _0x46242f;
-//     global.Howl = _0x2918a3;
-//     global.Sound = _0x4ad29a;
-//   } else if ("undefined" !== typeof window) {
-//     window.HowlerGlobal = _0x3f876e;
-//     window.Howler = _0x46242f;
-//     window.Howl = _0x2918a3;
-//     window.Sound = _0x4ad29a;
-//   }
-// })();
+(function () {
+  var _0x3f876e = function () {
+    this.init();
+  };
+  _0x3f876e.prototype = {
+    init: function () {
+      var _0xa0301b = this || _0x46242f;
+      _0xa0301b._counter = 0x3e8;
+      _0xa0301b._html5AudioPool = [];
+      _0xa0301b.html5PoolSize = 0xa;
+      _0xa0301b._codecs = {};
+      _0xa0301b._howls = [];
+      _0xa0301b._muted = false;
+      _0xa0301b._volume = 0x1;
+      _0xa0301b._canPlayEvent = "canplaythrough";
+      _0xa0301b._navigator =
+        "undefined" !== typeof window && window.navigator
+          ? window.navigator
+          : null;
+      _0xa0301b.masterGain = null;
+      _0xa0301b.noAudio = false;
+      _0xa0301b.usingWebAudio = true;
+      _0xa0301b.autoSuspend = true;
+      _0xa0301b.ctx = null;
+      _0xa0301b.autoUnlock = true;
+      _0xa0301b._setup();
+      return _0xa0301b;
+    },
+    volume: function (_0x466169) {
+      var _0x2dd5b9 = this || _0x46242f;
+      _0x466169 = parseFloat(_0x466169);
+      if (!_0x2dd5b9.ctx) {
+        _0xaf42be();
+      }
+      if (
+        "undefined" !== typeof _0x466169 &&
+        0x0 <= _0x466169 &&
+        0x1 >= _0x466169
+      ) {
+        _0x2dd5b9._volume = _0x466169;
+        if (_0x2dd5b9._muted) {
+          return _0x2dd5b9;
+        }
+        if (_0x2dd5b9.usingWebAudio) {
+          _0x2dd5b9.masterGain.gain.setValueAtTime(
+            _0x466169,
+            _0x46242f.ctx.currentTime
+          );
+        }
+        for (
+          var _0x5814de = 0x0;
+          _0x5814de < _0x2dd5b9._howls.length;
+          _0x5814de++
+        ) {
+          if (!_0x2dd5b9._howls[_0x5814de]._webAudio) {
+            var _0x3334fd = _0x2dd5b9._howls[_0x5814de]._getSoundIds();
+            for (
+              var _0x499646 = 0x0;
+              _0x499646 < _0x3334fd.length;
+              _0x499646++
+            ) {
+              var _0x4793d4 = _0x2dd5b9._howls[_0x5814de]._soundById(
+                _0x3334fd[_0x499646]
+              );
+              if (_0x4793d4 && _0x4793d4._node) {
+                _0x4793d4._node.volume = _0x4793d4._volume * _0x466169;
+              }
+            }
+          }
+        }
+        return _0x2dd5b9;
+      }
+      return _0x2dd5b9._volume;
+    },
+    mute: function (_0x47a9e2) {
+      var _0x5a872d = this || _0x46242f;
+      if (!_0x5a872d.ctx) {
+        _0xaf42be();
+      }
+      _0x5a872d._muted = _0x47a9e2;
+      if (_0x5a872d.usingWebAudio) {
+        _0x5a872d.masterGain.gain.setValueAtTime(
+          _0x47a9e2 ? 0x0 : _0x5a872d._volume,
+          _0x46242f.ctx.currentTime
+        );
+      }
+      for (
+        var _0x3a4ea6 = 0x0;
+        _0x3a4ea6 < _0x5a872d._howls.length;
+        _0x3a4ea6++
+      ) {
+        if (!_0x5a872d._howls[_0x3a4ea6]._webAudio) {
+          var _0x5240e0 = _0x5a872d._howls[_0x3a4ea6]._getSoundIds();
+          for (var _0x2dd087 = 0x0; _0x2dd087 < _0x5240e0.length; _0x2dd087++) {
+            var _0x4b9ecc = _0x5a872d._howls[_0x3a4ea6]._soundById(
+              _0x5240e0[_0x2dd087]
+            );
+            if (_0x4b9ecc && _0x4b9ecc._node) {
+              _0x4b9ecc._node.muted = _0x47a9e2 ? true : _0x4b9ecc._muted;
+            }
+          }
+        }
+      }
+      return _0x5a872d;
+    },
+    stop: function () {
+      var _0x2e880c = this || _0x46242f;
+      for (
+        var _0x560d15 = 0x0;
+        _0x560d15 < _0x2e880c._howls.length;
+        _0x560d15++
+      ) {
+        _0x2e880c._howls[_0x560d15].stop();
+      }
+      return _0x2e880c;
+    },
+    unload: function () {
+      var _0x5e8d6c = this || _0x46242f;
+      for (
+        var _0xf862b9 = _0x5e8d6c._howls.length - 0x1;
+        0x0 <= _0xf862b9;
+        _0xf862b9--
+      ) {
+        _0x5e8d6c._howls[_0xf862b9].unload();
+      }
+      if (
+        _0x5e8d6c.usingWebAudio &&
+        _0x5e8d6c.ctx &&
+        "undefined" !== typeof _0x5e8d6c.ctx.close
+      ) {
+        _0x5e8d6c.ctx.close();
+        _0x5e8d6c.ctx = null;
+        _0xaf42be();
+      }
+      return _0x5e8d6c;
+    },
+    codecs: function (_0x34053d) {
+      return (this || _0x46242f)._codecs[_0x34053d.replace(/^x-/, "")];
+    },
+    _setup: function () {
+      var _0x33ab0d = this || _0x46242f;
+      _0x33ab0d.state = _0x33ab0d.ctx
+        ? _0x33ab0d.ctx.state || "suspended"
+        : "suspended";
+      _0x33ab0d._autoSuspend();
+      if (!_0x33ab0d.usingWebAudio) {
+        if ("undefined" !== typeof Audio) {
+          try {
+            var _0x1cbf68 = new Audio();
+            if ("undefined" === typeof _0x1cbf68.oncanplaythrough) {
+              _0x33ab0d._canPlayEvent = "canplay";
+            }
+          } catch (_0x35dd85) {
+            _0x33ab0d.noAudio = true;
+          }
+        } else {
+          _0x33ab0d.noAudio = true;
+        }
+      }
+      try {
+        _0x1cbf68 = new Audio();
+        if (_0x1cbf68.muted) {
+          _0x33ab0d.noAudio = true;
+        }
+      } catch (_0x2b6fb8) {}
+      if (!_0x33ab0d.noAudio) {
+        _0x33ab0d._setupCodecs();
+      }
+      return _0x33ab0d;
+    },
+    _setupCodecs: function () {
+      var _0x2783fa = this || _0x46242f;
+      var _0x56bb1e = null;
+      try {
+        _0x56bb1e = "undefined" !== typeof Audio ? new Audio() : null;
+      } catch (_0x41928d) {
+        return _0x2783fa;
+      }
+      if (!_0x56bb1e || "function" !== typeof _0x56bb1e.canPlayType) {
+        return _0x2783fa;
+      }
+      var _0x458dfc = _0x56bb1e.canPlayType("audio/mpeg;").replace(/^no$/, "");
+      var _0x47a9bf = _0x2783fa._navigator
+        ? _0x2783fa._navigator.userAgent
+        : "";
+      var _0x4b0487 = _0x47a9bf.match(/OPR\/(\d+)/g);
+      var _0x4b0487 =
+        _0x4b0487 && 0x21 > parseInt(_0x4b0487[0x0].split("/")[0x1], 0xa);
+      var _0x3ecffe =
+        -0x1 !== _0x47a9bf.indexOf("Safari") &&
+        -0x1 === _0x47a9bf.indexOf("Chrome");
+      var _0x47a9bf = _0x47a9bf.match(/Version\/(.*?) /);
+      var _0x47a9bf =
+        _0x3ecffe && _0x47a9bf && 0xf > parseInt(_0x47a9bf[0x1], 0xa);
+      _0x2783fa._codecs = {
+        mp3: !(
+          _0x4b0487 ||
+          (!_0x458dfc &&
+            !_0x56bb1e.canPlayType("audio/mp3;").replace(/^no$/, ""))
+        ),
+        mpeg: !!_0x458dfc,
+        opus: !!_0x56bb1e
+          .canPlayType('audio/ogg; codecs="opus"')
+          .replace(/^no$/, ""),
+        ogg: !!_0x56bb1e
+          .canPlayType('audio/ogg; codecs="vorbis"')
+          .replace(/^no$/, ""),
+        oga: !!_0x56bb1e
+          .canPlayType('audio/ogg; codecs="vorbis"')
+          .replace(/^no$/, ""),
+        wav: !!(
+          _0x56bb1e.canPlayType('audio/wav; codecs="1"') ||
+          _0x56bb1e.canPlayType("audio/wav")
+        ).replace(/^no$/, ""),
+        aac: !!_0x56bb1e.canPlayType("audio/aac;").replace(/^no$/, ""),
+        caf: !!_0x56bb1e.canPlayType("audio/x-caf;").replace(/^no$/, ""),
+        m4a: !!(
+          _0x56bb1e.canPlayType("audio/x-m4a;") ||
+          _0x56bb1e.canPlayType("audio/m4a;") ||
+          _0x56bb1e.canPlayType("audio/aac;")
+        ).replace(/^no$/, ""),
+        m4b: !!(
+          _0x56bb1e.canPlayType("audio/x-m4b;") ||
+          _0x56bb1e.canPlayType("audio/m4b;") ||
+          _0x56bb1e.canPlayType("audio/aac;")
+        ).replace(/^no$/, ""),
+        mp4: !!(
+          _0x56bb1e.canPlayType("audio/x-mp4;") ||
+          _0x56bb1e.canPlayType("audio/mp4;") ||
+          _0x56bb1e.canPlayType("audio/aac;")
+        ).replace(/^no$/, ""),
+        weba: !(
+          _0x47a9bf ||
+          !_0x56bb1e
+            .canPlayType('audio/webm; codecs="vorbis"')
+            .replace(/^no$/, "")
+        ),
+        webm: !(
+          _0x47a9bf ||
+          !_0x56bb1e
+            .canPlayType('audio/webm; codecs="vorbis"')
+            .replace(/^no$/, "")
+        ),
+        dolby: !!_0x56bb1e
+          .canPlayType('audio/mp4; codecs="ec-3"')
+          .replace(/^no$/, ""),
+        flac: !!(
+          _0x56bb1e.canPlayType("audio/x-flac;") ||
+          _0x56bb1e.canPlayType("audio/flac;")
+        ).replace(/^no$/, ""),
+      };
+      return _0x2783fa;
+    },
+    _unlockAudio: function () {
+      var _0x3b5402 = this || _0x46242f;
+      if (!_0x3b5402._audioUnlocked && _0x3b5402.ctx) {
+        _0x3b5402._audioUnlocked = false;
+        _0x3b5402.autoUnlock = false;
+        if (!_0x3b5402._mobileUnloaded && 0xac44 !== _0x3b5402.ctx.sampleRate) {
+          _0x3b5402._mobileUnloaded = true;
+          _0x3b5402.unload();
+        }
+        _0x3b5402._scratchBuffer = _0x3b5402.ctx.createBuffer(0x1, 0x1, 0x5622);
+        var _0x273178 = function () {
+          for (; _0x3b5402._html5AudioPool.length < _0x3b5402.html5PoolSize; ) {
+            try {
+              var _0x52803c = new Audio();
+              _0x52803c._unlocked = true;
+              _0x3b5402._releaseHtml5Audio(_0x52803c);
+            } catch (_0x36f306) {
+              _0x3b5402.noAudio = true;
+              break;
+            }
+          }
+          for (
+            _0x52803c = 0x0;
+            _0x52803c < _0x3b5402._howls.length;
+            _0x52803c++
+          ) {
+            if (!_0x3b5402._howls[_0x52803c]._webAudio) {
+              var _0x45413b = _0x3b5402._howls[_0x52803c]._getSoundIds();
+              for (
+                var _0x1502a0 = 0x0;
+                _0x1502a0 < _0x45413b.length;
+                _0x1502a0++
+              ) {
+                var _0x50a693 = _0x3b5402._howls[_0x52803c]._soundById(
+                  _0x45413b[_0x1502a0]
+                );
+                if (
+                  _0x50a693 &&
+                  _0x50a693._node &&
+                  !_0x50a693._node._unlocked
+                ) {
+                  _0x50a693._node._unlocked = true;
+                  _0x50a693._node.load();
+                }
+              }
+            }
+          }
+          _0x3b5402._autoResume();
+          var _0x117529 = _0x3b5402.ctx.createBufferSource();
+          _0x117529.buffer = _0x3b5402._scratchBuffer;
+          _0x117529.connect(_0x3b5402.ctx.destination);
+          if ("undefined" === typeof _0x117529.start) {
+            _0x117529.noteOn(0x0);
+          } else {
+            _0x117529.start(0x0);
+          }
+          if ("function" === typeof _0x3b5402.ctx.resume) {
+            _0x3b5402.ctx.resume();
+          }
+          _0x117529.onended = function () {
+            _0x117529.disconnect(0x0);
+            _0x3b5402._audioUnlocked = true;
+            document.removeEventListener("touchstart", _0x273178, true);
+            document.removeEventListener("touchend", _0x273178, true);
+            document.removeEventListener("click", _0x273178, true);
+            document.removeEventListener("keydown", _0x273178, true);
+            for (
+              var _0x30b799 = 0x0;
+              _0x30b799 < _0x3b5402._howls.length;
+              _0x30b799++
+            ) {
+              _0x3b5402._howls[_0x30b799]._emit("unlock");
+            }
+          };
+        };
+        document.addEventListener("touchstart", _0x273178, true);
+        document.addEventListener("touchend", _0x273178, true);
+        document.addEventListener("click", _0x273178, true);
+        document.addEventListener("keydown", _0x273178, true);
+        return _0x3b5402;
+      }
+    },
+    _obtainHtml5Audio: function () {
+      var _0x3878e4 = this || _0x46242f;
+      if (_0x3878e4._html5AudioPool.length) {
+        return _0x3878e4._html5AudioPool.pop();
+      }
+      if (
+        (_0x3878e4 = new Audio().play()) &&
+        "undefined" !== typeof Promise &&
+        (_0x3878e4 instanceof Promise || "function" === typeof _0x3878e4.then)
+      ) {
+        _0x3878e4["catch"](function () {
+          // console.warn(
+          //   "HTML5 Audio pool exhausted, returning potentially locked audio object."
+          // );
+        });
+      }
+      return new Audio();
+    },
+    _releaseHtml5Audio: function (_0x3fdb43) {
+      var _0x5c9bd2 = this || _0x46242f;
+      if (_0x3fdb43._unlocked) {
+        _0x5c9bd2._html5AudioPool.push(_0x3fdb43);
+      }
+      return _0x5c9bd2;
+    },
+    _autoSuspend: function () {
+      var _0x247dfc = this;
+      if (
+        _0x247dfc.autoSuspend &&
+        _0x247dfc.ctx &&
+        "undefined" !== typeof _0x247dfc.ctx.suspend &&
+        _0x46242f.usingWebAudio
+      ) {
+        for (
+          var _0x19fddf = 0x0;
+          _0x19fddf < _0x247dfc._howls.length;
+          _0x19fddf++
+        ) {
+          if (_0x247dfc._howls[_0x19fddf]._webAudio) {
+            for (
+              var _0x2419e6 = 0x0;
+              _0x2419e6 < _0x247dfc._howls[_0x19fddf]._sounds.length;
+              _0x2419e6++
+            ) {
+              if (!_0x247dfc._howls[_0x19fddf]._sounds[_0x2419e6]._paused) {
+                return _0x247dfc;
+              }
+            }
+          }
+        }
+        if (_0x247dfc._suspendTimer) {
+          clearTimeout(_0x247dfc._suspendTimer);
+        }
+        _0x247dfc._suspendTimer = setTimeout(function () {
+          if (_0x247dfc.autoSuspend) {
+            _0x247dfc._suspendTimer = null;
+            _0x247dfc.state = "suspending";
+            var _0x25c5b4 = function () {
+              _0x247dfc.state = "suspended";
+              if (_0x247dfc._resumeAfterSuspend) {
+                delete _0x247dfc._resumeAfterSuspend;
+                _0x247dfc._autoResume();
+              }
+            };
+            _0x247dfc.ctx.suspend().then(_0x25c5b4, _0x25c5b4);
+          }
+        }, 0x7530);
+        return _0x247dfc;
+      }
+    },
+    _autoResume: function () {
+      var _0x193d81 = this;
+      if (
+        _0x193d81.ctx &&
+        "undefined" !== typeof _0x193d81.ctx.resume &&
+        _0x46242f.usingWebAudio
+      ) {
+        if (
+          "running" === _0x193d81.state &&
+          "interrupted" !== _0x193d81.ctx.state &&
+          _0x193d81._suspendTimer
+        ) {
+          clearTimeout(_0x193d81._suspendTimer);
+          _0x193d81._suspendTimer = null;
+        } else if (
+          "suspended" === _0x193d81.state ||
+          ("running" === _0x193d81.state &&
+            "interrupted" === _0x193d81.ctx.state)
+        ) {
+          _0x193d81.ctx.resume().then(function () {
+            _0x193d81.state = "running";
+            for (
+              var _0x2c4fe3 = 0x0;
+              _0x2c4fe3 < _0x193d81._howls.length;
+              _0x2c4fe3++
+            ) {
+              _0x193d81._howls[_0x2c4fe3]._emit("resume");
+            }
+          });
+          if (_0x193d81._suspendTimer) {
+            clearTimeout(_0x193d81._suspendTimer);
+            _0x193d81._suspendTimer = null;
+          }
+        } else if ("suspending" === _0x193d81.state) {
+          _0x193d81._resumeAfterSuspend = true;
+        }
+        return _0x193d81;
+      }
+    },
+  };
+  var _0x46242f = new _0x3f876e();
+  var _0x2918a3 = function (_0x52bb81) {
+    if (!_0x52bb81.src || 0x0 === _0x52bb81.src.length) {
+      // console.error(
+      //   "An array of source files must be passed with any new Howl."
+      // );
+    } else {
+      this.init(_0x52bb81);
+    }
+  };
+  _0x2918a3.prototype = {
+    init: function (_0x4d0d7c) {
+      var _0x3a1ac0 = this;
+      if (!_0x46242f.ctx) {
+        _0xaf42be();
+      }
+      _0x3a1ac0._autoplay = _0x4d0d7c.autoplay || false;
+      _0x3a1ac0._format =
+        "string" !== typeof _0x4d0d7c.format
+          ? _0x4d0d7c.format
+          : [_0x4d0d7c.format];
+      _0x3a1ac0._html5 = _0x4d0d7c.html5 || false;
+      _0x3a1ac0._muted = _0x4d0d7c.mute || false;
+      _0x3a1ac0._loop = _0x4d0d7c.loop || false;
+      _0x3a1ac0._pool = _0x4d0d7c.pool || 0x5;
+      _0x3a1ac0._preload =
+        "boolean" === typeof _0x4d0d7c.preload ||
+        "metadata" === _0x4d0d7c.preload
+          ? _0x4d0d7c.preload
+          : true;
+      _0x3a1ac0._rate = _0x4d0d7c.rate || 0x1;
+      _0x3a1ac0._sprite = _0x4d0d7c.sprite || {};
+      _0x3a1ac0._src =
+        "string" !== typeof _0x4d0d7c.src ? _0x4d0d7c.src : [_0x4d0d7c.src];
+      _0x3a1ac0._volume =
+        undefined !== _0x4d0d7c.volume ? _0x4d0d7c.volume : 0x1;
+      _0x3a1ac0._xhr = {
+        method:
+          _0x4d0d7c.xhr && _0x4d0d7c.xhr.method ? _0x4d0d7c.xhr.method : "GET",
+        headers:
+          _0x4d0d7c.xhr && _0x4d0d7c.xhr.headers ? _0x4d0d7c.xhr.headers : null,
+        withCredentials:
+          _0x4d0d7c.xhr && _0x4d0d7c.xhr.withCredentials
+            ? _0x4d0d7c.xhr.withCredentials
+            : false,
+      };
+      _0x3a1ac0._duration = 0x0;
+      _0x3a1ac0._state = "unloaded";
+      _0x3a1ac0._sounds = [];
+      _0x3a1ac0._endTimers = {};
+      _0x3a1ac0._queue = [];
+      _0x3a1ac0._playLock = false;
+      _0x3a1ac0._onend = _0x4d0d7c.onend
+        ? [
+            {
+              fn: _0x4d0d7c.onend,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onfade = _0x4d0d7c.onfade
+        ? [
+            {
+              fn: _0x4d0d7c.onfade,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onload = _0x4d0d7c.onload
+        ? [
+            {
+              fn: _0x4d0d7c.onload,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onloaderror = _0x4d0d7c.onloaderror
+        ? [
+            {
+              fn: _0x4d0d7c.onloaderror,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onplayerror = _0x4d0d7c.onplayerror
+        ? [
+            {
+              fn: _0x4d0d7c.onplayerror,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onpause = _0x4d0d7c.onpause
+        ? [
+            {
+              fn: _0x4d0d7c.onpause,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onplay = _0x4d0d7c.onplay
+        ? [
+            {
+              fn: _0x4d0d7c.onplay,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onstop = _0x4d0d7c.onstop
+        ? [
+            {
+              fn: _0x4d0d7c.onstop,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onmute = _0x4d0d7c.onmute
+        ? [
+            {
+              fn: _0x4d0d7c.onmute,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onvolume = _0x4d0d7c.onvolume
+        ? [
+            {
+              fn: _0x4d0d7c.onvolume,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onrate = _0x4d0d7c.onrate
+        ? [
+            {
+              fn: _0x4d0d7c.onrate,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onseek = _0x4d0d7c.onseek
+        ? [
+            {
+              fn: _0x4d0d7c.onseek,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onunlock = _0x4d0d7c.onunlock
+        ? [
+            {
+              fn: _0x4d0d7c.onunlock,
+            },
+          ]
+        : [];
+      _0x3a1ac0._onresume = [];
+      _0x3a1ac0._webAudio = _0x46242f.usingWebAudio && !_0x3a1ac0._html5;
+      if (
+        "undefined" !== typeof _0x46242f.ctx &&
+        _0x46242f.ctx &&
+        _0x46242f.autoUnlock
+      ) {
+        _0x46242f._unlockAudio();
+      }
+      _0x46242f._howls.push(_0x3a1ac0);
+      if (_0x3a1ac0._autoplay) {
+        _0x3a1ac0._queue.push({
+          event: "play",
+          action: function () {
+            _0x3a1ac0.play();
+          },
+        });
+      }
+      if (_0x3a1ac0._preload && "none" !== _0x3a1ac0._preload) {
+        _0x3a1ac0.load();
+      }
+      return _0x3a1ac0;
+    },
+    load: function () {
+      var _0x5871ee = null;
+      if (_0x46242f.noAudio) {
+        this._emit("loaderror", null, "No audio support.");
+      } else {
+        if ("string" === typeof this._src) {
+          this._src = [this._src];
+        }
+        for (var _0x27bca2 = 0x0; _0x27bca2 < this._src.length; _0x27bca2++) {
+          var _0x42a441;
+          var _0x2afef4;
+          if (this._format && this._format[_0x27bca2]) {
+            _0x42a441 = this._format[_0x27bca2];
+          } else {
+            _0x2afef4 = this._src[_0x27bca2];
+            if ("string" !== typeof _0x2afef4) {
+              this._emit(
+                "loaderror",
+                null,
+                "Non-string found in selected audio sources - ignoring."
+              );
+              continue;
+            }
+            if (!(_0x42a441 = /^data:audio\/([^;,]+);/i.exec(_0x2afef4))) {
+              _0x42a441 = /\.([^.]+)$/.exec(_0x2afef4.split("?", 0x1)[0x0]);
+            }
+            if (_0x42a441) {
+              _0x42a441 = _0x42a441[0x1].toLowerCase();
+            }
+          }
+          if (!_0x42a441) {
+            // console.warn(
+            //   'No file extension was found. Consider using the "format" property or specify an extension.'
+            // );
+          }
+          if (_0x42a441 && _0x46242f.codecs(_0x42a441)) {
+            _0x5871ee = this._src[_0x27bca2];
+            break;
+          }
+        }
+        if (_0x5871ee) {
+          this._src = _0x5871ee;
+          this._state = "loading";
+          if (
+            "https:" === window.location.protocol &&
+            "http:" === _0x5871ee.slice(0x0, 0x5)
+          ) {
+            this._html5 = true;
+            this._webAudio = false;
+          }
+          new _0x4ad29a(this);
+          if (this._webAudio) {
+            var _0x1e710e = this;
+            var _0x20d4a3 = _0x1e710e._src;
+            if (_0x1bad54[_0x20d4a3]) {
+              _0x1e710e._duration = _0x1bad54[_0x20d4a3].duration;
+              _0x10c14f(_0x1e710e);
+            } else {
+              if (/^data:[^;]+;base64,/.test(_0x20d4a3)) {
+                _0x5871ee = atob(_0x20d4a3.split(",")[0x1]);
+                _0x27bca2 = new Uint8Array(_0x5871ee.length);
+                for (
+                  _0x42a441 = 0x0;
+                  _0x42a441 < _0x5871ee.length;
+                  ++_0x42a441
+                ) {
+                  _0x27bca2[_0x42a441] = _0x5871ee.charCodeAt(_0x42a441);
+                }
+                _0x4d2539(_0x27bca2.buffer, _0x1e710e);
+              } else {
+                var _0x490e15 = new XMLHttpRequest();
+                _0x490e15.open(_0x1e710e._xhr.method, _0x20d4a3, true);
+                _0x490e15.withCredentials = _0x1e710e._xhr.withCredentials;
+                _0x490e15.responseType = "arraybuffer";
+                if (_0x1e710e._xhr.headers) {
+                  Object.keys(_0x1e710e._xhr.headers).forEach(function (
+                    _0x3f0492
+                  ) {
+                    _0x490e15.setRequestHeader(
+                      _0x3f0492,
+                      _0x1e710e._xhr.headers[_0x3f0492]
+                    );
+                  });
+                }
+                _0x490e15.onload = function () {
+                  var _0x28d298 = (_0x490e15.status + "")[0x0];
+                  if (
+                    "0" !== _0x28d298 &&
+                    "2" !== _0x28d298 &&
+                    "3" !== _0x28d298
+                  ) {
+                    _0x1e710e._emit(
+                      "loaderror",
+                      null,
+                      "Failed loading audio file with status: " +
+                        _0x490e15.status +
+                        "."
+                    );
+                  } else {
+                    _0x4d2539(_0x490e15.response, _0x1e710e);
+                  }
+                };
+                _0x490e15.onerror = function () {
+                  if (_0x1e710e._webAudio) {
+                    _0x1e710e._html5 = true;
+                    _0x1e710e._webAudio = false;
+                    _0x1e710e._sounds = [];
+                    delete _0x1bad54[_0x20d4a3];
+                    _0x1e710e.load();
+                  }
+                };
+                try {
+                  _0x490e15.send();
+                } catch (_0x2fccc1) {
+                  _0x490e15.onerror();
+                }
+              }
+            }
+          }
+          return this;
+        }
+        this._emit(
+          "loaderror",
+          null,
+          "No codec support for selected audio sources."
+        );
+      }
+    },
+    play: function (_0x2f503a, _0x1b3b7c) {
+      var _0x5c2382 = this;
+      var _0x36b075 = null;
+      if ("number" === typeof _0x2f503a) {
+        _0x36b075 = _0x2f503a;
+        _0x2f503a = null;
+      } else {
+        if (
+          "string" === typeof _0x2f503a &&
+          "loaded" === _0x5c2382._state &&
+          !_0x5c2382._sprite[_0x2f503a]
+        ) {
+          return null;
+        }
+        if (
+          "undefined" === typeof _0x2f503a &&
+          ((_0x2f503a = "__default"), !_0x5c2382._playLock)
+        ) {
+          var _0x585f9a = 0x0;
+          for (
+            var _0x34bdd3 = 0x0;
+            _0x34bdd3 < _0x5c2382._sounds.length;
+            _0x34bdd3++
+          ) {
+            if (
+              _0x5c2382._sounds[_0x34bdd3]._paused &&
+              !_0x5c2382._sounds[_0x34bdd3]._ended
+            ) {
+              _0x585f9a++;
+              _0x36b075 = _0x5c2382._sounds[_0x34bdd3]._id;
+            }
+          }
+          if (0x1 === _0x585f9a) {
+            _0x2f503a = null;
+          } else {
+            _0x36b075 = null;
+          }
+        }
+      }
+      var _0x52c3e5 = _0x36b075
+        ? _0x5c2382._soundById(_0x36b075)
+        : _0x5c2382._inactiveSound();
+      if (!_0x52c3e5) {
+        return null;
+      }
+      if (_0x36b075 && !_0x2f503a) {
+        _0x2f503a = _0x52c3e5._sprite || "__default";
+      }
+      if ("loaded" !== _0x5c2382._state) {
+        _0x52c3e5._sprite = _0x2f503a;
+        _0x52c3e5._ended = false;
+        var _0x431cb3 = _0x52c3e5._id;
+        _0x5c2382._queue.push({
+          event: "play",
+          action: function () {
+            _0x5c2382.play(_0x431cb3);
+          },
+        });
+        return _0x431cb3;
+      }
+      if (_0x36b075 && !_0x52c3e5._paused) {
+        if (!_0x1b3b7c) {
+          _0x5c2382._loadQueue("play");
+        }
+        return _0x52c3e5._id;
+      }
+      if (_0x5c2382._webAudio) {
+        _0x46242f._autoResume();
+      }
+      var _0xd71c82 = Math.max(
+        0x0,
+        0x0 < _0x52c3e5._seek
+          ? _0x52c3e5._seek
+          : _0x5c2382._sprite[_0x2f503a][0x0] / 0x3e8
+      );
+      var _0x389c7c = Math.max(
+        0x0,
+        (_0x5c2382._sprite[_0x2f503a][0x0] +
+          _0x5c2382._sprite[_0x2f503a][0x1]) /
+          0x3e8 -
+          _0xd71c82
+      );
+      var _0x511229 = (0x3e8 * _0x389c7c) / Math.abs(_0x52c3e5._rate);
+      var _0x4679f6 = _0x5c2382._sprite[_0x2f503a][0x0] / 0x3e8;
+      var _0x520f5f =
+        (_0x5c2382._sprite[_0x2f503a][0x0] +
+          _0x5c2382._sprite[_0x2f503a][0x1]) /
+        0x3e8;
+      _0x52c3e5._sprite = _0x2f503a;
+      _0x52c3e5._ended = false;
+      var _0x331af1 = function () {
+        _0x52c3e5._paused = false;
+        _0x52c3e5._seek = _0xd71c82;
+        _0x52c3e5._start = _0x4679f6;
+        _0x52c3e5._stop = _0x520f5f;
+        _0x52c3e5._loop = !(
+          !_0x52c3e5._loop && !_0x5c2382._sprite[_0x2f503a][0x2]
+        );
+      };
+      if (_0xd71c82 >= _0x520f5f) {
+        _0x5c2382._ended(_0x52c3e5);
+      } else {
+        var _0x1bff56 = _0x52c3e5._node;
+        if (_0x5c2382._webAudio) {
+          _0x36b075 = function () {
+            _0x5c2382._playLock = false;
+            _0x331af1();
+            _0x5c2382._refreshBuffer(_0x52c3e5);
+            _0x1bff56.gain.setValueAtTime(
+              _0x52c3e5._muted || _0x5c2382._muted ? 0x0 : _0x52c3e5._volume,
+              _0x46242f.ctx.currentTime
+            );
+            _0x52c3e5._playStart = _0x46242f.ctx.currentTime;
+            if ("undefined" === typeof _0x1bff56.bufferSource.start) {
+              if (_0x52c3e5._loop) {
+                _0x1bff56.bufferSource.noteGrainOn(0x0, _0xd71c82, 0x15180);
+              } else {
+                _0x1bff56.bufferSource.noteGrainOn(0x0, _0xd71c82, _0x389c7c);
+              }
+            } else if (_0x52c3e5._loop) {
+              _0x1bff56.bufferSource.start(0x0, _0xd71c82, 0x15180);
+            } else {
+              _0x1bff56.bufferSource.start(0x0, _0xd71c82, _0x389c7c);
+            }
+            if (Infinity !== _0x511229) {
+              _0x5c2382._endTimers[_0x52c3e5._id] = setTimeout(
+                _0x5c2382._ended.bind(_0x5c2382, _0x52c3e5),
+                _0x511229
+              );
+            }
+            if (!_0x1b3b7c) {
+              setTimeout(function () {
+                _0x5c2382._emit("play", _0x52c3e5._id);
+                _0x5c2382._loadQueue();
+              }, 0x0);
+            }
+          };
+          if (
+            "running" === _0x46242f.state &&
+            "interrupted" !== _0x46242f.ctx.state
+          ) {
+            _0x36b075();
+          } else {
+            _0x5c2382._playLock = true;
+            _0x5c2382.once("resume", _0x36b075);
+            _0x5c2382._clearTimer(_0x52c3e5._id);
+          }
+        } else {
+          var _0x3b8729 = function () {
+            _0x1bff56.currentTime = _0xd71c82;
+            _0x1bff56.muted =
+              _0x52c3e5._muted ||
+              _0x5c2382._muted ||
+              _0x46242f._muted ||
+              _0x1bff56.muted;
+            _0x1bff56.volume = _0x52c3e5._volume * _0x46242f.volume();
+            _0x1bff56.playbackRate = _0x52c3e5._rate;
+            try {
+              var _0x54d86c = _0x1bff56.play();
+              if (
+                _0x54d86c &&
+                "undefined" !== typeof Promise &&
+                (_0x54d86c instanceof Promise ||
+                  "function" === typeof _0x54d86c.then)
+              ) {
+                _0x5c2382._playLock = true;
+                _0x331af1();
+                _0x54d86c
+                  .then(function () {
+                    _0x5c2382._playLock = false;
+                    _0x1bff56._unlocked = true;
+                    if (_0x1b3b7c) {
+                      _0x5c2382._loadQueue();
+                    } else {
+                      _0x5c2382._emit("play", _0x52c3e5._id);
+                    }
+                  })
+                  ["catch"](function () {
+                    _0x5c2382._playLock = false;
+                    _0x5c2382._emit(
+                      "playerror",
+                      _0x52c3e5._id,
+                      "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."
+                    );
+                    _0x52c3e5._ended = true;
+                    _0x52c3e5._paused = true;
+                  });
+              } else if (!_0x1b3b7c) {
+                _0x5c2382._playLock = false;
+                _0x331af1();
+                _0x5c2382._emit("play", _0x52c3e5._id);
+              }
+              _0x1bff56.playbackRate = _0x52c3e5._rate;
+              if (_0x1bff56.paused) {
+                _0x5c2382._emit(
+                  "playerror",
+                  _0x52c3e5._id,
+                  "Playback was unable to start. This is most commonly an issue on mobile devices and Chrome where playback was not within a user interaction."
+                );
+              } else if ("__default" !== _0x2f503a || _0x52c3e5._loop) {
+                _0x5c2382._endTimers[_0x52c3e5._id] = setTimeout(
+                  _0x5c2382._ended.bind(_0x5c2382, _0x52c3e5),
+                  _0x511229
+                );
+              } else {
+                _0x5c2382._endTimers[_0x52c3e5._id] = function () {
+                  _0x5c2382._ended(_0x52c3e5);
+                  _0x1bff56.removeEventListener(
+                    "ended",
+                    _0x5c2382._endTimers[_0x52c3e5._id],
+                    false
+                  );
+                };
+                _0x1bff56.addEventListener(
+                  "ended",
+                  _0x5c2382._endTimers[_0x52c3e5._id],
+                  false
+                );
+              }
+            } catch (_0x4fbca8) {
+              _0x5c2382._emit("playerror", _0x52c3e5._id, _0x4fbca8);
+            }
+          };
+          if (
+            "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA" ===
+            _0x1bff56.src
+          ) {
+            _0x1bff56.src = _0x5c2382._src;
+            _0x1bff56.load();
+          }
+          _0x36b075 =
+            (window && window.ejecta) ||
+            (!_0x1bff56.readyState && _0x46242f._navigator.isCocoonJS);
+          if (0x3 <= _0x1bff56.readyState || _0x36b075) {
+            _0x3b8729();
+          } else {
+            _0x5c2382._playLock = true;
+            _0x5c2382._state = "loading";
+            var _0x5e59ea = function () {
+              _0x5c2382._state = "loaded";
+              _0x3b8729();
+              _0x1bff56.removeEventListener(
+                _0x46242f._canPlayEvent,
+                _0x5e59ea,
+                false
+              );
+            };
+            _0x1bff56.addEventListener(
+              _0x46242f._canPlayEvent,
+              _0x5e59ea,
+              false
+            );
+            _0x5c2382._clearTimer(_0x52c3e5._id);
+          }
+        }
+        return _0x52c3e5._id;
+      }
+    },
+    pause: function (_0x91c72c, _0x472393) {
+      var _0x194882 = this;
+      if ("loaded" !== _0x194882._state || _0x194882._playLock) {
+        _0x194882._queue.push({
+          event: "pause",
+          action: function () {
+            _0x194882.pause(_0x91c72c);
+          },
+        });
+        return _0x194882;
+      }
+      var _0x14a013 = _0x194882._getSoundIds(_0x91c72c);
+      for (var _0x3619af = 0x0; _0x3619af < _0x14a013.length; _0x3619af++) {
+        _0x194882._clearTimer(_0x14a013[_0x3619af]);
+        var _0x2af3ac = _0x194882._soundById(_0x14a013[_0x3619af]);
+        if (
+          _0x2af3ac &&
+          !_0x2af3ac._paused &&
+          ((_0x2af3ac._seek = _0x194882.seek(_0x14a013[_0x3619af])),
+          (_0x2af3ac._rateSeek = 0x0),
+          (_0x2af3ac._paused = true),
+          _0x194882._stopFade(_0x14a013[_0x3619af]),
+          _0x2af3ac._node)
+        ) {
+          if (_0x194882._webAudio) {
+            if (!_0x2af3ac._node.bufferSource) {
+              continue;
+            }
+            if ("undefined" === typeof _0x2af3ac._node.bufferSource.stop) {
+              _0x2af3ac._node.bufferSource.noteOff(0x0);
+            } else {
+              _0x2af3ac._node.bufferSource.stop(0x0);
+            }
+            _0x194882._cleanBuffer(_0x2af3ac._node);
+          } else if (
+            !isNaN(_0x2af3ac._node.duration) ||
+            Infinity === _0x2af3ac._node.duration
+          ) {
+            _0x2af3ac._node.pause();
+          }
+        }
+        if (!_0x472393) {
+          _0x194882._emit("pause", _0x2af3ac ? _0x2af3ac._id : null);
+        }
+      }
+      return _0x194882;
+    },
+    stop: function (_0x271e03, _0x899325) {
+      var _0x2ac0d1 = this;
+      if ("loaded" !== _0x2ac0d1._state || _0x2ac0d1._playLock) {
+        _0x2ac0d1._queue.push({
+          event: "stop",
+          action: function () {
+            _0x2ac0d1.stop(_0x271e03);
+          },
+        });
+        return _0x2ac0d1;
+      }
+      var _0x5165de = _0x2ac0d1._getSoundIds(_0x271e03);
+      for (var _0x4ca200 = 0x0; _0x4ca200 < _0x5165de.length; _0x4ca200++) {
+        _0x2ac0d1._clearTimer(_0x5165de[_0x4ca200]);
+        var _0x20610d = _0x2ac0d1._soundById(_0x5165de[_0x4ca200]);
+        if (_0x20610d) {
+          _0x20610d._seek = _0x20610d._start || 0x0;
+          _0x20610d._rateSeek = 0x0;
+          _0x20610d._paused = true;
+          _0x20610d._ended = true;
+          _0x2ac0d1._stopFade(_0x5165de[_0x4ca200]);
+          if (_0x20610d._node) {
+            if (_0x2ac0d1._webAudio) {
+              if (_0x20610d._node.bufferSource) {
+                if ("undefined" === typeof _0x20610d._node.bufferSource.stop) {
+                  _0x20610d._node.bufferSource.noteOff(0x0);
+                } else {
+                  _0x20610d._node.bufferSource.stop(0x0);
+                }
+                _0x2ac0d1._cleanBuffer(_0x20610d._node);
+              }
+            } else {
+              if (
+                !isNaN(_0x20610d._node.duration) ||
+                Infinity === _0x20610d._node.duration
+              ) {
+                _0x20610d._node.currentTime = _0x20610d._start || 0x0;
+                _0x20610d._node.pause();
+                if (Infinity === _0x20610d._node.duration) {
+                  _0x2ac0d1._clearSound(_0x20610d._node);
+                }
+              }
+            }
+          }
+          if (!_0x899325) {
+            _0x2ac0d1._emit("stop", _0x20610d._id);
+          }
+        }
+      }
+      return _0x2ac0d1;
+    },
+    mute: function (_0x4bc71b, _0x1f13d7) {
+      var _0xac0179 = this;
+      if ("loaded" !== _0xac0179._state || _0xac0179._playLock) {
+        _0xac0179._queue.push({
+          event: "mute",
+          action: function () {
+            _0xac0179.mute(_0x4bc71b, _0x1f13d7);
+          },
+        });
+        return _0xac0179;
+      }
+      if ("undefined" === typeof _0x1f13d7) {
+        if ("boolean" === typeof _0x4bc71b) {
+          _0xac0179._muted = _0x4bc71b;
+        } else {
+          return _0xac0179._muted;
+        }
+      }
+      var _0x530a48 = _0xac0179._getSoundIds(_0x1f13d7);
+      for (var _0x20d4f9 = 0x0; _0x20d4f9 < _0x530a48.length; _0x20d4f9++) {
+        var _0x390834 = _0xac0179._soundById(_0x530a48[_0x20d4f9]);
+        if (_0x390834) {
+          _0x390834._muted = _0x4bc71b;
+          if (_0x390834._interval) {
+            _0xac0179._stopFade(_0x390834._id);
+          }
+          if (_0xac0179._webAudio && _0x390834._node) {
+            _0x390834._node.gain.setValueAtTime(
+              _0x4bc71b ? 0x0 : _0x390834._volume,
+              _0x46242f.ctx.currentTime
+            );
+          } else if (_0x390834._node) {
+            _0x390834._node.muted = _0x46242f._muted ? true : _0x4bc71b;
+          }
+          _0xac0179._emit("mute", _0x390834._id);
+        }
+      }
+      return _0xac0179;
+    },
+    volume: function () {
+      var _0x3579f8 = this;
+      var _0x56c56f;
+      var _0x4bdbf3;
+      if (0x0 === arguments.length) {
+        return _0x3579f8._volume;
+      }
+      if (
+        0x1 === arguments.length ||
+        (0x2 === arguments.length && "undefined" === typeof arguments[0x1])
+      ) {
+        if (0x0 <= _0x3579f8._getSoundIds().indexOf(arguments[0x0])) {
+          _0x4bdbf3 = parseInt(arguments[0x0], 0xa);
+        } else {
+          _0x56c56f = parseFloat(arguments[0x0]);
+        }
+      } else if (0x2 <= arguments.length) {
+        _0x56c56f = parseFloat(arguments[0x0]);
+        _0x4bdbf3 = parseInt(arguments[0x1], 0xa);
+      }
+      var _0x535f2c;
+      if (
+        "undefined" !== typeof _0x56c56f &&
+        0x0 <= _0x56c56f &&
+        0x1 >= _0x56c56f
+      ) {
+        if ("loaded" !== _0x3579f8._state || _0x3579f8._playLock) {
+          _0x3579f8._queue.push({
+            event: "volume",
+            action: function () {
+              _0x3579f8.volume.apply(_0x3579f8, arguments);
+            },
+          });
+          return _0x3579f8;
+        }
+        if ("undefined" === typeof _0x4bdbf3) {
+          _0x3579f8._volume = _0x56c56f;
+        }
+        _0x4bdbf3 = _0x3579f8._getSoundIds(_0x4bdbf3);
+        for (var _0x11ba17 = 0x0; _0x11ba17 < _0x4bdbf3.length; _0x11ba17++) {
+          if ((_0x535f2c = _0x3579f8._soundById(_0x4bdbf3[_0x11ba17]))) {
+            _0x535f2c._volume = _0x56c56f;
+            if (!arguments[0x2]) {
+              _0x3579f8._stopFade(_0x4bdbf3[_0x11ba17]);
+            }
+            if (_0x3579f8._webAudio && _0x535f2c._node && !_0x535f2c._muted) {
+              _0x535f2c._node.gain.setValueAtTime(
+                _0x56c56f,
+                _0x46242f.ctx.currentTime
+              );
+            } else if (_0x535f2c._node && !_0x535f2c._muted) {
+              _0x535f2c._node.volume = _0x56c56f * _0x46242f.volume();
+            }
+            _0x3579f8._emit("volume", _0x535f2c._id);
+          }
+        }
+      } else {
+        return (_0x535f2c = _0x4bdbf3
+          ? _0x3579f8._soundById(_0x4bdbf3)
+          : _0x3579f8._sounds[0x0])
+          ? _0x535f2c._volume
+          : 0x0;
+      }
+      return _0x3579f8;
+    },
+    fade: function (_0x1a261c, _0x5737e7, _0x9ca99, _0x3a4c34) {
+      var _0x26a692 = this;
+      if ("loaded" !== _0x26a692._state || _0x26a692._playLock) {
+        _0x26a692._queue.push({
+          event: "fade",
+          action: function () {
+            _0x26a692.fade(_0x1a261c, _0x5737e7, _0x9ca99, _0x3a4c34);
+          },
+        });
+        return _0x26a692;
+      }
+      _0x1a261c = Math.min(Math.max(0x0, parseFloat(_0x1a261c)), 0x1);
+      _0x5737e7 = Math.min(Math.max(0x0, parseFloat(_0x5737e7)), 0x1);
+      _0x9ca99 = parseFloat(_0x9ca99);
+      _0x26a692.volume(_0x1a261c, _0x3a4c34);
+      var _0x45e4c9 = _0x26a692._getSoundIds(_0x3a4c34);
+      for (var _0x1fdc32 = 0x0; _0x1fdc32 < _0x45e4c9.length; _0x1fdc32++) {
+        var _0x477a66 = _0x26a692._soundById(_0x45e4c9[_0x1fdc32]);
+        if (_0x477a66) {
+          if (!_0x3a4c34) {
+            _0x26a692._stopFade(_0x45e4c9[_0x1fdc32]);
+          }
+          if (_0x26a692._webAudio && !_0x477a66._muted) {
+            var _0x4bcfba = _0x46242f.ctx.currentTime;
+            var _0xe045aa = _0x4bcfba + _0x9ca99 / 0x3e8;
+            _0x477a66._volume = _0x1a261c;
+            _0x477a66._node.gain.setValueAtTime(_0x1a261c, _0x4bcfba);
+            _0x477a66._node.gain.linearRampToValueAtTime(_0x5737e7, _0xe045aa);
+          }
+          _0x26a692._startFadeInterval(
+            _0x477a66,
+            _0x1a261c,
+            _0x5737e7,
+            _0x9ca99,
+            _0x45e4c9[_0x1fdc32],
+            "undefined" === typeof _0x3a4c34
+          );
+        }
+      }
+      return _0x26a692;
+    },
+    _startFadeInterval: function (
+      _0x9619b8,
+      _0x3d353c,
+      _0x4ed05b,
+      _0x9a6b14,
+      _0xadfadc,
+      _0x4c8838
+    ) {
+      var _0x182c98 = this;
+      var _0x53dca6 = _0x3d353c;
+      var _0x4f7a17 = _0x4ed05b - _0x3d353c;
+      _0xadfadc = Math.abs(_0x4f7a17 / 0.01);
+      _0xadfadc = Math.max(
+        0x4,
+        0x0 < _0xadfadc ? _0x9a6b14 / _0xadfadc : _0x9a6b14
+      );
+      var _0x1dad2d = Date.now();
+      _0x9619b8._fadeTo = _0x4ed05b;
+      _0x9619b8._interval = setInterval(function () {
+        var _0x53e6c3 = (Date.now() - _0x1dad2d) / _0x9a6b14;
+        _0x1dad2d = Date.now();
+        _0x53dca6 += _0x4f7a17 * _0x53e6c3;
+        _0x53dca6 = Math.round(100 * _0x53dca6) / 100;
+        _0x53dca6 =
+          0x0 > _0x4f7a17
+            ? Math.max(_0x4ed05b, _0x53dca6)
+            : Math.min(_0x4ed05b, _0x53dca6);
+        if (_0x182c98._webAudio) {
+          _0x9619b8._volume = _0x53dca6;
+        } else {
+          _0x182c98.volume(_0x53dca6, _0x9619b8._id, true);
+        }
+        if (_0x4c8838) {
+          _0x182c98._volume = _0x53dca6;
+        }
+        if (
+          (_0x4ed05b < _0x3d353c && _0x53dca6 <= _0x4ed05b) ||
+          (_0x4ed05b > _0x3d353c && _0x53dca6 >= _0x4ed05b)
+        ) {
+          clearInterval(_0x9619b8._interval);
+          _0x9619b8._interval = null;
+          _0x9619b8._fadeTo = null;
+          _0x182c98.volume(_0x4ed05b, _0x9619b8._id);
+          _0x182c98._emit("fade", _0x9619b8._id);
+        }
+      }, _0xadfadc);
+    },
+    _stopFade: function (_0x38dadb) {
+      var _0x4fc53c = this._soundById(_0x38dadb);
+      if (_0x4fc53c && _0x4fc53c._interval) {
+        if (this._webAudio) {
+          _0x4fc53c._node.gain.cancelScheduledValues(_0x46242f.ctx.currentTime);
+        }
+        clearInterval(_0x4fc53c._interval);
+        _0x4fc53c._interval = null;
+        this.volume(_0x4fc53c._fadeTo, _0x38dadb);
+        _0x4fc53c._fadeTo = null;
+        this._emit("fade", _0x38dadb);
+      }
+      return this;
+    },
+    loop: function () {
+      var _0x309fec = arguments;
+      var _0x2d64be;
+      var _0x424812;
+      if (0x0 === _0x309fec.length) {
+        return this._loop;
+      }
+      if (0x1 === _0x309fec.length) {
+        if ("boolean" === typeof _0x309fec[0x0]) {
+          this._loop = _0x2d64be = _0x309fec[0x0];
+        } else {
+          return (_0x309fec = this._soundById(parseInt(_0x309fec[0x0], 0xa)))
+            ? _0x309fec._loop
+            : false;
+        }
+      } else if (0x2 === _0x309fec.length) {
+        _0x2d64be = _0x309fec[0x0];
+        _0x424812 = parseInt(_0x309fec[0x1], 0xa);
+      }
+      _0x424812 = this._getSoundIds(_0x424812);
+      for (var _0x3a91b6 = 0x0; _0x3a91b6 < _0x424812.length; _0x3a91b6++) {
+        if ((_0x309fec = this._soundById(_0x424812[_0x3a91b6]))) {
+          _0x309fec._loop = _0x2d64be;
+          if (
+            this._webAudio &&
+            _0x309fec._node &&
+            _0x309fec._node.bufferSource &&
+            (_0x309fec._node.bufferSource.loop = _0x2d64be)
+          ) {
+            _0x309fec._node.bufferSource.loopStart = _0x309fec._start || 0x0;
+            _0x309fec._node.bufferSource.loopEnd = _0x309fec._stop;
+            if (this.playing(_0x424812[_0x3a91b6])) {
+              this.pause(_0x424812[_0x3a91b6], true);
+              this.play(_0x424812[_0x3a91b6], true);
+            }
+          }
+        }
+      }
+      return this;
+    },
+    rate: function () {
+      var _0x45d2a4 = this;
+      var _0x53ebd0;
+      var _0x30ef6c;
+      if (0x0 === arguments.length) {
+        _0x30ef6c = _0x45d2a4._sounds[0x0]._id;
+      } else if (0x1 === arguments.length) {
+        if (0x0 <= _0x45d2a4._getSoundIds().indexOf(arguments[0x0])) {
+          _0x30ef6c = parseInt(arguments[0x0], 0xa);
+        } else {
+          _0x53ebd0 = parseFloat(arguments[0x0]);
+        }
+      } else if (0x2 === arguments.length) {
+        _0x53ebd0 = parseFloat(arguments[0x0]);
+        _0x30ef6c = parseInt(arguments[0x1], 0xa);
+      }
+      var _0x3bffac;
+      if ("number" === typeof _0x53ebd0) {
+        if ("loaded" !== _0x45d2a4._state || _0x45d2a4._playLock) {
+          _0x45d2a4._queue.push({
+            event: "rate",
+            action: function () {
+              _0x45d2a4.rate.apply(_0x45d2a4, arguments);
+            },
+          });
+          return _0x45d2a4;
+        }
+        if ("undefined" === typeof _0x30ef6c) {
+          _0x45d2a4._rate = _0x53ebd0;
+        }
+        _0x30ef6c = _0x45d2a4._getSoundIds(_0x30ef6c);
+        for (var _0x1e8ddc = 0x0; _0x1e8ddc < _0x30ef6c.length; _0x1e8ddc++) {
+          if ((_0x3bffac = _0x45d2a4._soundById(_0x30ef6c[_0x1e8ddc]))) {
+            if (_0x45d2a4.playing(_0x30ef6c[_0x1e8ddc])) {
+              _0x3bffac._rateSeek = _0x45d2a4.seek(_0x30ef6c[_0x1e8ddc]);
+              _0x3bffac._playStart = _0x45d2a4._webAudio
+                ? _0x46242f.ctx.currentTime
+                : _0x3bffac._playStart;
+            }
+            _0x3bffac._rate = _0x53ebd0;
+            if (
+              _0x45d2a4._webAudio &&
+              _0x3bffac._node &&
+              _0x3bffac._node.bufferSource
+            ) {
+              _0x3bffac._node.bufferSource.playbackRate.setValueAtTime(
+                _0x53ebd0,
+                _0x46242f.ctx.currentTime
+              );
+            } else if (_0x3bffac._node) {
+              _0x3bffac._node.playbackRate = _0x53ebd0;
+            }
+            var _0x1f746f = _0x45d2a4.seek(_0x30ef6c[_0x1e8ddc]);
+            var _0x1f746f =
+              (0x3e8 *
+                ((_0x45d2a4._sprite[_0x3bffac._sprite][0x0] +
+                  _0x45d2a4._sprite[_0x3bffac._sprite][0x1]) /
+                  0x3e8 -
+                  _0x1f746f)) /
+              Math.abs(_0x3bffac._rate);
+            if (
+              _0x45d2a4._endTimers[_0x30ef6c[_0x1e8ddc]] ||
+              !_0x3bffac._paused
+            ) {
+              _0x45d2a4._clearTimer(_0x30ef6c[_0x1e8ddc]);
+              _0x45d2a4._endTimers[_0x30ef6c[_0x1e8ddc]] = setTimeout(
+                _0x45d2a4._ended.bind(_0x45d2a4, _0x3bffac),
+                _0x1f746f
+              );
+            }
+            _0x45d2a4._emit("rate", _0x3bffac._id);
+          }
+        }
+      } else {
+        return (_0x3bffac = _0x45d2a4._soundById(_0x30ef6c))
+          ? _0x3bffac._rate
+          : _0x45d2a4._rate;
+      }
+      return _0x45d2a4;
+    },
+    seek: function () {
+      var _0x3489be = this;
+      var _0x3161ca;
+      var _0x4a3177;
+      if (0x0 === arguments.length) {
+        if (_0x3489be._sounds.length) {
+          _0x4a3177 = _0x3489be._sounds[0x0]._id;
+        }
+      } else if (0x1 === arguments.length) {
+        if (0x0 <= _0x3489be._getSoundIds().indexOf(arguments[0x0])) {
+          _0x4a3177 = parseInt(arguments[0x0], 0xa);
+        } else if (_0x3489be._sounds.length) {
+          _0x4a3177 = _0x3489be._sounds[0x0]._id;
+          _0x3161ca = parseFloat(arguments[0x0]);
+        }
+      } else if (0x2 === arguments.length) {
+        _0x3161ca = parseFloat(arguments[0x0]);
+        _0x4a3177 = parseInt(arguments[0x1], 0xa);
+      }
+      if ("undefined" === typeof _0x4a3177) {
+        return 0x0;
+      }
+      if (
+        "number" === typeof _0x3161ca &&
+        ("loaded" !== _0x3489be._state || _0x3489be._playLock)
+      ) {
+        _0x3489be._queue.push({
+          event: "seek",
+          action: function () {
+            _0x3489be.seek.apply(_0x3489be, arguments);
+          },
+        });
+        return _0x3489be;
+      }
+      var _0x175771 = _0x3489be._soundById(_0x4a3177);
+      if (_0x175771) {
+        if ("number" === typeof _0x3161ca && 0x0 <= _0x3161ca) {
+          var _0x304962 = _0x3489be.playing(_0x4a3177);
+          if (_0x304962) {
+            _0x3489be.pause(_0x4a3177, true);
+          }
+          _0x175771._seek = _0x3161ca;
+          _0x175771._ended = false;
+          _0x3489be._clearTimer(_0x4a3177);
+          if (
+            !_0x3489be._webAudio &&
+            _0x175771._node &&
+            !isNaN(_0x175771._node.duration)
+          ) {
+            _0x175771._node.currentTime = _0x3161ca;
+          }
+          var _0xdb8bba = function () {
+            if (_0x304962) {
+              _0x3489be.play(_0x4a3177, true);
+            }
+            _0x3489be._emit("seek", _0x4a3177);
+          };
+          if (_0x304962 && !_0x3489be._webAudio) {
+            var _0x330d0d = function () {
+              if (_0x3489be._playLock) {
+                setTimeout(_0x330d0d, 0x0);
+              } else {
+                _0xdb8bba();
+              }
+            };
+            setTimeout(_0x330d0d, 0x0);
+          } else {
+            _0xdb8bba();
+          }
+        } else {
+          return _0x3489be._webAudio
+            ? ((_0x3161ca = _0x3489be.playing(_0x4a3177)
+                ? _0x46242f.ctx.currentTime - _0x175771._playStart
+                : 0x0),
+              _0x175771._seek +
+                ((_0x175771._rateSeek
+                  ? _0x175771._rateSeek - _0x175771._seek
+                  : 0x0) +
+                  _0x3161ca * Math.abs(_0x175771._rate)))
+            : _0x175771._node.currentTime;
+        }
+      }
+      return _0x3489be;
+    },
+    playing: function (_0x5200bf) {
+      if ("number" === typeof _0x5200bf) {
+        return (_0x5200bf = this._soundById(_0x5200bf))
+          ? !_0x5200bf._paused
+          : false;
+      }
+      for (_0x5200bf = 0x0; _0x5200bf < this._sounds.length; _0x5200bf++) {
+        if (!this._sounds[_0x5200bf]._paused) {
+          return true;
+        }
+      }
+      return false;
+    },
+    duration: function (_0x24dcc0) {
+      var _0x2f91db = this._duration;
+      if ((_0x24dcc0 = this._soundById(_0x24dcc0))) {
+        _0x2f91db = this._sprite[_0x24dcc0._sprite][0x1] / 0x3e8;
+      }
+      return _0x2f91db;
+    },
+    state: function () {
+      return this._state;
+    },
+    unload: function () {
+      var _0x3b9f81 = this._sounds;
+      for (var _0x140e6c = 0x0; _0x140e6c < _0x3b9f81.length; _0x140e6c++) {
+        if (!_0x3b9f81[_0x140e6c]._paused) {
+          this.stop(_0x3b9f81[_0x140e6c]._id);
+        }
+        if (!this._webAudio) {
+          this._clearSound(_0x3b9f81[_0x140e6c]._node);
+          _0x3b9f81[_0x140e6c]._node.removeEventListener(
+            "error",
+            _0x3b9f81[_0x140e6c]._errorFn,
+            false
+          );
+          _0x3b9f81[_0x140e6c]._node.removeEventListener(
+            _0x46242f._canPlayEvent,
+            _0x3b9f81[_0x140e6c]._loadFn,
+            false
+          );
+          _0x3b9f81[_0x140e6c]._node.removeEventListener(
+            "ended",
+            _0x3b9f81[_0x140e6c]._endFn,
+            false
+          );
+          _0x46242f._releaseHtml5Audio(_0x3b9f81[_0x140e6c]._node);
+        }
+        delete _0x3b9f81[_0x140e6c]._node;
+        this._clearTimer(_0x3b9f81[_0x140e6c]._id);
+      }
+      _0x140e6c = _0x46242f._howls.indexOf(this);
+      if (0x0 <= _0x140e6c) {
+        _0x46242f._howls.splice(_0x140e6c, 0x1);
+      }
+      _0x3b9f81 = true;
+      for (_0x140e6c = 0x0; _0x140e6c < _0x46242f._howls.length; _0x140e6c++) {
+        if (
+          _0x46242f._howls[_0x140e6c]._src === this._src ||
+          0x0 <= this._src.indexOf(_0x46242f._howls[_0x140e6c]._src)
+        ) {
+          _0x3b9f81 = false;
+          break;
+        }
+      }
+      if (_0x1bad54 && _0x3b9f81) {
+        delete _0x1bad54[this._src];
+      }
+      _0x46242f.noAudio = false;
+      this._state = "unloaded";
+      this._sounds = [];
+      return null;
+    },
+    on: function (_0x40d854, _0x8f6c4b, _0x13c722, _0x3329e7) {
+      _0x40d854 = this["_on" + _0x40d854];
+      if ("function" === typeof _0x8f6c4b) {
+        _0x40d854.push(
+          _0x3329e7
+            ? {
+                id: _0x13c722,
+                fn: _0x8f6c4b,
+                once: _0x3329e7,
+              }
+            : {
+                id: _0x13c722,
+                fn: _0x8f6c4b,
+              }
+        );
+      }
+      return this;
+    },
+    off: function (_0x276689, _0x225783, _0x3c77f6) {
+      var _0x1e4268 = this["_on" + _0x276689];
+      var _0x24ef2f = 0x0;
+      if ("number" === typeof _0x225783) {
+        _0x3c77f6 = _0x225783;
+        _0x225783 = null;
+      }
+      if (_0x225783 || _0x3c77f6) {
+        for (_0x24ef2f = 0x0; _0x24ef2f < _0x1e4268.length; _0x24ef2f++) {
+          _0x276689 = _0x3c77f6 === _0x1e4268[_0x24ef2f].id;
+          if (
+            (_0x225783 === _0x1e4268[_0x24ef2f].fn && _0x276689) ||
+            (!_0x225783 && _0x276689)
+          ) {
+            _0x1e4268.splice(_0x24ef2f, 0x1);
+            break;
+          }
+        }
+      } else {
+        if (_0x276689) {
+          this["_on" + _0x276689] = [];
+        } else {
+          _0x225783 = Object.keys(this);
+          for (_0x24ef2f = 0x0; _0x24ef2f < _0x225783.length; _0x24ef2f++) {
+            if (
+              0x0 === _0x225783[_0x24ef2f].indexOf("_on") &&
+              Array.isArray(this[_0x225783[_0x24ef2f]])
+            ) {
+              this[_0x225783[_0x24ef2f]] = [];
+            }
+          }
+        }
+      }
+      return this;
+    },
+    once: function (_0x1e7064, _0x240a52, _0x3c1f9b) {
+      this.on(_0x1e7064, _0x240a52, _0x3c1f9b, 0x1);
+      return this;
+    },
+    _emit: function (_0x4620e5, _0x61ffff, _0x2df215) {
+      var _0x3207b9 = this["_on" + _0x4620e5];
+      for (
+        var _0x1354fe = _0x3207b9.length - 0x1;
+        0x0 <= _0x1354fe;
+        _0x1354fe--
+      ) {
+        if (
+          !_0x3207b9[_0x1354fe].id ||
+          _0x3207b9[_0x1354fe].id === _0x61ffff ||
+          "load" === _0x4620e5
+        ) {
+          setTimeout(
+            function (_0x20e0ee) {
+              _0x20e0ee.call(this, _0x61ffff, _0x2df215);
+            }.bind(this, _0x3207b9[_0x1354fe].fn),
+            0x0
+          );
+          if (_0x3207b9[_0x1354fe].once) {
+            this.off(
+              _0x4620e5,
+              _0x3207b9[_0x1354fe].fn,
+              _0x3207b9[_0x1354fe].id
+            );
+          }
+        }
+      }
+      this._loadQueue(_0x4620e5);
+      return this;
+    },
+    _loadQueue: function (_0x41a455) {
+      if (0x0 < this._queue.length) {
+        var _0x41c3ea = this._queue[0x0];
+        if (_0x41c3ea.event === _0x41a455) {
+          this._queue.shift();
+          this._loadQueue();
+        }
+        if (!_0x41a455) {
+          _0x41c3ea.action();
+        }
+      }
+      return this;
+    },
+    _ended: function (_0x399590) {
+      var _0x4ad1b6 = _0x399590._sprite;
+      if (
+        !this._webAudio &&
+        _0x399590._node &&
+        !_0x399590._node.paused &&
+        !_0x399590._node.ended &&
+        _0x399590._node.currentTime < _0x399590._stop
+      ) {
+        setTimeout(this._ended.bind(this, _0x399590), 0x64);
+        return this;
+      }
+      _0x4ad1b6 = !(!_0x399590._loop && !this._sprite[_0x4ad1b6][0x2]);
+      this._emit("end", _0x399590._id);
+      if (!this._webAudio && _0x4ad1b6) {
+        this.stop(_0x399590._id, true).play(_0x399590._id);
+      }
+      if (this._webAudio && _0x4ad1b6) {
+        this._emit("play", _0x399590._id);
+        _0x399590._seek = _0x399590._start || 0x0;
+        _0x399590._rateSeek = 0x0;
+        _0x399590._playStart = _0x46242f.ctx.currentTime;
+        var _0x97b4e3 =
+          (0x3e8 * (_0x399590._stop - _0x399590._start)) /
+          Math.abs(_0x399590._rate);
+        this._endTimers[_0x399590._id] = setTimeout(
+          this._ended.bind(this, _0x399590),
+          _0x97b4e3
+        );
+      }
+      if (this._webAudio && !_0x4ad1b6) {
+        _0x399590._paused = true;
+        _0x399590._ended = true;
+        _0x399590._seek = _0x399590._start || 0x0;
+        _0x399590._rateSeek = 0x0;
+        this._clearTimer(_0x399590._id);
+        this._cleanBuffer(_0x399590._node);
+        _0x46242f._autoSuspend();
+      }
+      if (!this._webAudio && !_0x4ad1b6) {
+        this.stop(_0x399590._id, true);
+      }
+      return this;
+    },
+    _clearTimer: function (_0x236801) {
+      if (this._endTimers[_0x236801]) {
+        if ("function" !== typeof this._endTimers[_0x236801]) {
+          clearTimeout(this._endTimers[_0x236801]);
+        } else {
+          var _0x20ff59 = this._soundById(_0x236801);
+          if (_0x20ff59 && _0x20ff59._node) {
+            _0x20ff59._node.removeEventListener(
+              "ended",
+              this._endTimers[_0x236801],
+              false
+            );
+          }
+        }
+        delete this._endTimers[_0x236801];
+      }
+      return this;
+    },
+    _soundById: function (_0x124d23) {
+      for (var _0x4edb40 = 0x0; _0x4edb40 < this._sounds.length; _0x4edb40++) {
+        if (_0x124d23 === this._sounds[_0x4edb40]._id) {
+          return this._sounds[_0x4edb40];
+        }
+      }
+      return null;
+    },
+    _inactiveSound: function () {
+      this._drain();
+      for (var _0x28a5de = 0x0; _0x28a5de < this._sounds.length; _0x28a5de++) {
+        if (this._sounds[_0x28a5de]._ended) {
+          return this._sounds[_0x28a5de].reset();
+        }
+      }
+      return new _0x4ad29a(this);
+    },
+    _drain: function () {
+      var _0x84a1b0 = this._pool;
+      var _0x1bf36c = 0x0;
+      var _0x16c921 = 0x0;
+      if (!(this._sounds.length < _0x84a1b0)) {
+        for (_0x16c921 = 0x0; _0x16c921 < this._sounds.length; _0x16c921++) {
+          if (this._sounds[_0x16c921]._ended) {
+            _0x1bf36c++;
+          }
+        }
+        for (
+          _0x16c921 = this._sounds.length - 0x1;
+          0x0 <= _0x16c921 && !(_0x1bf36c <= _0x84a1b0);
+          _0x16c921--
+        ) {
+          if (this._sounds[_0x16c921]._ended) {
+            if (this._webAudio && this._sounds[_0x16c921]._node) {
+              this._sounds[_0x16c921]._node.disconnect(0x0);
+            }
+            this._sounds.splice(_0x16c921, 0x1);
+            _0x1bf36c--;
+          }
+        }
+      }
+    },
+    _getSoundIds: function (_0x1ce920) {
+      if ("undefined" === typeof _0x1ce920) {
+        _0x1ce920 = [];
+        for (
+          var _0x3a12a2 = 0x0;
+          _0x3a12a2 < this._sounds.length;
+          _0x3a12a2++
+        ) {
+          _0x1ce920.push(this._sounds[_0x3a12a2]._id);
+        }
+        return _0x1ce920;
+      }
+      return [_0x1ce920];
+    },
+    _refreshBuffer: function (_0x4f4cb5) {
+      _0x4f4cb5._node.bufferSource = _0x46242f.ctx.createBufferSource();
+      _0x4f4cb5._node.bufferSource.buffer = _0x1bad54[this._src];
+      if (_0x4f4cb5._panner) {
+        _0x4f4cb5._node.bufferSource.connect(_0x4f4cb5._panner);
+      } else {
+        _0x4f4cb5._node.bufferSource.connect(_0x4f4cb5._node);
+      }
+      if ((_0x4f4cb5._node.bufferSource.loop = _0x4f4cb5._loop)) {
+        _0x4f4cb5._node.bufferSource.loopStart = _0x4f4cb5._start || 0x0;
+        _0x4f4cb5._node.bufferSource.loopEnd = _0x4f4cb5._stop || 0x0;
+      }
+      _0x4f4cb5._node.bufferSource.playbackRate.setValueAtTime(
+        _0x4f4cb5._rate,
+        _0x46242f.ctx.currentTime
+      );
+      return this;
+    },
+    _cleanBuffer: function (_0x5e7bb0) {
+      var _0x425040 =
+        _0x46242f._navigator &&
+        0x0 <= _0x46242f._navigator.vendor.indexOf("Apple");
+      if (!_0x5e7bb0.bufferSource) {
+        return this;
+      }
+      if (
+        _0x46242f._scratchBuffer &&
+        _0x5e7bb0.bufferSource &&
+        ((_0x5e7bb0.bufferSource.onended = null),
+        _0x5e7bb0.bufferSource.disconnect(0x0),
+        _0x425040)
+      ) {
+        try {
+          _0x5e7bb0.bufferSource.buffer = _0x46242f._scratchBuffer;
+        } catch (_0x3c96d9) {}
+      }
+      _0x5e7bb0.bufferSource = null;
+      return this;
+    },
+    _clearSound: function (_0x2b9599) {
+      if (
+        !/MSIE |Trident\//.test(
+          _0x46242f._navigator && _0x46242f._navigator.userAgent
+        )
+      ) {
+        _0x2b9599.src =
+          "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
+      }
+    },
+  };
+  var _0x4ad29a = function (_0x2f0c3f) {
+    this._parent = _0x2f0c3f;
+    this.init();
+  };
+  _0x4ad29a.prototype = {
+    init: function () {
+      var _0x481da2 = this._parent;
+      this._muted = _0x481da2._muted;
+      this._loop = _0x481da2._loop;
+      this._volume = _0x481da2._volume;
+      this._rate = _0x481da2._rate;
+      this._seek = 0x0;
+      this._ended = this._paused = true;
+      this._sprite = "__default";
+      this._id = ++_0x46242f._counter;
+      _0x481da2._sounds.push(this);
+      this.create();
+      return this;
+    },
+    create: function () {
+      var _0x8bc912 = this._parent;
+      var _0x3ba200 =
+        _0x46242f._muted || this._muted || this._parent._muted
+          ? 0x0
+          : this._volume;
+      if (_0x8bc912._webAudio) {
+        this._node =
+          "undefined" === typeof _0x46242f.ctx.createGain
+            ? _0x46242f.ctx.createGainNode()
+            : _0x46242f.ctx.createGain();
+        this._node.gain.setValueAtTime(_0x3ba200, _0x46242f.ctx.currentTime);
+        this._node.paused = true;
+        this._node.connect(_0x46242f.masterGain);
+      } else if (!_0x46242f.noAudio) {
+        this._node = _0x46242f._obtainHtml5Audio();
+        this._errorFn = this._errorListener.bind(this);
+        this._node.addEventListener("error", this._errorFn, false);
+        this._loadFn = this._loadListener.bind(this);
+        this._node.addEventListener(
+          _0x46242f._canPlayEvent,
+          this._loadFn,
+          false
+        );
+        this._endFn = this._endListener.bind(this);
+        this._node.addEventListener("ended", this._endFn, false);
+        this._node.src = _0x8bc912._src;
+        this._node.preload =
+          true === _0x8bc912._preload ? "auto" : _0x8bc912._preload;
+        this._node.volume = _0x3ba200 * _0x46242f.volume();
+        this._node.load();
+      }
+      return this;
+    },
+    reset: function () {
+      var _0x30c70b = this._parent;
+      this._muted = _0x30c70b._muted;
+      this._loop = _0x30c70b._loop;
+      this._volume = _0x30c70b._volume;
+      this._rate = _0x30c70b._rate;
+      this._rateSeek = this._seek = 0x0;
+      this._ended = this._paused = true;
+      this._sprite = "__default";
+      this._id = ++_0x46242f._counter;
+      return this;
+    },
+    _errorListener: function () {
+      this._parent._emit(
+        "loaderror",
+        this._id,
+        this._node.error ? this._node.error.code : 0x0
+      );
+      this._node.removeEventListener("error", this._errorFn, false);
+    },
+    _loadListener: function () {
+      var _0x229236 = this._parent;
+      _0x229236._duration = Math.ceil(0xa * this._node.duration) / 0xa;
+      if (0x0 === Object.keys(_0x229236._sprite).length) {
+        _0x229236._sprite = {
+          __default: [0x0, 0x3e8 * _0x229236._duration],
+        };
+      }
+      if ("loaded" !== _0x229236._state) {
+        _0x229236._state = "loaded";
+        _0x229236._emit("load");
+        _0x229236._loadQueue();
+      }
+      this._node.removeEventListener(
+        _0x46242f._canPlayEvent,
+        this._loadFn,
+        false
+      );
+    },
+    _endListener: function () {
+      var _0x2c160d = this._parent;
+      if (Infinity === _0x2c160d._duration) {
+        _0x2c160d._duration = Math.ceil(0xa * this._node.duration) / 0xa;
+        if (Infinity === _0x2c160d._sprite.__default[0x1]) {
+          _0x2c160d._sprite.__default[0x1] = 0x3e8 * _0x2c160d._duration;
+        }
+        _0x2c160d._ended(this);
+      }
+      this._node.removeEventListener("ended", this._endFn, false);
+    },
+  };
+  var _0x1bad54 = {};
+  var _0x4d2539 = function (_0xa0e228, _0x35abd7) {
+    var _0x215515 = function () {
+      _0x35abd7._emit("loaderror", null, "Decoding audio data failed.");
+    };
+    var _0x51115c = function (_0x5f144a) {
+      if (_0x5f144a && 0x0 < _0x35abd7._sounds.length) {
+        _0x1bad54[_0x35abd7._src] = _0x5f144a;
+        _0x10c14f(_0x35abd7, _0x5f144a);
+      } else {
+        _0x215515();
+      }
+    };
+    if (
+      "undefined" !== typeof Promise &&
+      0x1 === _0x46242f.ctx.decodeAudioData.length
+    ) {
+      _0x46242f.ctx
+        .decodeAudioData(_0xa0e228)
+        .then(_0x51115c)
+        ["catch"](_0x215515);
+    } else {
+      _0x46242f.ctx.decodeAudioData(_0xa0e228, _0x51115c, _0x215515);
+    }
+  };
+  var _0x10c14f = function (_0x5cddf2, _0x3ee60c) {
+    if (_0x3ee60c && !_0x5cddf2._duration) {
+      _0x5cddf2._duration = _0x3ee60c.duration;
+    }
+    if (0x0 === Object.keys(_0x5cddf2._sprite).length) {
+      _0x5cddf2._sprite = {
+        __default: [0x0, 0x3e8 * _0x5cddf2._duration],
+      };
+    }
+    if ("loaded" !== _0x5cddf2._state) {
+      _0x5cddf2._state = "loaded";
+      _0x5cddf2._emit("load");
+      _0x5cddf2._loadQueue();
+    }
+  };
+  var _0xaf42be = function () {
+    if (_0x46242f.usingWebAudio) {
+      try {
+        if ("undefined" !== typeof AudioContext) {
+          _0x46242f.ctx = new AudioContext();
+        } else if ("undefined" !== typeof webkitAudioContext) {
+          _0x46242f.ctx = new webkitAudioContext();
+        } else {
+          _0x46242f.usingWebAudio = false;
+        }
+      } catch (_0x2c245e) {
+        _0x46242f.usingWebAudio = false;
+      }
+      if (!_0x46242f.ctx) {
+        _0x46242f.usingWebAudio = false;
+      }
+      var _0x49ffc9 = /iP(hone|od|ad)/.test(
+        _0x46242f._navigator && _0x46242f._navigator.platform
+      );
+      var _0x56104d =
+        _0x46242f._navigator &&
+        _0x46242f._navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/);
+      var _0x56104d = _0x56104d ? parseInt(_0x56104d[0x1], 0xa) : null;
+      if (_0x49ffc9 && _0x56104d && 0x9 > _0x56104d) {
+        _0x49ffc9 = /safari/.test(
+          _0x46242f._navigator && _0x46242f._navigator.userAgent.toLowerCase()
+        );
+        if (_0x46242f._navigator && !_0x49ffc9) {
+          _0x46242f.usingWebAudio = false;
+        }
+      }
+      if (_0x46242f.usingWebAudio) {
+        _0x46242f.masterGain =
+          "undefined" === typeof _0x46242f.ctx.createGain
+            ? _0x46242f.ctx.createGainNode()
+            : _0x46242f.ctx.createGain();
+        _0x46242f.masterGain.gain.setValueAtTime(
+          _0x46242f._muted ? 0x0 : _0x46242f._volume,
+          _0x46242f.ctx.currentTime
+        );
+        _0x46242f.masterGain.connect(_0x46242f.ctx.destination);
+      }
+      _0x46242f._setup();
+    }
+  };
+  if ("function" === typeof define && define.amd) {
+    define([], function () {
+      return {
+        Howler: _0x46242f,
+        Howl: _0x2918a3,
+      };
+    });
+  }
+  if ("undefined" !== typeof exports) {
+    exports.Howler = _0x46242f;
+    exports.Howl = _0x2918a3;
+  }
+  if ("undefined" !== typeof global) {
+    global.HowlerGlobal = _0x3f876e;
+    global.Howler = _0x46242f;
+    global.Howl = _0x2918a3;
+    global.Sound = _0x4ad29a;
+  } else if ("undefined" !== typeof window) {
+    window.HowlerGlobal = _0x3f876e;
+    window.Howler = _0x46242f;
+    window.Howl = _0x2918a3;
+    window.Sound = _0x4ad29a;
+  }
+})();
 (function () {
   HowlerGlobal.prototype._pos = [0x0, 0x0, 0x0];
   HowlerGlobal.prototype._orientation = [0x0, 0x0, -0x1, 0x0, 0x1, 0x0];
