@@ -18,13 +18,10 @@ import {
   HemisphericLight,
   PhysicsShapeType,
   HavokPlugin,
+  Engine,
+  SceneLoader,
 } from "babylonjs";
-import { Engine, SceneLoader } from "@babylonjs/core";
 
-// import HavokPlugin from "@babylonjs/havok";
-// 物理引擎模块的正确导入路径
-// import { PhysicsAggregate } from "@babylonjs/core/Physics/physicsAggregate";
-// import { PhysicsShapeType } from "@babylonjs/core/Physics/physicsShapeType";
 // 将导入的模块暴露给 window
 window.BABYLON = {
   ParticleSystem,
