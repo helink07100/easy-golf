@@ -6,8 +6,8 @@ module.exports = {
   output: {
     filename: "babylon.js", // 输出文件名
     path: path.resolve(__dirname + "/assets", "script"), // 输出目录
-    // library: "BABYLON", // 将输出文件暴露为全局变量
-    libraryTarget: "umd", // 支持多种模块格式
+    library: "BABYLON", // 将所有导出挂载到 window.BABYLON
+    libraryTarget: "window",
   },
   module: {
     rules: [
@@ -25,5 +25,12 @@ module.exports = {
   },
   resolve: {
     extensions: [".js"], // 解析的文件扩展名
+    fallback: {
+      fs: false, // Ignore 'fs' for browser builds
+      path: false, // Ignore 'path' for browser builds
+    },
+  },
+  optimization: {
+    minimize: true,
   },
 };

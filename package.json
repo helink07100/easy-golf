@@ -1,15 +1,21 @@
 {
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
   "dependencies": {
     "@babylonjs/core": "^7.32.0",
     "@babylonjs/havok": "^1.3.10",
     "@babylonjs/loaders": "^7.32.0",
-    "babylonjs": "^7.32.0"
+    "ammo.js": "^0.0.10",
+    "babylonjs": "^6.12.3"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
     "babel-loader": "^9.2.1",
     "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
