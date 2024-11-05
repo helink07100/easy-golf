@@ -32,7 +32,9 @@ async function loadAllAssets(assetList) {
   let assetsLoaded = 0;
   for (const asset of assetList) {
     try {
+      console.log("before");
       await loadAsset(asset);
+      console.log("after");
       assetsLoaded++;
       updateProgress(assetsLoaded, assetList.length);
     } catch (error) {

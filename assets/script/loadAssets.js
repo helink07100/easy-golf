@@ -46,14 +46,6 @@ function loadAsset(path) {
         null,
         reject
       );
-    } else if (path.endsWith(".js")) {
-      // 加载JavaScript脚本
-      // const script = document.createElement("script");
-      // script.src = path;
-      // script.onload = () => resolve();
-      // script.onerror = reject;
-      // document.head.appendChild(script);
-      console.log("script");
     } else if (path.endsWith(".wasm")) {
       // 加载WASM文件
       fetch(path)

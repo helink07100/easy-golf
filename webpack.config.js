@@ -5,7 +5,7 @@ module.exports = {
   entry: "./assets/babylonBuild.js", // 入口文件
   output: {
     filename: "babylon.js", // 输出文件名
-    path: path.resolve(__dirname + "/assets", "script"), // 输出目录
+    path: path.resolve(__dirname + "/assets/script", "babylon"), // 输出目录
     library: "BABYLON", // 将所有导出挂载到 window.BABYLON
     libraryTarget: "window",
   },

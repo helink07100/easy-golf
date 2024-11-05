@@ -32,3 +32,7 @@ export { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
 export { Mesh } from "@babylonjs/core/Meshes/mesh";
 export { TransformNode } from "@babylonjs/core/Meshes/transformNode";
 export { TrailMesh } from "@babylonjs/core/Meshes/trailMesh";
+
+export { CreatePlane } from "@babylonjs/core/Meshes/Builders/planeBuilder";
+
+export { Axis, Space } from "@babylonjs/core/Maths/math.axis";
