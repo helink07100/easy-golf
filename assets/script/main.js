@@ -1,109 +1,57 @@
-// 加载fb
-window.fbAsyncInit = function () {
-  // 确保 Facebook SDK 加载完成
-  FBInstant.initializeAsync()
-    .then(() => {
-      console.log("Facebook SDK initialized");
-
-      // 添加加载进度
-      // setLoadingProgress();
-
-      FBInstant.startGameAsync()
-        .then(() => {
-          // // console.log("Game started!");
-          // progressBar.style.display = "none";
-          // 游戏主逻辑
-          startMainGame();
-        })
-        .catch((error) => {
-          console.error("Error starting game:", error);
-        });
-    })
-    .catch((error) => {
-      console.error("Error initializing Facebook SDK:", error);
-    });
-};
-
-(function (d, s, id) {
-  var js,
-    fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "https://connect.facebook.net/en_US/fbinstant.7.1.js"; // 确保这里的 URL 是有效的
-  fjs.parentNode.insertBefore(js, fjs);
-})(document, "script", "facebook-jssdk");
-
-// Assuming you have a progress bar element in your HTML
-const progressBar = document.getElementById("progress-bar");
-
-// Initialize the Facebook SDK
-const setLoadingProgress = () => {
-  // Update progress during asset loading
-  let progress = 0;
-
-  // Simulating loading progress for demonstration
-  const loadingInterval = setInterval(() => {
-    progress += 10; // Simulate loading progress (replace with actual loading logic)
-
-    // Update the SDK loading progress
-    FBInstant.setLoadingProgress(progress);
-
-    // Update your custom progress bar (optional)
-    if (progressBar) {
-      progressBar.style.width = `${progress}%`;
-    }
-
-    // Check if loading is complete
-    if (progress >= 100) {
-      clearInterval(loadingInterval);
-
-      // 游戏启动流程
-      FBInstant.startGameAsync()
-        .then(() => {
-          // // console.log("Game started!");
-          progressBar.style.display = "none";
-          // 游戏主逻辑
-          startMainGame();
-        })
-        .catch((error) => {
-          console.error("Error starting game:", error);
-        });
-    }
-  }, 200); // Adjust the interval or replace with actual loading logic
-};
-
-// 检查是否支持广告
-function startMainGame() {
-  // FBInstant.getSupportedAPIs().then((supportedAPIs) => {
-  //   // // console.log("Supported APIs:", supportedAPIs);
-  //   // 例如，检查是否支持用户数据存储
-  //   let canShowAds =
-  //     supportedAPIs.includes("getInterstitialAdAsync") &&
-  //     supportedAPIs.includes("getRewardedVideoAsync");
-  //   if (!canShowAds) {
-  //     // console.error("Ads not supported in this session");
-  //   } else {
-  //     // 如果可以则加载，插页式广告
-  //     preloadInterstitial();
-  //   }
-  // });
+// 初始化 Facebook SDK
+function initializeFacebookSDK() {
+  return FBInstant.initializeAsync().then(() => {
+    console.log("SDK initialized");
+    FBInstant.setLoadingProgress(0);
+  });
 }
 
-// 预加载插页式广告
-function preloadInterstitial() {
-  // // console.log("Preloading Interstitial");
-  FBInstant.getInterstitialAdAsync("id")
-    .then(function (interstitial) {
-      // Load the Ad asynchronously
-      SETTINGS.Ad.preloadedInterstitial = interstitial;
-      return SETTINGS.Ad.preloadedInterstitial.loadAsync();
-    })
-    .then(function () {
-      // // console.log("Interstitial ready");
-      showInterstitial();
-    })
-    .catch(function (error) {
-      // console.error("Interstitial failed to preload: " + error.message);
+// 更新进度条
+function updateProgress(assetsLoaded, totalAssets) {
+  let progress = Math.floor((assetsLoaded / totalAssets) * 100);
+  console.log("update----");
+  FBInstant.setLoadingProgress(progress);
+  console.log(`Loading progress: ${progress}%`);
+}
+
+// 加载所有资源
+function fetchAssetList() {
+  console.log("2222");
+  return fetch("assets/assetList.json")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("in");
+      // 合并所有资源路径为一个数组
+      return [].concat(...Object.values(data));
     });
 }
+
+// 加载所有资源
+async function loadAllAssets(assetList) {
+  console.log(111, assetList);
+  let assetsLoaded = 0;
+  for (const asset of assetList) {
+    try {
+      await loadAsset(asset);
+      assetsLoaded++;
+      updateProgress(assetsLoaded, assetList.length);
+    } catch (error) {
+      console.error("Failed to load asset:", asset, error);
+    }
+  }
+}
+
+// 启动游戏
+function startGame() {
+  FBInstant.startGameAsync().then(() => {
+    console.log("Game started!");
+    // 游戏逻辑代码放在这里
+  });
+}
+
+// 主流程
+initializeFacebookSDK()
+  .then(fetchAssetList)
+  .then(loadAllAssets)
+  .then(startGame)
+  .catch((error) => console.error("Error loading game assets:", error));
