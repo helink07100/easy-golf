@@ -16,19 +16,12 @@ function updateProgress(assetsLoaded, totalAssets) {
 
 // 加载所有资源
 function fetchAssetList() {
-  console.log("2222");
-  return fetch("assets/assetList.json")
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("in");
-      // 合并所有资源路径为一个数组
-      return [].concat(...Object.values(data));
-    });
+  // 合并所有资源路径为一个数组
+  return [].concat(...Object.values(assetList));
 }
 
 // 加载所有资源
 async function loadAllAssets(assetList) {
-  console.log(111, assetList);
   let assetsLoaded = 0;
   for (const asset of assetList) {
     try {
