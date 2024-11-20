@@ -1,38 +1,50 @@
-// 引擎和加载器
-export { Engine } from "@babylonjs/core/Engines/engine";
-export { SceneLoader } from "@babylonjs/core/Loading/sceneLoader";
+import { ParticleSystem } from "@babylonjs/core/Particles/particleSystem";
+import { Vector3 } from "@babylonjs/core/Maths/math.vector";
+import { Texture } from "@babylonjs/core/Materials/Textures/texture";
+import { Color4, Color3 } from "@babylonjs/core/Maths/math.color";
+import { Constants } from "@babylonjs/core/Engines/constants";
+import { PhysicsAggregate, PhysicsShapeType } from "@babylonjs/core/Physics";
+import { Axis, Space } from "@babylonjs/core/Maths/math.axis";
+import { Engine } from "@babylonjs/core/Engines/engine";
+import { Scene } from "@babylonjs/core/scene";
+import { SceneLoader } from "@babylonjs/core/Loading/sceneLoader";
+import { HemisphericLight } from "@babylonjs/core/Lights/hemisphericLight";
+import { HavokPlugin } from "@babylonjs/core/Physics/v2/Plugins/havokPlugin";
+import { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
+import { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
+import { CubeTexture } from "@babylonjs/core/Materials/Textures/cubeTexture";
+import { Mesh } from "@babylonjs/core/Meshes/mesh";
+import { TransformNode } from "@babylonjs/core/Meshes/transformNode";
+import { TrailMesh } from "@babylonjs/core/Meshes/trailMesh";
+import { FollowCamera } from "@babylonjs/core/Cameras/followCamera";
+import { Matrix, Quaternion } from "@babylonjs/core/Maths/math.vector";
+import "@babylonjs/loaders"; // 加载器插件会自动注册到 SceneLoader
 
-// 数学库
-export { Vector3, Matrix, Quaternion } from "@babylonjs/core/Maths/math.vector";
-export { Color4, Color3 } from "@babylonjs/core/Maths/math.color";
-export { Constants } from "@babylonjs/core/Engines/constants";
-
-// 光源
-export { HemisphericLight } from "@babylonjs/core/Lights/hemisphericLight";
-
-// 材质和纹理
-export { Texture } from "@babylonjs/core/Materials/Textures/texture";
-export { CubeTexture } from "@babylonjs/core/Materials/Textures/cubeTexture";
-export { StandardMaterial } from "@babylonjs/core/Materials/standardMaterial";
-
-// 粒子系统
-export { ParticleSystem } from "@babylonjs/core/Particles/particleSystem";
-
-// 物理系统（Physics v2）
-export { PhysicsImpostor } from "@babylonjs/core/Physics/v2/physicsImpostor"; // v2 PhysicsImpostor
-export { PhysicsBody } from "@babylonjs/core/Physics/v2/physicsBody"; // v2 PhysicsBody
-export { PhysicsShape } from "@babylonjs/core/Physics/v2/physicsShape"; // v2 PhysicsShape
-export { HavokPlugin } from "@babylonjs/core/Physics/v2/Plugins/havokPlugin"; // v2 HavokPlugin
-
-// 相机
-export { FollowCamera } from "@babylonjs/core/Cameras/followCamera";
-
-// 网格和几何体
-export { MeshBuilder } from "@babylonjs/core/Meshes/meshBuilder";
-export { Mesh } from "@babylonjs/core/Meshes/mesh";
-export { TransformNode } from "@babylonjs/core/Meshes/transformNode";
-export { TrailMesh } from "@babylonjs/core/Meshes/trailMesh";
-
-export { CreatePlane } from "@babylonjs/core/Meshes/Builders/planeBuilder";
-
-export { Axis, Space } from "@babylonjs/core/Maths/math.axis";
+// 将模块挂载到 window.BABYLON
+export {
+  ParticleSystem,
+  Vector3,
+  Texture,
+  Color4,
+  Color3,
+  Constants,
+  PhysicsAggregate,
+  PhysicsShapeType,
+  Axis,
+  Space,
+  Engine,
+  Scene,
+  SceneLoader,
+  HemisphericLight,
+  HavokPlugin,
+  MeshBuilder,
+  StandardMaterial,
+  CubeTexture,
+  Mesh,
+  TransformNode,
+  TrailMesh,
+  FollowCamera,
+  Matrix,
+  Quaternion,
+};
+// window.BABYLON = BABYLON;

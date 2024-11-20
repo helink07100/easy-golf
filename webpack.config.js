@@ -1,32 +1,35 @@
-const fs = require("fs");
 const path = require("path");
+
 module.exports = {
-  entry: "./assets/script/babylon.max2.js", // 入口文件指向 'index.js'
+  entry: "./assets/babylonBuild.js", // 自己创建的入口文件
   output: {
-    filename: "[name].[contenthash].js", // 动态生成的模块文件
-    path: path.resolve(__dirname + "/assets/", "babylon"),
-    clean: true, // 清理旧的输出文件
-    library: "BABYLON", // UMD 格式库
-    libraryTarget: "umd",
+    filename: "babylon.js", // 输出的文件名
+    path: path.resolve(__dirname + "/assets/", "babylon"), // 输出的文件路径
+    library: "BABYLON", // 导出到 window.BABYLON
+    libraryTarget: "umd", // 兼容 UMD 格式
   },
+  mode: "production", // 或 "development" 根据需要选择
   optimization: {
-    splitChunks: {
-      chunks: "all", // 分离所有模块
-      minSize: 10000, // 模块大小超过 10KB 才分离
-      maxSize: 250000, // 最大文件大小限制
-    },
+    usedExports: true, // 启用 Tree-Shaking
+    sideEffects: true, // 保留 @babylonjs/loaders 的副作用注册行为
+  },
+  resolve: {
+    extensions: [".js", ".ts"],
   },
   module: {
     rules: [
       {
-        test: /\.ts$/, // 处理 TypeScript 文件
-        use: "ts-loader",
+        test: /\.js$/,
+        use: "babel-loader",
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(babylon|gltf|glb)$/,
+        type: "asset/resource", // 使用 Webpack 内置资源模块
+        generator: {
+          filename: "assets/[hash][ext][query]", // 输出路径
+        },
       },
     ],
   },
-  resolve: {
-    extensions: [".js", ".ts"], // 支持 .ts 和 .js 文件
-  },
-  devtool: "source-map", // 开启源代码映射
 };
