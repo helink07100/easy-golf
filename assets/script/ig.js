@@ -11146,13 +11146,13 @@
           this.arrow.renderingGroupId = 0x1;
           this.aimLine = wgl.scene.getMeshByName("AimConnect");
           this.aimLine.material.depthFunction = BABYLON.Constants.ALWAYS;
-          this.aimLine.material.emissiveColor = new BABYLON.Color3.Yellow();
+          this.aimLine.material.emissiveColor = BABYLON.Color3.Yellow;
           this.aimLine.material.disableLighting = true;
           this.aimLine.isVisible = false;
           this.aimBall = wgl.scene.getMeshByName("AimBall");
           this.aimBall.material.depthFunction = BABYLON.Constants.ALWAYS;
           this.aimBall.material.disableLighting = true;
-          this.aimBall.material.emissiveColor = new BABYLON.Color3.Yellow();
+          this.aimBall.material.emissiveColor = BABYLON.Color3.Yellow;
           this.aimBall.isVisible = false;
           this.aimBall.renderingGroupId = 0x1;
           this.isFocused = false;
@@ -11587,8 +11587,20 @@
             "assets/media/babylon/",
             "scene.babylon",
             this.engine,
-            function (_0x94b773) {
-              this.scene = _0x94b773;
+            function (scene) {
+              this.scene = scene;
+              console.log(scene);
+              // scene.exportMeshToGltfAsync().then((glTF) => {
+              //   // 将 glTF 数据保存为文件
+              //   const fileName = "scene.gltf";
+              //   const blob = new Blob([JSON.stringify(glTF)], {
+              //     type: "application/json",
+              //   });
+              //   const link = document.createElement("a");
+              //   link.href = URL.createObjectURL(blob);
+              //   link.download = fileName;
+              //   link.click();
+              // });
               try {
                 HavokPhysics().then(
                   function (_0x273c4a) {
