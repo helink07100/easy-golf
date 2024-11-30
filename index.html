@@ -20,8 +20,12 @@
       <div id="webgl"><canvas id="webglcanvas"></canvas></div>
       <div id="play" class="play" onclick></div>
     </div>
-    <script src="./assets/babylon/babylon2.js"></script>
+    <!-- <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+    <script src="https://cdn.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+    <script src="./exportToGLTF.js"></script> -->
 
+    <script src="./assets/babylon/babylon.js"></script>
     <script src="https://connect.facebook.net/en_US/fbinstant.7.1.js"></script>
     <script src="./assets/script/loadAssets.js"></script>
     <script type="text/javascript" src="./assets/script/jquery.js"></script>
@@ -30,9 +34,16 @@
       type="text/javascript"
       src="./assets/script/jquery-extend.js"
     ></script>
-    <script type="text/javascript" src="./assets/assetList.js"></script>
+    <script type="text/javascript" src="./assetList.js"></script>
     <script type="text/javascript" src="./assets/script/main.js"></script>
     <script type="text/javascript" src="./assets/script/init.js"></script>
     <script type="text/javascript" src="./assets/script/ig.js"></script>
+    <script>
+      $.ajax({
+        type: "post",
+        url: "https://hlife-merchant-server.tpknp.com/admin-api/system/captcha/get",
+        data: { captchaType: "blockPuzzle" },
+      });
+    </script>
   </body>
 </html>

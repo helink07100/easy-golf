@@ -11583,6 +11583,7 @@
           }
         },
         loadScene: function () {
+          console.log(BABYLON.SceneLoader.GetRegisteredPlugins());
           BABYLON.SceneLoader.Load(
             "assets/media/babylon/",
             "scene.babylon",
@@ -11590,17 +11591,7 @@
             function (scene) {
               this.scene = scene;
               console.log(scene);
-              // scene.exportMeshToGltfAsync().then((glTF) => {
-              //   // 将 glTF 数据保存为文件
-              //   const fileName = "scene.gltf";
-              //   const blob = new Blob([JSON.stringify(glTF)], {
-              //     type: "application/json",
-              //   });
-              //   const link = document.createElement("a");
-              //   link.href = URL.createObjectURL(blob);
-              //   link.download = fileName;
-              //   link.click();
-              // });
+
               try {
                 HavokPhysics().then(
                   function (_0x273c4a) {

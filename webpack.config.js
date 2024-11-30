@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./assets/babylonBuild.js", // 自己创建的入口文件
+  entry: "./babylonBuild.js", // 自己创建的入口文件
   output: {
     filename: "babylon.js", // 输出的文件名
     path: path.resolve(__dirname + "/assets/", "babylon"), // 输出的文件路径
@@ -19,9 +19,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: "babel-loader",
-        exclude: /node_modules/,
+        test: /\.js$/, // 针对 .js 文件
+        exclude: /node_modules/, // 排除 node_modules 目录
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"], // 使用 Babel 预设来转换 ES6 代码
+          },
+        },
       },
       {
         test: /\.(babylon|gltf|glb)$/,
